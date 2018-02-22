@@ -1,0 +1,25 @@
+Package: s3m
+Type: package
+Title: An implementation of the Simple Spatial Sampling Method (S3M) in R
+Version: 0.1.0
+Authors@R: c(
+    person("Mark", "Myatt", email = "mark@brixtonhealth.com", role = "aut"),
+    person("Farah", "Ibrahim", email = "abud.ff@gmail.com", role = "aut"),
+    person("Ernest", "Guevarra", comment = c(ORCID = "0000-0002-4887-4415"), 
+           email = "ernestgmd@gmail.com", role = c("aut", "cre")))
+Description: The Simple Spatial Survey Method (S3M) was developed from the
+    Centric Systematic Area Sampling (CSAS) approach used in biodiversity species
+    counting and adapted for use in health and nutrition surveys by Brixton Health
+    and Valid International. S3M is used in surveys designed to be spatially 
+    representative i.e., the sample distributed evenly across the survey area, 
+    using a spatial sample design that selected communities located closest to 
+    the centroids of a hexagonal grid laid over the survey area. The resulting 
+    sample is a triangular irregular network.
+License: AGPL-3
+Encoding: UTF-8
+LazyData: true
+Imports: gstat,
+    Imap,
+    rgeos,
+    rgdal,
+    raster

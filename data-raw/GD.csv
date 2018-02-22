@@ -1,0 +1,626 @@
+id,x,y,village,locality
+1,34.44006,13.69201,abo rakham,Almafaza
+2,34.51158,13.62992,abu shaibah barno,Almafaza
+3,34.46096,13.63248,abu shaibah garib,Almafaza
+4,34.51693,13.62591,banat,Almafaza
+5,34.83371,13.68023,bila,Almafaza
+6,34.3585,13.74471,el amarah(near al gerefat),Almafaza
+7,34.48498,13.68402,el dobaseyeen,Almafaza
+8,34.41591,13.71784,el gedeyrab,Almafaza
+9,34.35771,13.7574,el gereefat,Almafaza
+10,34.69046,13.60393,el hileeba,Almafaza
+11,34.37597,13.69231,el iteefah,Almafaza
+12,34.38724,13.68628,el iteefah elmanarah,Almafaza
+13,34.53769,13.56812,el khashkhashah,Almafaza
+14,34.52543,13.63569,el khtmeeyah,Almafaza
+15,34.54169,13.60775,el mafazah,Almafaza
+16,34.50846,13.52746,el shagah,Almafaza
+17,34.30354,13.73884,el sharafah,Almafaza
+18,34.52756,13.52812,el usharah,Almafaza
+19,34.49852,13.64268,el wahedo,Almafaza
+20,34.39618,13.75321,elteneedbah sharag,Almafaza
+21,34.38805,13.74887,elteneedbah gaerib(malamgado),Almafaza
+22,34.72631,13.61856,gulbi,Almafaza
+23,34.33306,13.72929,halali,Almafaza
+24,34.52158,13.55995,hari abakar,Almafaza
+25,34.37951,13.7361,hawa el benyah,Almafaza
+26,34.5235,13.64655,helat el shareef,Almafaza
+27,34.53031,13.63078,helat malek,Almafaza
+28,34.35749,13.70809,hilat ali,Almafaza
+29,34.52013,13.55652,hilat shuaibou,Almafaza
+30,34.509,13.64182,kamar sambo,Almafaza
+31,34.78048,13.5996,makarnado,Almafaza
+32,34.39012,13.7455,malm jalo,Almafaza
+33,34.2614,13.75967,nor elhuda,Almafaza
+34,34.51986,13.54922,um fajo,Almafaza
+35,34.51834,13.50294,um tukosa,Almafaza
+36,34.40151,13.62453,wad awad,Almafaza
+37,34.41604,13.66215,wad el atrash,Almafaza
+38,34.52982,13.6436,wad el knoon,Almafaza
+39,34.3236,13.7426,wad el rawaj,Almafaza
+40,34.50243,13.66642,wad el sabur,Almafaza
+41,34.51508,13.64802,wad gateet,Almafaza
+42,34.40343,13.64048,wad mahmood,Almafaza
+43,35.88575,13.18668,alaam,Basunda
+44,35.61243344,12.72066046,aoodah,Basunda
+45,35.58051017,12.72464052,babanosah,basunda
+46,35.7647,12.99553,babekry,Basunda
+47,35.92006,12.90225,basanga,Basunda
+48,35.84477,12.98328,basundah,Basunda
+49,35.59474,12.71942,el fazraa,Basunda
+50,36.14014,12.95876,el galabat,Basunda
+51,35.8646,12.75975,el haskaneet,Basunda
+52,36.03334,13.12646,el hojar el zorug ,Basunda
+53,35.91794,13.24201,el jammam,Basunda
+54,35.86686,12.95673,el rumeylah,Basunda
+55,35.983,12.93573,el seafah,Basunda
+56,35.88053,13.05875,el temeyTah,Basunda
+57,35.88456,13.08264,gezoley,Basunda
+58,35.94238,13.09975,gryganah,Basunda
+59,35.63081,12.70748,hantoob,Basunda
+60,35.76073,12.67473,jazeerat el dood,Basunda
+61,35.69503,12.6925,kareemah,Basunda
+62,36.02515,13.01766,khor saad,Basunda
+63,35.95299,12.98708,khor shatah,Basunda
+64,36.00818,13.1005,koneenah elbeer,Basunda
+65,35.91729,13.00241,kornekela,Basunda
+66,36.0281,13.12207,kuneenah tabaldeyah,Basunda
+67,35.56653,13.00121,mabrookah(lamlamo/alkherat),Basunda
+68,36.08239,13.00395,otrub,Basunda
+69,35.86393,13.22228,saraf saeed,Basunda
+70,36.07437,12.964,shangal,Basunda
+71,35.87177,13.12204,tamarah,Basunda
+72,36.04882,12.77878,tayah(Basunda),Basunda
+73,35.90861,12.75741,um debeloo,Basunda
+74,35.92331,13.12819,um kharayeet,Basunda
+75,35.87404,13.06662,um meleeha,Basunda
+76,36.00416,12.8889,wad abo lesan,Basunda
+77,35.94364,13.016,wad abo taher,Basunda
+78,36.0225,12.8053,wad el ajooz,Basunda
+79,35.92214,13.2316,wad koseebah,Basunda
+80,35.85947,13.01347,yaseen,Basunda
+81,35.766899,13.1772,danikola,Basunda
+82,35.8833,12.9333,hayafa,Basunda
+83,36.13277,13.46316,abduelmajeed,Eastern El Qalabat
+84,36.02558,13.26142,abduelwahab,Eastern El Qalabat
+85,35.82048,13.5469,abo irwah,Eastern El Qalabat
+86,36.02256,13.28574,aseel,Eastern El Qalabat
+87,36.02406,13.30839,dor um zeenah,Eastern El Qalabat
+88,36.03389,13.33275,el azazah,Eastern El Qalabat
+89,35.8509,13.33249,el saboot,Eastern El Qalabat
+90,35.53917,13.31467,eldroot,Eastern El Qalabat
+91,35.58126,13.63628,elhamraa,Eastern El Qalabat
+92,35.47645,13.22772,elkafay,Eastern El Qalabat
+93,35.71109,13.6273,elsameenah,Eastern El Qalabat
+94,35.85664,13.46189,elsaraf elahmar,Eastern El Qalabat
+95,35.86668,13.46381,elsaraf amaarah,Eastern El Qalabat
+96,35.8723,13.4639,elsaraf bawey,Eastern El Qalabat
+97,35.86966,13.44424,elsaraf elbadya,Eastern El Qalabat
+98,35.86223,13.44001,elsaraf ibraheem,Eastern El Qalabat
+99,35.72987,13.6014,elsireefah(EG),Eastern El Qalabat
+100,35.76376,13.5763,greeb,Eastern El Qalabat
+101,36.02954,13.21926,helat khater,Eastern El Qalabat
+102,36.09698,13.43339,jumeezah,Eastern El Qalabat
+103,36.07417,13.26567,koneenah sofia,Eastern El Qalabat
+104,35.88143,13.34022,madag,Eastern El Qalabat
+105,35.9169,13.35278,mahalah,Eastern El Qalabat
+106,35.8972,13.29224,maryood,Eastern El Qalabat
+107,36.08653,13.41564,mohammed musa,Eastern El Qalabat
+108,36.02306,13.25827,radah,Eastern El Qalabat
+109,35.63599,13.52041,rashed,Eastern El Qalabat
+110,36.01876,13.30379,sondus,Eastern El Qalabat
+111,35.8485,13.46224,elsaraf tabldeeyah,Eastern El Qalabat
+112,35.63085,13.55138,twareet,Eastern El Qalabat
+113,36.06587,13.38412,um adarah,Eastern El Qalabat
+114,36.08036,13.40491,um deesah haj taher,Eastern El Qalabat
+115,36.05787,13.35509,um khatar,Eastern El Qalabat
+116,36.04374,12.81801,um rakobah,Eastern El Qalabat
+117,35.68517,13.49765,um rakoobah,Eastern El Qalabat
+118,36.02827,13.11516,um saye,Eastern El Qalabat
+119,35.91249,13.37817,um seneebrah(EG),Eastern El Qalabat
+120,35.72908,13.57202,wad elshejarah,Eastern El Qalabat
+121,35.82315,13.59488,wad ganoofah,Eastern El Qalabat
+122,36.083599,13.4107,omer elsoky,Eastern El Qalabat
+123,36.117401,13.437,balola,Eastern El Qalabat
+124,36.022099,13.285,tokar,Eastern El Qalabat
+125,36.020699,13.2629,Gds,Eastern El Qalabat
+126,35.793301,13.4673,sanon,Eastern El Qalabat
+127,35.24038,15.00076,abo gambeel el shershb,El Butana
+128,34.69768,15.02932,abo geraad,El Butana
+129,35.04381,14.951,arrugail,El Butana
+130,34.77502,14.69074,edad banat,El Butana
+131,34.79724,14.63655,edad el hamar,El Butana
+132,34.71232,14.6995,edad sameena,El Butana
+133,34.74616,14.6559,edad shaa el deen,El Butana
+134,34.76585,14.72487,edad touwal,El Butana
+135,34.7715,14.70295,edad wad elzain,El Butana
+136,34.57526,15.41221,el bahogy,El Butana
+137,35.11444,14.97798,el beras,El Butana
+138,33.80893,15.54667,el derehan,El Butana
+139,34.9251,14.72841,el elaw,El Butana
+140,35.02291,15.04166,el fool,El Butana
+141,33.70035,15.47817,el gadoorab,El Butana
+142,34.99738,15.02667,el gafala,El Butana
+143,35.03135,15.18473,el geleeb,El Butana
+144,35.04725,14.41675,el hesneeyah,El Butana
+145,34.29613,15.37838,el hagar,El Butana
+146,35.1391,14.885,el hushaib,El Butana
+147,35.03728,15.23603,el sadda,El Butana
+148,35.03728,15.23603,el sadda ganoob,El Butana
+149,33.78605,15.49071,el shebeak(el hasnab),El Butana
+150,34.80398879,15.29726239,el subaag,El Butana
+151,34.70593,15.49257,el sufayah,El Butana
+152,34.86549,14.99024,el tekoon,El Butana
+153,35.13137,15.11196,gaad allah,El Butana
+154,33.76625,15.56982,geyli el gelea,El Butana
+155,33.73272,15.51277,geyli el souk,El Butana
+156,35.09872,14.83922,hushaib arakeen,El Butana
+157,35.21342,14.97419,jabal el geer,El Butana
+158,34.68707,15.35119,reara,El Butana
+159,34.95509,14.83289,serooj mahmood,El Butana
+160,35.04976,14.94494,suroj monana,El Butana
+161,34.2851,15.66918,um khatam,El Butana
+162,34.38406,15.61704,um rewashed,El Butana
+163,34.8845,14.70651,um sarha,El Butana
+164,33.8381,15.63375,wad agwa,El Butana
+165,34.38165,15.79583,el geleata,El Butana
+166,34.755299,15.3198,Halat Hamad,El Butana
+167,35.91096,14.77033,abu gengel,El Fashaga
+168,35.88235,14.83705,al dwah,El Fashaga
+169,35.99279,14.05609,ajab sedo,El Fashaga
+170,35.99341,14.05464,ajab sedoo,El Fashaga
+171,36.2304,13.87643,alban jadeed(El fashaga),El Fashaga
+172,35.90791,14.76325,al sharfa,El Fashaga
+173,35.9663,14.23967,burgoma,El Fashaga
+174,36.07227,13.96316,darabi shareg,El Fashaga
+175,36.23965,13.94815,el geleea,El Fashaga
+176,36.36195,14.26572,el godeemah,El Fashaga
+177,35.86919,14.63562,el japparap,El Fashaga
+178,35.86761,14.59253,el mansoora,El Fashaga
+179,35.87741,14.43734,el merebeea,El Fashaga
+180,35.87486,14.27402,el morabaa,El Fashaga
+181,35.87756,14.62325,el mugasema,El Fashaga
+182,35.74144,14.40599,el muharrgat,El Fashaga
+183,35.90239,14.2466,el rymeela,El Fashaga
+184,35.87802261,14.55844518,el shareef hasb allah,El Fashaga
+185,35.84364,14.30082,el toomat,El Fashaga
+186,35.93951,14.10642,elbahkar gareb,El Fashaga
+187,35.8839,14.47824,hajar abyad,El Fashaga
+188,35.87036,14.49249,ilayan,El Fashaga
+189,35.65598,14.61852,karkoora,El Fashaga
+190,35.87024,14.50076,katoota,El Fashaga
+191,35.8551,14.4967,mabrooka,El Fashaga
+192,35.86887,14.69185,mageet abd elnabi,El Fashaga
+193,35.86507,14.64373,el mugata el zain,El Fashaga
+194,35.86386,14.6711,al mugata suge,El Fashaga
+195,35.9135,14.80492,el shagrab janoob,El Fashaga
+196,35.88114,14.71216,shalateeb,El Fashaga
+197,35.88574,14.46215,shengerara,El Fashaga
+198,35.89478,14.74293,al tartar,El Fashaga
+199,35.92321,14.21946,taybah(El Fashaga),El Fashaga
+200,35.635,14.50552,um gargoor,El Fashaga
+201,35.87605,14.6972,wad el faki,El Fashaga
+202,35.85873,14.53671,wad el hadey,El Fashaga
+203,35.87752,14.58217,wad el khedir,El Fashaga
+204,35.87077,14.60275,wad el naeem,El Fashaga
+205,35.88224,14.71741,wad farah,El Fashaga
+206,35.88429,14.5683,wad hassan,El Fashaga
+207,35.87006,14.60701,wad ieesa,El Fashaga
+208,35.88271,14.70723,wad mageet,El Fashaga
+209,35.88658,14.57491,wad mageet showat,El Fashaga
+210,35.87627,14.70154,wad matar,El Fashaga
+211,35.8699,14.63867,wad sewar,El Fashaga
+212,35.87132,14.30872,mugran seteet,El fashaga
+213,35.865297,14.581708,almadina Arab,El fashaga
+214,35.878934,14.227196,madina1,El fashaga
+215,36.049276,14.058151,madina2,El fashaga
+216,35.877662,14.004427,madina3,El fashaga
+217,36.02825,14.17853,madina6,El fashaga
+218,36.083944,14.153969,madina7,El fashaga
+219,36.123651,14.174564,madina8,El fashaga
+220,34.07712,13.91389,abo ashoosh,El Faw
+221,34.14215,14.10223,banat el lauta,El Faw
+222,34.21902,13.80259,cambo 10,El Faw
+223,34.2712,13.80596,cambo 6,El Faw
+224,34.25784,13.79419,cambo 7,El Faw
+225,34.10891,13.8884,cambo abo zahrah,El Faw
+226,34.14231,13.88824,cambo alban jadeed,El Faw
+227,34.19421,13.84224,dar el salam,El Faw
+228,33.95895,14.11673,el akaas,El Faw
+229,34.20251,14.10368,el benayah el sadgab,El Faw
+230,33.99189,14.33622,el bewayda,El Faw
+231,34.12226,14.12401,el bwadrah,El Faw
+232,34.01862,13.99786,el degerab,El Faw
+233,34.32172,14.15887,el dubasyeen,El Faw
+234,34.08646,14.1111,el faw,El Faw
+235,33.97398,14.07058,el jaafrah,El Faw
+236,34.28619,14.16526,el semeryat,El Faw
+237,34.31173,13.79515,Garya1,El Faw
+238,34.21105,14.01053,Garya11,El Faw
+239,34.17527,14.01201,Garya12,El Faw
+240,34.09783,14.00765,Garya14,El Faw
+241,34.13504,14.01204,Garya13,El Faw
+242,34.05682,14.01763,Garya15,El Faw
+243,34.20268,14.09695,Garya16,El Faw
+244,34.09103,14.0772,Garya17,El Faw
+245,34.01941,14.08524,Garya18,El Faw
+246,34.0209,14.13697,Garya19,El Faw
+247,34.25316,13.81637,Garya2,El Faw
+248,33.97411,14.14984,Garya20,El Faw
+249,34.31072,13.83562,Mejar1,El Faw
+250,34.2677,13.85222,Garya3,El Faw
+251,34.25481,13.94063,elrai36,El Faw
+252,34.26324,13.94574,Garya36,El Faw
+253,34.20264,13.864,Garya4,El Faw
+254,34.25027,13.89028,Garya5,El Faw
+255,34.22702,13.9242,Garya6,El Faw
+256,34.15248,13.92176,Garya7,El Faw
+257,34.08883,13.93627,Garya8,El Faw
+258,34.11347,14.13265,Garya elmamoorah,El Faw
+259,34.16493,14.04659,Gantra 60,El Faw
+260,34.12306,13.86326,haj idrees,El Faw
+261,34.24799,14.13961,harerah el maashrah,El Faw
+262,34.26142,14.15227,harerah el rtamat,El Faw
+263,34.16072,14.10181,jabal el meleh,El Faw
+264,34.12001,13.81521,kahelah,El Faw
+265,34.20591,13.83222,mabrooka,El Faw
+266,34.10647,14.10881,mabrooka,El Faw
+267,34.12603,14.04707,mejar 4,El Faw
+268,34.05546,14.18071,mejar 5,El Faw
+269,34.03688,14.08686,mayo,El Faw
+270,34.34132,13.79088,reweena,El Faw
+271,34.04501,13.97589,sabreen,El Faw
+272,33.99023,14.04487,shrab,El Faw
+273,33.93658,14.13156,um gradah,El Faw
+274,34.09459,13.86122,um tareezah,El Faw
+275,34.36203,13.77316,wad el ard,El Faw
+276,34.2369,14.13352,wad el faki,El Faw
+277,34.28333,14.13123,wad el hewery,El Faw
+278,34.18552,14.12358,wad el mada,El Faw
+279,34.112,14.11681,wad gees,El Faw
+280,34.2289,14.12579,wad ikheeshin(hareera),El Faw
+281,34.05194,13.99216,wad ikheeshn (albahar),El Faw
+282,34.16982,14.1262,wad noreen,El Faw
+283,34.21022,14.09411,wad reheemah,El Faw
+284,34.1983,14.12265,wad sageer,El Faw
+285,33.99418,14.02931,wad saneen,El Faw
+286,34.16804,13.76857,el leweesah,El faw
+287,34.22104,13.73751,el shalalah,El faw
+288,34.139205,13.962319,Garya10,El Faw
+289,35.88401306,13.66423315,abo glood,El Quresha
+290,36.0959,13.74964,areydah shamal,El Quresha
+291,36.095655,13.740521,aryedah ganoob,El Quresha
+292,36.13685451,13.64791129,burbur el fogara,El Quresha
+293,36.15833,13.80129,cambo dajo,El Quresha
+294,36.20171,13.74902,daw gendeebah,El Quresha
+295,36.16539,13.78548,el edreyah,El Quresha
+296,35.84347015,13.70381874,el galah,El Quresha
+297,35.81346549,13.71648839,el galah el donky,El Quresha
+298,35.92668223,13.71578486,el goreeshah,El Quresha
+299,35.83501,13.90245,eltamargoo,El Quresha
+300,36.24924,13.68466,gazeerat el dabey,El Quresha
+301,36.14117796,13.62830992,jabal gana,El Quresha
+302,35.93396765,13.61671451,kakom,El Quresha
+303,36.1968033,13.59336301,khoor zaraf,El Quresha
+304,36.09393,13.87987,kona gamar,El Quresha
+305,36.08623,13.89109,kona zaburma,El Quresha
+306,36.25834579,13.52448133,marbatah,El Quresha
+307,36.11817,13.72155,mudardamah,El Quresha
+308,36.30809548,13.58049216,muderyeah al jika ,El Quresha
+309,36.24073621,13.51726927,mushra  el neel,El Quresha
+310,36.10991,13.85809,sefawa,El Quresha
+311,36.16291,13.78623,sharboob gareb,El Quresha
+312,36.16539,13.78548,sharboob shareg,El Quresha
+313,35.86764016,13.74613,shuayb,El Quresha
+314,36.09368328,13.62289744,tabarak allah,El Quresha
+315,36.28884,13.61825,el tybar,El Quresha
+316,36.22887,13.71619,um gezaz gareb,El Quresha
+317,36.22887,13.71619,um gezaz shareg,El Quresha
+318,36.22050806,13.5262717,um tawakal,El Quresha
+319,36.27707,13.66702,wad aarood,El Quresha
+320,36.09686013,13.67998119,wad harrey,El Quresha
+321,36.28278193,13.54616691,wad kawley,El Quresha
+322,35.93887721,13.75697702,wad yusuf,El Quresha
+323,36.161065,13.483187,birkt Norein,El Quresha
+324,36.171622,13.500855,Edd elforsan,El Quresha
+325,36.297159,13.605669,Al Asirra,El Quresha
+326,36.168999,13.5556,Saraf Aradeiba,El Quresha
+327,36.032058,13.948944,madina4,El Quresha
+328,35.912506,13.876911,madina5,El Quresha
+329,34.52976,13.58771,abu digin,EL Rahad
+330,34.91524,13.13585,abu nahal shareg,EL Rahad
+331,34.95217,13.0612,abu tarboosh,EL Rahad
+332,34.84899,13.18513,alban jadeed(EL Rahad),EL Rahad
+333,35.0668,12.91629,ali babeker,EL Rahad
+334,34.76577,13.34612,anjameenah,EL Rahad
+335,34.93396,13.10542,bazora ,EL Rahad
+336,34.6027,13.41739,helat beilo,EL Rahad
+337,34.99415,13.0812,cambo ibeed,EL Rahad
+338,34.53789,13.47701,dabanga,EL Rahad
+339,34.60416,13.44269,dankola,EL Rahad
+340,35.01722,13.10837,dar el radi,EL Rahad
+341,35.15248,12.889,dar el salam,EL Rahad
+342,34.52861,13.48044,deel abeh,EL Rahad
+343,34.65226,13.36944,dorah,EL Rahad
+344,34.64166,13.4001,el amarah(El Rahad) near El hawata,EL Rahad
+345,34.83688,13.19744,el amereyah,EL Rahad
+346,34.72499,13.26128,el baboon,EL Rahad
+347,35.01953,12.97524,el dareesah,EL Rahad
+348,34.55205,13.59348,el engaz,EL Rahad
+349,34.79685,13.20509,el geregreeb,EL Rahad
+350,35.07637,12.90813,el hano el azrag shareg,EL Rahad
+351,35.07275,12.90151,el hano el azrag gareb,EL Rahad
+352,35.12497,12.9053,el hano el sheteeb,EL Rahad
+353,35.10898,12.90151,el jamam gareb,EL Rahad
+354,35.10569,12.91656,el jamam shareg,EL Rahad
+355,35.21105,12.82713,el khayrat(EL Rahad),EL Rahad
+356,34.5221,13.49046,el kofah,EL Rahad
+357,35.00843,12.90837,el rumeelah,EL Rahad
+358,34.68026,13.3288,el seysabanah,EL Rahad
+359,34.82122,13.23012,el shamam,EL Rahad
+360,34.94655,13.10353,el toob el ahmar,EL Rahad
+361,34.67076,13.36731,el yas,EL Rahad
+362,34.56784,13.47765,Gargosha,EL Rahad
+363,34.97946,13.00225,gadoorah shareg,EL Rahad
+364,34.96588,13.00311,gadorah gareb,EL Rahad
+365,34.98491,13.17756,gala el bagar,EL Rahad
+366,34.80984,13.65308,gemi,EL Rahad
+367,34.62741,13.3868,garmey,EL Rahad
+368,34.76107,13.26645,garyat abdulateef,EL Rahad
+369,34.42067,13.71695,hanan,EL Rahad
+370,34.66488,13.37887,hilat ali (near El hawata),El Rahad
+371,34.89799,13.14066,hilat ali (near Wad Miskeen),El Rahad
+372,34.6061,13.45023,hilat burbur,EL Rahad
+373,34.65299,13.39424,hilat el khalifah bazora,EL Rahad
+374,34.58146,13.44333,hilat gasim,EL Rahad
+375,35.06021,12.91509,hilat hashem,EL Rahad
+376,34.95328,13.07193,hilat ishag,EL Rahad
+377,34.90481,13.14884,hilat maren,EL Rahad
+378,34.59968,13.42419,hilat salih,EL Rahad
+379,34.53009,13.60951,hilat yusif,EL Rahad
+380,35.15983,12.8622,iyn el jamal,EL Rahad
+381,34.72041,13.32459,jazeerat fatima,EL Rahad
+382,34.857,13.1821,kamar el basheer,EL Rahad
+383,34.73054,13.28326,kamar salamat,EL Rahad
+384,34.55172,13.47235,kameer,EL Rahad
+385,34.79808,13.23818,kamel nomak,EL Rahad
+386,35.13247,12.9011,kashm el batah,EL Rahad
+387,34.67497,13.38236,kunah,EL Rahad
+388,34.56376,13.46888,malalah,EL Rahad
+389,34.9441,13.07575,marsela,EL Rahad
+390,34.95463,13.08558,mushra koka,EL Rahad
+391,34.69553,13.33691,mykankah,EL Rahad
+392,34.5235,13.61813513,NA,EL Rahad
+393,35.15048,12.8803,nor el madeenah,EL Rahad
+394,34.5178,13.51558,oshara garib,EL Rahad
+395,34.93343,13.08771,rofa,EL Rahad
+396,35.03004266,13.01197599,rumbeek(eldressa),EL Rahad
+397,34.49891,13.42035,salatena,EL Rahad
+398,35.04779,12.93621,sanger,EL Rahad
+399,34.54081,13.45511,sarkal tomah,EL Rahad
+400,34.68169,13.34562,sharmah,EL Rahad
+401,34.91661,13.10312,tawakalna,EL Rahad
+402,34.91239,13.10059,taybah(El Rahad),EL Rahad
+403,34.93112,12.96452,um adarah,EL Rahad
+404,35.14595,12.89326,um el kheer,EL Rahad
+405,35.12497,12.88764,um el kheer gareb,EL Rahad
+406,34.52515,13.5045,um hijeleejah,EL Rahad
+407,35.16264,12.87526,um kakar gareb,EL Rahad
+408,34.86882,13.17534,um rakooba(El Rahad),EL Rahad
+409,35.18147,12.84283,um salala gareb,EL Rahad
+410,34.88976,13.03606,um sedrah,EL Rahad
+411,34.60845,13.40016,um teleeh,EL Rahad
+412,34.7449,13.27315,um wadeekah,EL Rahad
+413,34.79953,13.24683,wad abakar,EL Rahad
+414,34.8104,13.19972,wad abu auzaz,EL Rahad
+415,34.83157,13.20848,wad batool,EL Rahad
+416,34.61155,13.3838,wad el shaeir,EL Rahad
+417,34.78001,13.22205,wad gamzon,EL Rahad
+418,34.85894,13.17284,wad hamad,EL Rahad
+419,34.88825,13.14915,wad meskeen,EL Rahad
+420,34.88919,13.16228,Wad meskeen shareg,EL Rahad
+421,34.58967,13.4612,Zama,EL Rahad
+422,34.57215,13.25777,shalaey,EL Rahad
+423,34.16394,13.86227,el meegrah,Middle Qadareef
+424,35.1294,14.05616,abo kashma,Middle Qadareef
+425,34.96707,14.36552,abo sena eldabiy,Middle Qadareef
+426,35.38709,14.08725,add el teen,Middle Qadareef
+427,35.22911,14.05524,allayah,Middle Qadareef
+428,35.29934,14.13083,azaza el matar,Middle Qadareef
+429,34.87637,13.94323,cambo 4,Middle Qadareef
+430,34.8693,13.85405,cambo 7,Middle Qadareef
+431,34.78454,13.92528,cambo 5,Middle Qadareef
+432,35.43116,14.02312,dalasah  abo anja,Middle Qadareef
+433,35.44339,14.01562,dalasah el shawarab,Middle Qadareef
+434,35.43228,14.01829,dalasah el umdah,Middle Qadareef
+435,35.42535,14.03407,dalasah elarakeyeen,Middle Qadareef
+436,35.61343,14.16642,dar el zain,Middle Qadareef
+437,35.50452,14.076,el agal,Middle Qadareef
+438,34.55808,14.0485,el agleen,Middle Qadareef
+439,35.46347,14.03896,el amarah wasat,Middle Qadareef
+440,34.92644,13.87747,el geleea el bargo,Middle Qadareef
+441,34.84674,13.87328,el geraa 1,Middle Qadareef
+442,34.81717,13.87051,el gerag 3,Middle Qadareef
+443,34.8231,13.87061,el gerag 2,Middle Qadareef
+444,35.40672,14.15552,el hajokat,Middle Qadareef
+445,35.46277,14.08183,el horrya,Middle Qadareef
+446,35.4756,14.07845,el hosenat,Middle Qadareef
+447,34.71294,14.1005,el kadada,Middle Qadareef
+448,35.3292,14.22279,el karadees,Middle Qadareef
+449,35.57509,14.19502,el rawashda,Middle Qadareef
+450,35.50456,14.04163,el sharafah,Middle Qadareef
+451,35.47317,14.05725,el shemeylyab,Middle Qadareef
+452,34.98886,14.02627,gadambleeya el jabal,Middle Qadareef
+453,35.00468,14.01723,gadambleeya shareg (trfa),Middle Qadareef
+454,35.4412,13.99591,gebeesha,Middle Qadareef
+455,34.9223,13.90457,gela gareb,Middle Qadareef
+456,34.92715,13.90506,gelaa shareg,Middle Qadareef
+457,35.36122,13.96279,gereeganah(Middle Qadareef),Middle Qadareef
+458,35.55073,14.06959,helat hassan,Middle Qadareef
+459,34.57076,14.05096,hellat el gawasma,Middle Qadareef
+460,35.36982,14.08766,hellat sheekh ali,Middle Qadareef
+461,34.79261,13.92654,kambo kh,Middle Qadareef
+462,34.54635,14.01204,khanbo,Middle Qadareef
+463,35.17597,14.10402,kilo 6,Middle Qadareef
+464,35.29667,14.61975,meela,Middle Qadareef
+465,34.58676,14.04965,megreh el sug,Middle Qadareef
+466,34.59695,14.04192,megreh mushammer,Middle Qadareef
+467,35.430907,14.0809,rufaah,Middle Qadareef
+468,34.67981,14.41966,suki el norab,Middle Qadareef
+469,34.68814,14.41395,suki el sadgab,Middle Qadareef
+470,34.65238,14.41083,suki el semarab,Middle Qadareef
+471,35.30176,13.97515,tajamua abo el naja,Middle Qadareef
+472,34.93112,13.96452,um adarah,Middle Qadareef
+473,35.41978,14.13215,um gewaied,Middle Qadareef
+474,35.28086,14.0736,um goulja,Middle Qadareef
+475,35.29271,14.05305,um hejaleeja,Middle Qadareef
+476,35.27711,14.17691,um khangar el donki,Middle Qadareef
+477,35.30662,14.14853,um khangar el madrasa,Middle Qadareef
+478,35.36276,14.11502,um seneabra,Middle Qadareef
+479,35.46964,14.09745,um shagara,Middle Qadareef
+480,35.47228,14.02539,um shedeera,Middle Qadareef
+481,35.06142,14.26105,um shoraba elmusalameeyah,Middle Qadareef
+482,35.0234,14.25551,um shorabah elarakeyeen,Middle Qadareef
+483,34.69026,14.1625,ummat remala ganoob,Middle Qadareef
+484,34.68928,14.17711,ummat remala shamal,Middle Qadareef
+485,34.56773,14.04076,wad el ahmar,Middle Qadareef
+486,34.59035,14.03226,wad el reef,Middle Qadareef
+487,35.50686,14.05096,wad el sayed,Middle Qadareef
+488,35.54306,14.21317,wad ennayer,Middle Qadareef
+489,35.50272,14.2465,wad kaboo,Middle Qadareef
+490,35.42985,14.00166,wad sanad,Middle Qadareef
+491,35.45405,14.22899,wad shaboot,Middle Qadareef
+492,35.42804,14.00298,wad omer,Middle Qadareef
+493,35.32067,14.0099,wad wadeedah(Middle Qadareef),Middle Qadareef
+494,34.93346,13.59779,abu ranjah,Qala  El Nahal
+495,35.46367,12.98054,abu sabeeka,Qala  El Nahal
+496,35.17012,13.45895,abu sharaan,Qala  El Nahal
+497,34.91183,13.43108,ban,Qala  El Nahal
+498,34.98743,13.4294,beyah,Qala  El Nahal
+499,34.95139,13.375,bulos,Qala  El Nahal
+500,34.95566,13.4825,el agar,Qala  El Nahal
+501,34.89075,13.67277,el amara kenana,Qala  El Nahal
+502,34.85423,13.28765,el asama,Qala  El Nahal
+503,34.99538,13.44545,el bydaa,Qala  El Nahal
+504,35.00865,13.27526,el dangrar,Qala  El Nahal
+505,35.1095,13.25624,el dehemaa,Qala  El Nahal
+506,34.80989,13.61083,el fereekh,Qala  El Nahal
+507,34.85072,13.30992,el fordoos (el marafaa),Qala  El Nahal
+508,34.80693,13.55938,el ireed,Qala  El Nahal
+509,35.00698,13.73258,el kewasher,Qala  El Nahal
+510,35.36151,13.01485,el kheyran,Qala  El Nahal
+511,34.84568,13.68476,el majg,Qala  El Nahal
+512,35.35139,13.02921,el mashrooa el kanadi,Qala  El Nahal
+513,35.04771,13.76816,el matenah,Qala  El Nahal
+514,35.09716,13.27881,el outash,Qala  El Nahal
+515,34.74725,13.48895,el rahmaneeyah,Qala  El Nahal
+516,35.10765,13.79489,el remylah,Qala  El Nahal
+517,35.0276,13.23498,el zarzoor,Qala  El Nahal
+518,35.11271,13.48876,garam,Qala  El Nahal
+519,34.78428,13.52586,gerean,Qala  El Nahal
+520,35.00882,13.64654,hafeer el jeer,Qala  El Nahal
+521,34.99369,13.36059,heweyj,Qala  El Nahal
+522,34.98323,13.50836,kambroos,Qala  El Nahal
+523,34.81377,13.60182,kartoot,Qala  El Nahal
+524,35.3369,13.15466,khor el sheheet,Qala  El Nahal
+525,34.90601,13.40927,magadeet,Qala  El Nahal
+526,35.15235,13.40541,salmeen shareg,Qala  El Nahal
+527,35.13126,13.38397,salmeen wasat,Qala  El Nahal
+528,35.24188,13.1954,samsam el hayaah,Qala  El Nahal
+529,35.20594,13.18842,samsam gujah,Qala  El Nahal
+530,35.1949,13.15999,samsam ramadan,Qala  El Nahal
+531,34.85273,13.27864,suraj,Qala  El Nahal
+532,35.4031,13.20443,um adaarah(Qala  El Nahal),Qala  El Nahal
+533,34.96307,13.26987,um buroosh gareb,Qala  El Nahal
+534,34.97749,13.26977,um buroosh shareg,Qala  El Nahal
+535,34.69583,13.48895,um masan,Qala  El Nahal
+536,35.06802,13.32615,um sagata,Qala  El Nahal
+537,34.8138,13.33099,wad shkeen,Qala  El Nahal
+538,34.83031,13.65483,wad shoosh,Qala  El Nahal
+539,34.93095,13.50496,wadi el naeem,Qala  El Nahal
+540,35.04456,13.78763,ali jada,Qala  El Nahal
+541,35.04239,13.79333,helat el yass,Qala  El Nahal
+542,35.04845,13.79457,helat idrees,Qala  El Nahal
+543,35.124179,13.383304,salmeen garep,Qala  El Nahal
+544,35.5659,12.73648,abeed,Western EL Qalabat
+545,35.2375,12.78842,afrosh tobak,Western EL Qalabat
+546,35.48826,12.73489,aradeabt hassan korsi,Western EL Qalabat
+547,35.26709,12.81308,aradeebat el tejany,Western EL Qalabat
+548,35.22675,12.83265,bandegew,Western EL Qalabat
+549,35.39047,12.74484,dar el salam (west Galabat),Western EL Qalabat
+550,35.48197,12.73596,el azazah elbedah,Western EL Qalabat
+551,35.34175,12.75109,el daleeb,Western EL Qalabat
+552,35.31488,12.77617,el iebeek,Western EL Qalabat
+553,35.28041,12.79319,el rogab,Western EL Qalabat
+554,35.32841,12.76292,helat ieesa,Western EL Qalabat
+555,35.45308,12.7369,kakamutah,Western EL Qalabat
+556,35.47026,12.7383,karsh el feel,Western EL Qalabat
+557,35.36569,12.73998,khashm el battah,Western EL Qalabat
+558,35.16067,12.88439,tabaldeyat jezam,Western EL Qalabat
+559,35.55131,12.73648,um dakeen,Western EL Qalabat
+560,35.42197,12.73116,um hujarah,Western EL Qalabat
+561,35.16067,12.86666,um kakar,Western EL Qalabat
+562,35.17594,12.85043,um salalaa,Western EL Qalabat
+563,35.53583,13.0247,alban jadeed el amarah,Western EL Qalabat
+564,35.32153,13.42289,helat gadeed,Western EL Qalabat
+565,35.3222,13.42376,helat jadeed2,Western EL Qalabat
+566,35.28553,13.89419,abu areef,Western EL Qalabat
+567,35.14254,13.88936,abu marwah,Western EL Qalabat
+568,35.42064,13.91085,ambasah,Western EL Qalabat
+569,35.42175,13.88732,assar aradeebah,Western EL Qalabat
+570,35.41942,13.88078,assar el kamar,Western EL Qalabat
+571,35.42022,13.87287,assar wad el ameen,Western EL Qalabat
+572,35.39145,13.95322,banat,Western EL Qalabat
+573,35.03483,13.78568,damagdam,Western EL Qalabat
+574,35.23215,13.71235,el azaza sugoorah,Western EL Qalabat
+575,35.08386,13.89136,el domat,Western EL Qalabat
+576,35.35527,13.92702,el geleeah,Western EL Qalabat
+577,35.12209,13.64917,el gonguleesah,Western EL Qalabat
+578,35.28854,13.90942,el janah barah,Western EL Qalabat
+579,35.225,13.88109,el kamadeeb ,Western EL Qalabat
+580,35.38913,13.94355,el kanarah,Western EL Qalabat
+581,35.43741,13.92596,el kanz,Western EL Qalabat
+582,35.44143,13.72541,el mahal,Western EL Qalabat
+583,35.50307,13.89139,el mudardamah,Western EL Qalabat
+584,35.17611,13.8633,el radeef,Western EL Qalabat
+585,35.40747,13.59343,el sabaat,Western EL Qalabat
+586,35.36534,13.93463,el sarraf ,Western EL Qalabat
+587,35.44487,13.90445,el sereefah,Western EL Qalabat
+588,35.28613,13.92404,el sufarah,Western EL Qalabat
+589,35.34471,13.32591,habeela(WG),Western EL Qalabat
+590,35.46242,13.92289,hemeleyah tagaly,Western EL Qalabat
+591,35.45581,13.94695,hemelyah hamaray,Western EL Qalabat
+592,35.44932,13.92596,hemelyah kara,Western EL Qalabat
+593,35.45591,13.94121,hemelyah karkawh,Western EL Qalabat
+594,35.45441,13.84939,jenan,Western EL Qalabat
+595,35.3809,13.88983,kerew,Western EL Qalabat
+596,35.35919,13.92451,kandawah,Western EL Qalabat
+597,35.37441,13.7249,khor seror,Western EL Qalabat
+598,35.40456,13.89977,kojra,Western EL Qalabat
+599,35.40858,13.90515,kojra el daraweesh,Western EL Qalabat
+600,35.43005,13.82293,kom shetaa,Western EL Qalabat
+601,35.54787,13.66418,saboni,Western EL Qalabat
+602,35.23434,13.56359,saburna,Western EL Qalabat
+603,35.26699,13.84197,saseeb,Western EL Qalabat
+604,35.57623,13.85194,shasheena el basabeer,Western EL Qalabat
+605,35.5857,13.86275,shasheena wasat,Western EL Qalabat
+606,35.59506,13.87346,shashena el sabtab,Western EL Qalabat
+607,35.47624,13.58941,tagali,Western EL Qalabat
+608,35.2317,13.8065,taybah el lahaween,Western EL Qalabat
+609,35.22311,13.9799,turayah el beer,Western EL Qalabat
+610,35.24407,13.99,turayah el doonky,Western EL Qalabat
+611,35.33467,13.48347,um beleel shemal,Western EL Qalabat
+612,35.21223,13.94983,um shegerat,Western EL Qalabat
+613,35.66824,13.79677,um thawani,Western EL Qalabat
+614,35.42197,13.86881,wad abo assal el jadeedah,Western EL Qalabat
+615,35.53085,13.81267,wad abu asal,Western EL Qalabat
+616,35.37347,13.86096,wad daeef,Western EL Qalabat
+617,35.42113,13.80014,wad el halangi,Western EL Qalabat
+618,35.40899,13.87738,wad el sanoosy,Western EL Qalabat
+619,35.36282,13.90361,wad kabroos,Western EL Qalabat
+620,35.17705,13.50227,wad wadeedah,Western EL Qalabat
+621,35.35865,13.92463,zahanah,Western EL Qalabat
+622,35.49067,13.72098,zerega el beer,Western EL Qalabat
+623,35.51508,13.68767,zerega el donky,Western EL Qalabat
+624,35.2333,13.9167,Wad al huri,Western EL Qalabat
+625,35.25,13.4167,wadfartog,Western EL Qalabat
