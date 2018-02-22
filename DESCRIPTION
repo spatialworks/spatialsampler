@@ -23,3 +23,4 @@ Imports: gstat,
     rgeos,
     rgdal,
     raster
+RoxygenNote: 6.0.1
