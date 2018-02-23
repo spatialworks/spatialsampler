@@ -4,23 +4,25 @@
 #'
 #' Function to select nearest community to a given sampling location
 #'
-#' @param data An input data frame of village/community locations with at least
-#'     information on longitude and latitude coordinates. This argument is
-#'     optional. If provided, must specify \code{x} and \code{y} parameters to
-#'     identify columns in data for longitude and latitude information
+#' @param input A matrix or data frame of input sampling locations to which nearest
+#'     village locations are to be matched. Data frame should contain at least
+#'     information on longitude and latitude coordinates. Currently, the default
+#'     expected \code{input} is that of an object of class \code{SpatialPoints}
+#'     produced by \code{grid_hexagon()} with longitude and latitude data named
+#'     \code{x} and \code{y} respectively
+#' @param query A data frame of village/community locations with at least
+#'     information on longitude and latitude coordinates from which to query for
+#'     nearest point. This argument is optional. If provided, must specify \code{x}
+#'     and \code{y} parameters to identify columns in \code{query} for longitude
+#'     and latitude information
 #' @param x A numeric vector providing longitude of village/community locations
-#'     (default). If \code{data} is specified, \code{x} must be a character value
-#'     specifying the variable name in \code{data} holding the longitude
+#'     (default). If \code{query} is specified, \code{x} must be a character value
+#'     specifying the variable name in \code{query} holding the longitude
 #'     information of the village/community locations
 #' @param y A numeric vector providing latitude of village/community locations
 #'     (default). If \code{data} is specified, \code{y} must be a character value
 #'     specifying the variable name in \code{data} holding the latitude
 #'     information of the village/community locations
-#' @param query A query matrix of sampling locations with at least information
-#'     on longitude and latitude coordinates. Currently, the default expected
-#'     \code{query} is that of an object of class \code{SpatialPoints} produced
-#'     by \code{spsample()} in the \code{gstat} package with longitude and
-#'     latitude data found at second and third columns
 #'
 #' @return A data frame of selected nearest sampling village/community locations
 #'
@@ -34,18 +36,48 @@
 #
 ################################################################################
 
-get_nearest_point <- function(data, x, y, query) {
+get_nearest_point <- function(input,
+                              x, y,
+                              query) {
   #
   # Create concatenating object
   #
   near.point <- NULL
   #
+  # Check if data is NULL
+  #
+  if(is.null(input)) {
+    #
+    # Check that x and y are numeric
+    #
+    if(class(x) != "numeric" | class(y) != "numeric") {
+      stop("x and/or y is not numeric. If input is not provided, x and y should be numeric. Try again")
+    }
+    #
+    # Cycle through rows of data
+    #
+    for(i in 1:length(x)) {
+
+      near.point1 <- Imap::gdist(input$x[i], input$y[i], x, y,
+                                 units = "km")
+
+      near.point2 <-  c(y$id[which(near.point1 == min(near.point1))],
+                        y$x[which(near.point1 == min(near.point1))],
+                        y$y[which(near.point1 == min(near.point1))],
+                        y$village[which(near.point1 == min(near.point1))],
+                        y$locality[which(near.point1 == min(near.point1))],
+                        min(near.point1))
+
+      near.point <- rbind(near.point, near.point2)
+    }
+  }
+  #
   #
   #
   for(i in 1:length(data)) {
 
-    near.point1 <- gdist(x$x[i], x$y[i], y[,2], y[,3],
-                         units = "km", a = 6378137.0, b = 6356752.3142)
+    near.point1 <- Imap::gdist(data$x[i], x$y[i], y[,2], y[,3],
+                               units = "km")
 
     near.point2 <-  c(y$id[which(near.point1 == min(near.point1))],
                       y$x[which(near.point1 == min(near.point1))],
