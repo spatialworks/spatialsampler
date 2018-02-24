@@ -18,7 +18,8 @@
 #'     holding the longitude information of the village/community locations
 #' @param y2 A character value specifying the variable name in \code{query}
 #'     holding the latitude information of the village/community locations
-#' @param n Number of nearest village/community locations to select
+#' @param n Number of nearest village/community locations to select. Default
+#'     is 1.
 #'
 #' @return A data frame of selected nearest sampling village/community locations
 #'
@@ -44,7 +45,7 @@ get_nearest_point <- function(input,
   #
   # Check that x1, y1, x2, y2 are character
   #
-  if(x1 != "character" | y1 != "character" | x2 != "character" | y2 != "character") {
+  if(class(x1) != "character" | class(y1) != "character" | class(x2) != "character" | class(y2) != "character") {
     stop("x1 and/or y1 and/or x2 and/or y2 is/are not character. Try again")
     }
   #
@@ -62,7 +63,11 @@ get_nearest_point <- function(input,
       #
       # Get distance between current sampling point and current village
       #
-      dist <- tail(Imap::gdist(x1[i], y1[i], x2[j], y2[j], units = "km"), n)
+      dist <- Imap::gdist(input[ , x1][i],
+                          input[ , y1][i],
+                          query[ , x2][j],
+                          query[ , y2][j],
+                          units = "km")
       #
       #
       #
@@ -71,10 +76,18 @@ get_nearest_point <- function(input,
     #
     # Find the village nearest to the sampling point
     #
-    near.point2 <- query[which(near.point1 == min(near.point1)), ]
+    near.point2 <- query[which(near.point1 %in% tail(sort(x = near.point1, decreasing = TRUE), n = n)), ]
+    #
+    # Add sampling point id
+    #
+    near.point2 <- data.frame("spid" = rep(i, n), near.point2)
     #
     # Concatenate villages
     #
     near.point <- data.frame(rbind(near.point, near.point2))
   }
+  #
+  # Return output
+  #
+  return(near.point)
 }
