@@ -95,6 +95,12 @@ get_nearest_point <- function(input,
     near.point <- data.frame(rbind(near.point, near.point2))
   }
   #
+  # Check of remove duplicates
+  #
+  #
+  if(duplicate == FALSE) {
+
+  }
   # Return output
   #
   return(near.point)
