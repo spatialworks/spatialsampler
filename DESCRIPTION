@@ -1,5 +1,5 @@
 Package: s3m
-Type: package
+Type: Package
 Title: An implementation of the Simple Spatial Sampling Method (S3M) in R
 Version: 0.1.0
 Authors@R: c(
@@ -15,12 +15,13 @@ Description: The Simple Spatial Survey Method (S3M) was developed from the
     using a spatial sample design that selected communities located closest to 
     the centroids of a hexagonal grid laid over the survey area. The resulting 
     sample is a triangular irregular network.
-License: AGPL-3
-Encoding: UTF-8
-LazyData: true
+Depends: R (>= 2.10)
 Imports: gstat,
     Imap,
     rgeos,
     rgdal,
     raster
+License: AGPL-3
+Encoding: UTF-8
+LazyData: true
 RoxygenNote: 6.0.1
