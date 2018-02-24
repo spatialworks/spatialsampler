@@ -14,6 +14,8 @@
 #' @docType package
 #' @name s3m
 #' @importFrom utils tail
+#' @importFrom graphics polygon
+#' @importFrom stats quantile
 #
 ################################################################################
 NULL
