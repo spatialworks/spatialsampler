@@ -37,7 +37,12 @@ A data frame of selected nearest sampling village/community locations
 Function to select nearest community to a given sampling location
 }
 \examples{
-#
+# Use get_nearest_point with test sampling points in Sennar
+sennar <- subset(sudan01, STATE == "Sennar")
+samp.points <- spsample(sennar, type = "hexagonal", n = 20)
+get_nearest_point(input = samp.points@coords, x1 = "x", y1 = "y",
+                  query = sennar_villages, x2 = "x", y2 = "y",
+                  n = 3)
 
 }
 \author{
