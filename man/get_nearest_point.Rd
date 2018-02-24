@@ -15,7 +15,7 @@ information on longitude and latitude coordinates}
 holding the longitude information of the sampling locations}
 
 \item{y1}{A character value specifying the variable name in \code{input}
-holding the latitude information of the village/community locations}
+holding the latitude information of the sampling locations}
 
 \item{query}{A data frame of village/community locations with at least
 information on longitude and latitude coordinates from which to query for
