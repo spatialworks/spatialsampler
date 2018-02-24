@@ -27,8 +27,8 @@
 #'
 #' @examples
 #' # Use get_nearest_point with test sampling points in Sennar
-#' sennar <- sudan01[sudan01@data$STATE == "Sennar", ]
-#' samp.points <- sp::spsample(sennar, type = "hexagonal", n = 20)
+#' sennar <- subset(sudan01, STATE == "Sennar")
+#' samp.points <- spsample(sennar, type = "hexagonal", n = 20)
 #' get_nearest_point(input = samp.points@coords, x1 = "x", y1 = "y",
 #'                   query = sennar_villages, x2 = "x", y2 = "y",
 #'                   n = 3)
