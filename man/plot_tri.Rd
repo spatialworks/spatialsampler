@@ -4,7 +4,7 @@
 \alias{plot_tri}
 \title{plot_tri}
 \usage{
-plot_tri(x, border, qTSL)
+plot_tri(x, border = "black", qTSL = 0.975)
 }
 \arguments{
 \item{x}{A SpatialPolygonsDataFrame object of \code{Delaunay triangulation}

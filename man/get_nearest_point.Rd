@@ -4,12 +4,12 @@
 \alias{get_nearest_point}
 \title{get_nearest_point}
 \usage{
-get_nearest_point(input, x1, y1, query, x2, y2, n = 1)
+get_nearest_point(input, x1, y1, query, x2, y2, n = 1, duplicate = FALSE)
 }
 \arguments{
 \item{input}{A matrix or data frame of input sampling locations to which nearest
 village locations are to be matched. Data frame should contain at least
-information on longitude and latitude coordinates.}
+information on longitude and latitude coordinates}
 
 \item{x1}{A character value specifying the variable name in \code{input}
 holding the longitude information of the sampling locations}
@@ -19,7 +19,7 @@ holding the latitude information of the village/community locations}
 
 \item{query}{A data frame of village/community locations with at least
 information on longitude and latitude coordinates from which to query for
-nearest point.}
+nearest point}
 
 \item{x2}{A character value specifying the variable name in \code{query}
 holding the longitude information of the village/community locations}
@@ -28,7 +28,10 @@ holding the longitude information of the village/community locations}
 holding the latitude information of the village/community locations}
 
 \item{n}{Number of nearest village/community locations to select. Default
-is 1.}
+is 1}
+
+\item{duplicate}{Logical. If TRUE, keep duplicate samples. If FALSE, remove
+duplicate samples.}
 }
 \value{
 A data frame of selected nearest sampling village/community locations
