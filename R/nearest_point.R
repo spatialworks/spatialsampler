@@ -6,20 +6,22 @@
 #'
 #' @param input A matrix or data frame of input sampling locations to which nearest
 #'     village locations are to be matched. Data frame should contain at least
-#'     information on longitude and latitude coordinates.
+#'     information on longitude and latitude coordinates
 #' @param x1 A character value specifying the variable name in \code{input}
 #'     holding the longitude information of the sampling locations
 #' @param y1 A character value specifying the variable name in \code{input}
 #'     holding the latitude information of the village/community locations
 #' @param query A data frame of village/community locations with at least
 #'     information on longitude and latitude coordinates from which to query for
-#'     nearest point.
+#'     nearest point
 #' @param x2 A character value specifying the variable name in \code{query}
 #'     holding the longitude information of the village/community locations
 #' @param y2 A character value specifying the variable name in \code{query}
 #'     holding the latitude information of the village/community locations
 #' @param n Number of nearest village/community locations to select. Default
-#'     is 1.
+#'     is 1
+#' @param duplicate Logical. If TRUE, keep duplicate samples. If FALSE, remove
+#'     duplicate samples.
 #'
 #' @return A data frame of selected nearest sampling village/community locations
 #'
@@ -42,7 +44,8 @@ get_nearest_point <- function(input,
                               x1, y1,
                               query,
                               x2, y2,
-                              n = 1) {
+                              n = 1,
+                              duplicate = FALSE) {
   #
   # Create concatenating object
   #
