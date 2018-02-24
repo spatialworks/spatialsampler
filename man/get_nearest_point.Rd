@@ -27,7 +27,8 @@ holding the longitude information of the village/community locations}
 \item{y2}{A character value specifying the variable name in \code{query}
 holding the latitude information of the village/community locations}
 
-\item{n}{Number of nearest village/community locations to select}
+\item{n}{Number of nearest village/community locations to select. Default
+is 1.}
 }
 \value{
 A data frame of selected nearest sampling village/community locations
