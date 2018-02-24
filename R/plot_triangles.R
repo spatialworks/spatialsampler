@@ -21,7 +21,7 @@
 #
 ################################################################################
 
-plot_tri <- function(x, border, qTSL) {
+plot_tri <- function(x, border = "black", qTSL = 0.975) {
   #
   # Create concatenating object
   #
@@ -62,9 +62,9 @@ plot_tri <- function(x, border, qTSL) {
   #
   # Determine which sides to drop
   #
-  out <- ifelse(distDF[,1] >= quantile(distDF, probs = qTSL), 1,
-           ifelse(distDF[,2] >= quantile(distDF, probs = qTSL), 1,
-             ifelse(distDF[,3] >= quantile(distDF, probs = qTSL), 1, 0)))
+  out <- ifelse(distDF[,1] >= quantile(distDF[ , 1], probs = qTSL), 1,
+           ifelse(distDF[,2] >= quantile(distDF[ , 2], probs = qTSL), 1,
+             ifelse(distDF[,3] >= quantile(distDF[ , 3], probs = qTSL), 1, 0)))
   #
   # Cycle through the sides of the triangles
   #
