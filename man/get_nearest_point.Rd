@@ -4,29 +4,30 @@
 \alias{get_nearest_point}
 \title{get_nearest_point}
 \usage{
-get_nearest_point(data, x, y, query)
+get_nearest_point(input, x1, y1, query, x2, y2, n = 1)
 }
 \arguments{
-\item{data}{An input data frame of village/community locations with at least
-information on longitude and latitude coordinates. This argument is
-optional. If provided, must specify \code{x} and \code{y} parameters to
-identify columns in data for longitude and latitude information}
+\item{input}{A matrix or data frame of input sampling locations to which nearest
+village locations are to be matched. Data frame should contain at least
+information on longitude and latitude coordinates.}
 
-\item{x}{A numeric vector providing longitude of village/community locations
-(default). If \code{data} is specified, \code{x} must be a character value
-specifying the variable name in \code{data} holding the longitude
-information of the village/community locations}
+\item{x1}{A character value specifying the variable name in \code{input}
+holding the longitude information of the sampling locations}
 
-\item{y}{A numeric vector providing latitude of village/community locations
-(default). If \code{data} is specified, \code{y} must be a character value
-specifying the variable name in \code{data} holding the latitude
-information of the village/community locations}
+\item{y1}{A character value specifying the variable name in \code{input}
+holding the latitude information of the village/community locations}
 
-\item{query}{A query matrix of sampling locations with at least information
-on longitude and latitude coordinates. Currently, the default expected
-\code{query} is that of an object of class \code{SpatialPoints} produced
-by \code{spsample()} in the \code{gstat} package with longitude and
-latitude data found at second and third columns}
+\item{query}{A data frame of village/community locations with at least
+information on longitude and latitude coordinates from which to query for
+nearest point.}
+
+\item{x2}{A character value specifying the variable name in \code{query}
+holding the longitude information of the village/community locations}
+
+\item{y2}{A character value specifying the variable name in \code{query}
+holding the latitude information of the village/community locations}
+
+\item{n}{Number of nearest village/community locations to select}
 }
 \value{
 A data frame of selected nearest sampling village/community locations
