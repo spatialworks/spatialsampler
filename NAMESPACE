@@ -2,6 +2,8 @@
 
 export(get_nearest_point)
 export(plot_tri)
+export(resample_variable)
+importFrom(graphics,identify)
 importFrom(graphics,polygon)
 importFrom(stats,quantile)
 importFrom(utils,tail)
