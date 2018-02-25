@@ -35,7 +35,7 @@ get_tri <- function(input, x, y,
   #
   # Create Delaunay triangulation of input data
   #
-  tri.poly <- rgeos::gDelaunayTriangulation(spgeom = SpatialPoints(coords = input[ , c("x", "y")],
+  tri.poly <- rgeos::gDelaunayTriangulation(spgeom = SpatialPoints(coords = input[ , c(x, y)],
                                                                    proj4string = CRS(crs)))
   #
   # Create concatenating object
@@ -80,12 +80,6 @@ get_tri <- function(input, x, y,
   out <- ifelse(distDF[ , 1] >= quantile(distDF[ , 1], probs = qTSL), FALSE,
            ifelse(distDF[ , 2] >= quantile(distDF[ , 2], probs = qTSL), FALSE,
              ifelse(distDF[ , 3] >= quantile(distDF[ , 3], probs = qTSL), FALSE, TRUE)))
-  #
-  # Cycle through the sides of the triangles
-  #
-  #for(j in which(out == TRUE)) {
-  #  polygon(x@polygons[[j]]@Polygons[[1]]@coords, border = border)
-  #}
   #
   # Get subset of Delaunay triangulation SpatialPolygonsDataFrame
   #

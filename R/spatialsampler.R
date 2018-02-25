@@ -12,10 +12,12 @@
 #' sample is a triangular irregular network.
 #'
 #' @docType package
-#' @name s3m
+#' @name spatialsampler
 #' @importFrom utils tail
 #' @importFrom graphics polygon identify
 #' @importFrom stats quantile
+#' @importFrom rgeos gDelaunayTriangulation
+#' @importFrom Imap gdist
 #'
 #
 ################################################################################
