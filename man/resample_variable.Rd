@@ -5,7 +5,6 @@
 \title{resample_variable}
 \usage{
 resample_variable(sample, x, y, label = seq_along(x), basemap = NULL,
-  points = NULL,
   crs = "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0")
 }
 \arguments{
