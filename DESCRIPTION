@@ -22,7 +22,8 @@ Imports: gstat,
     rgeos,
     rgdal,
     raster,
-    maptools
+    maptools,
+    sp
 License: AGPL-3
 Encoding: UTF-8
 LazyData: true
