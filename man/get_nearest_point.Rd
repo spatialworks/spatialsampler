@@ -37,7 +37,8 @@ duplicate samples.}
 A data frame of selected nearest sampling village/community locations
 }
 \description{
-Function to select nearest community to a given sampling location
+Function to select nearest community to a given sampling point (usually the
+centroid of a square grid for CSAS or of a hexagonal grid for S3M)
 }
 \examples{
 # Use get_nearest_point with test sampling points in Sennar
