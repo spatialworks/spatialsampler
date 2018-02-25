@@ -2,7 +2,8 @@
 #
 #' get_nearest_point
 #'
-#' Function to select nearest community to a given sampling location
+#' Function to select nearest community to a given sampling point (usually the
+#' centroid of a square grid for CSAS or of a hexagonal grid for S3M)
 #'
 #' @param input A matrix or data frame of input sampling locations to which nearest
 #'     village locations are to be matched. Data frame should contain at least
