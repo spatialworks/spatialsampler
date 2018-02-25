@@ -14,11 +14,11 @@
 #' @docType package
 #' @name spatialsampler
 #' @importFrom utils tail
-#' @importFrom graphics polygon identify
+#' @importFrom graphics polygon identify plot points
 #' @importFrom stats quantile
 #' @importFrom rgeos gDelaunayTriangulation
 #' @importFrom Imap gdist
-#'
+#' @importFrom sp SpatialPoints CRS
 #
 ################################################################################
 NULL
