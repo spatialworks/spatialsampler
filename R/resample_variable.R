@@ -23,8 +23,6 @@
 #'
 #' @return NULL
 #'
-#' @author Farah Mohamad Ibrahim <abdu.ff@gmail.com>
-#'
 #' @examples
 #' #
 #'
@@ -38,12 +36,16 @@ resample_variable <- function(sample, x, y, label = seq_along(x),
                               points = NULL,
                               crs = "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0") {
 
+  #plot(basemap)
+  #plot(get_tri(sample, x = x, y = y, crs = crs))
+
   repeat {
     #vil1 <- vil[!(vil$village %in% selPS$village),]
-    #plot(basemap)
+    plot(basemap)
+    #points(query[ , c("x", "y")], pch = 20, col = "blue")
+    plot(get_tri(sample, x = x, y = y, crs = crs), add = TRUE)
     p <- identify(sample[, x], sample[ , y], labels = label, pos = TRUE, n = 3)
 
-    toMOD <- sample[p[[1]], ]
     #toMOD <- data.frame(cbind(vil1$id[p[[1]]],
     #                        vil1$x[p[[1]]],
     #                        vil1$y[p[[1]]],
@@ -57,9 +59,10 @@ resample_variable <- function(sample, x, y, label = seq_along(x),
     #	Stop if no selection is made and stop if chosen from graphic device
     #
 
-    if(is.null(p)) { break }
+    if(length(p) == 0) { break }
 
     else {
+      toMOD <- sample[p[[1]], ]
       sample <- data.frame(rbind(sample, toMOD))
       sample <- sample[!duplicated(sample[ , c("x", "y")]), ]
     }
@@ -69,15 +72,15 @@ resample_variable <- function(sample, x, y, label = seq_along(x),
     #plot(base)
     #plot(loc, border = "black", lwd = 2, add =T)
     #points(SPs, pch = 20, cex = .5, col = "red")
-    points(sample[, c("x", "y")], col = "green", cex = 1, pch = 20)
+    #points(sample[, c("x", "y")], col = "green", cex = 1, pch = 20)
     #selPS.SP = SpatialPoints(cbind(selPS[, 2], selPS[, 3]), proj4string = CRS("+proj=longlat +dataum=WGS84"))
-    p.tri <- rgeos::gDelaunayTriangulation(SpatialPoints(sample[ , c("x", "y")], proj4string = CRS(crs)))
-    plot_tri(x = p.tri, border = "blue", qTSL = 0.975)
+    #p.tri <- rgeos::gDelaunayTriangulation(SpatialPoints(sample[ , c("x", "y")], proj4string = CRS(crs)))
+    #plot_tri(x = p.tri, border = "blue", qTSL = 0.975)
     #points(vil$x, vil$y, pch = 20, cex = .5, col = "black")
 
     #SPs.per.loc <- count.sps(selPS, vil, loc)
     #SPs.per.loc
 
-    #return(p)
+    return(sample)
   }
 }
