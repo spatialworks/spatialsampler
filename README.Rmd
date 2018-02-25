@@ -12,17 +12,17 @@ knitr::opts_chunk$set(
 )
 ```
 
-# s3m
+# spatialsampler
 
-The goal of s3m is to ...
+The goal of `spatialsampler` is to ...
 
 ## Installation
 
-You can install s3m from GitHub with:
+You can install `spatialsampler` from GitHub with:
 
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
-devtools::install_github("validmeasures/s3m")
+devtools::install_github("validmeasures/spatialsampler")
 ```
 
 ## Example
