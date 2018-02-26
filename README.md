@@ -3,6 +3,11 @@
 
 # spatialsampler
 
+[![Travis-CI Build
+Status](https://travis-ci.org/validmeasures/spatialsampler.svg?branch=master)](https://travis-ci.org/validmeasures/spatialsampler)
+[![AppVeyor Build
+Status](https://ci.appveyor.com/api/projects/status/github/validmeasures/spatialsampler?branch=master&svg=true)](https://ci.appveyor.com/project/validmeasures/spatialsampler)
+
 The goal of `spatialsampler` is to …
 
 ## Installation
