@@ -1,6 +1,6 @@
 ################################################################################
 #
-#' resample_variable
+#' vary_density
 #'
 #' Adjust triangulation by by dividing a densely populated triangle into smaller
 #' triangles by adding 3 points at the middle of each side of the triangle
@@ -31,12 +31,12 @@
 #
 ################################################################################
 
-resample_variable <- function(sample, x, y, label = seq_along(x),
-                              basemap = NULL,
-                              crs = "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0") {
-
-  plot(basemap)
-  plot(get_tri(sample, x = x, y = y, crs = crs), add = TRUE)
+vary_density <- function(sample, x, y, label = seq_along(x),
+                         basemap = NULL,
+                         crs = "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0") {
+  dev.new()
+  sp::plot(basemap)
+  sp::plot(get_tri(sample, x = x, y = y, crs = crs), add = TRUE)
   points(sample[, c(x, y)], pch = 20, col = "red")
   selectDF <- NULL
 
@@ -62,7 +62,7 @@ resample_variable <- function(sample, x, y, label = seq_along(x),
     #	Stop if no selection is made and stop if chosen from graphic device
     #
 
-    if(length(p) == 0) { break }
+    if(nrow(selectSP) == 0) { break }
 
     else
 
@@ -80,11 +80,10 @@ resample_variable <- function(sample, x, y, label = seq_along(x),
     #p.tri <- rgeos::gDelaunayTriangulation(SpatialPoints(sample[ , c("x", "y")], proj4string = CRS(crs)))
     #plot_tri(x = p.tri, border = "blue", qTSL = 0.975)
     #points(vil$x, vil$y, pch = 20, cex = .5, col = "black")
-    plot(get_tri(selectDF, x = x, y = y, crs = crs), add = TRUE, border = "black")
+    sp::plot(get_tri(selectDF, x = x, y = y, crs = crs), add = TRUE, border = "black")
     #SPs.per.loc <- count.sps(selPS, vil, loc)
     #SPs.per.loc
 
     return(selectDF)
-    #return(p)
   }
 }

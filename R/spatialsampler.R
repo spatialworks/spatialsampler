@@ -18,7 +18,8 @@
 #' @importFrom stats quantile
 #' @importFrom rgeos gDelaunayTriangulation
 #' @importFrom Imap gdist
-#' @importFrom sp SpatialPoints CRS
+#' @importFrom sp SpatialPoints CRS plot
+#' @importFrom grDevices dev.new
 #
 ################################################################################
 NULL
