@@ -100,3 +100,64 @@ create_doc(data = sudan02,
            description = "A map dataset of class SpatialPolygonsDataFrame of level 2 administrative units (localities) of Sudan",
            varList = varList,
            source = "Sudan Bureau of Statistics and UNICEF Sudan")
+
+################################################################################
+#
+# Turkey level 0 administrative map (National border)
+#
+################################################################################
+
+varList <- c("Name (English)",
+             "Administrative level 0 Code",
+             "Length of Shape",
+             "Area of Shape")
+
+create_doc(data = turkey00,
+           name = "turkey00",
+           description = "A map dataset of class SpatialPolygonsDataFrame of level 0 administrative units (national) of Turkey",
+           varList = varList,
+           source = "General Command of Mapping of Turkey (\\url{http://www.hgk.msb.gov.tr/u-23-turkiye-mulki-idare-sinirlari.html})")
+
+
+################################################################################
+#
+# Turkey level 1 administrative map (provinces)
+#
+################################################################################
+
+varList <- c("Length of Shape",
+             "Area of Shape",
+             "Province name (English)",
+             "Administrative level 0 Code",
+             "Administrative level 1 Code",
+             "Postal Code")
+
+create_doc(data = turkey01,
+           name = "turkey01",
+           description = "A map dataset of class SpatialPolygonsDataFrame of level 1 administrative units (province) of Turkey",
+           varList = varList,
+           source = "General Command of Mapping of Turkey (\\url{http://www.hgk.msb.gov.tr/u-23-turkiye-mulki-idare-sinirlari.html})")
+
+
+################################################################################
+#
+# Turkey level 2 administrative map (districts)
+#
+################################################################################
+
+varList <- c("District Name (English)",
+             "Province Name (English)",
+             "Administrative level 0 Code",
+             "Administrative level 1 Code",
+             "Administrative level 2 Code",
+             "Postal Code",
+             "Length of Shape",
+             "Additional Information",
+             "Length of Shape",
+             "Area of Shape")
+
+create_doc(data = turkey02,
+           name = "turkey02",
+           description = "A map dataset of class SpatialPolygonsDataFrame of level 2 administrative units (district) of Turkey",
+           varList = varList,
+           source = "General Command of Mapping of Turkey (\\url{http://www.hgk.msb.gov.tr/u-23-turkiye-mulki-idare-sinirlari.html})")
