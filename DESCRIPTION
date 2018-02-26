@@ -8,14 +8,13 @@ Authors@R: c(
     person("Farah", "Ibrahim", email = "abud.ff@gmail.com", role = "aut"),
     person("Ernest", "Guevarra", comment = c(ORCID = "0000-0002-4887-4415"), 
            email = "ernestgmd@gmail.com", role = c("aut", "cre")))
-Description: The Simple Spatial Survey Method (S3M) was developed from the
-    Centric Systematic Area Sampling (CSAS) approach used in biodiversity species
-    counting and adapted for use in health and nutrition surveys by Brixton Health
-    and Valid International. S3M is used in surveys designed to be spatially 
-    representative i.e., the sample distributed evenly across the survey area, 
-    using a spatial sample design that selected communities located closest to 
-    the centroids of a hexagonal grid laid over the survey area. The resulting 
-    sample is a triangular irregular network.
+Description: The Centric Systematic Area Sampling (CSAS) and the Simple Spatial 
+    Survey Method (S3M) are spatial sampling methods adapted and used in health 
+    and nutrition surveys by Brixton Health and Valid International. CSAS and 
+    S3M are used in surveys designed to be spatially representative i.e., the 
+    sample distributed evenly across the survey area, using a spatial sample 
+    design that selected communities located closest to the centroids of a 
+    square (for CSAS) or hexagonal (for S3M) grid laid over the survey area.
 Depends: R (>= 2.10)
 Imports: gstat,
     Imap,
