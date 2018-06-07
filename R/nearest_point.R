@@ -98,10 +98,10 @@ get_nearest_point <- function(input,
   #
   # Check of remove duplicates
   #
-  #
   if(duplicate == FALSE) {
     near.point <- near.point[!duplicated(near.point[ , c(x2, y2)]), ]
   }
+  #
   # Return output
   #
   return(near.point)
