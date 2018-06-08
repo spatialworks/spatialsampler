@@ -62,26 +62,10 @@ get_nearest_point <- function(input,
   #
   for(i in 1:nrow(input)) {
     #
-    # Create concatenating vector for distances
+    # Get distance between current sampling point and vector of villages
     #
-    near.point1 <- NULL
-    #
-    # Cycle through rows of query
-    #
-    for(j in 1:nrow(query)) {
-      #
-      # Get distance between current sampling point and current village
-      #
-      dist <- Imap::gdist(input[ , x1][i],
-                          input[ , y1][i],
-                          query[ , x2][j],
-                          query[ , y2][j],
-                          units = "km")
-      #
-      #
-      #
-      near.point1 <- c(near.point1, dist)
-    }
+    near.point1 <- mapply(FUN = gdist, lon.2 = query[ , x2], lat.2 = query[ , y2],
+                          MoreArgs = list(input[i, x1], input[i, y2]))
     #
     # Find the village nearest to the sampling point
     #
