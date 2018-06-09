@@ -6,14 +6,15 @@ warnings_are_errors: true
 sudo: false
 cache: packages
 
+addons:
+   apt:
+     packages:
+       - libgdal-dev
+       - libproj-dev
+
 r_github_packages:
   - r-lib/covr
 
 after_success:
   - Rscript -e 'covr::codecov()'
 
-addons:
-   apt:
-     packages:
-       - libgdal-dev
-       - libproj-dev
