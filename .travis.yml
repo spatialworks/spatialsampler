@@ -6,12 +6,17 @@ warnings_are_errors: true
 sudo: false
 cache: packages
 
+before_install:
+  - sudo add-apt-repository ppa:ubuntugis/ppa
+  - sudo apt-get update
+  - sudo apt-get install gdal-bin
+  - sudo apt-get -y install python-gdal
+
 addons:
    apt:
      packages:
        - libgdal-dev
        - libproj-dev
-       - gdal-bin
 
 r_github_packages:
   - r-lib/covr
