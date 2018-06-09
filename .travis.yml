@@ -15,7 +15,7 @@ cache: packages
 addons:
    apt:
      sources:
-       - ubuntugis/ppa
+       - ubuntugis-ppa
      packages:
        - libgdal-dev
        - libproj-dev
