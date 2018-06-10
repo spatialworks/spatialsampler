@@ -97,3 +97,21 @@
 #
 ################################################################################
 "sudan02"
+
+################################################################################
+#
+#' map_projections
+#'
+#' A dataset of UTM projections
+#'
+#' @format A data.frame with 12 rows and 3 columns:
+#' \describe{
+#' \item{\code{country}}{Name of country}
+#' \item{\code{utm}}{UTM name}
+#' \item{\code{proj}}{A character string specifying UTM projection}
+#' }
+#'
+#
+################################################################################
+"map_projections"
+
