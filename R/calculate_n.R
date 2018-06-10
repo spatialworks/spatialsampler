@@ -42,13 +42,13 @@ calculate_n <- function(x, d = NULL, area = NULL, country) {
   #
   #
   if(!is.null(d)) {
-    n <- ceiling(rgeos::gArea(x.utm) / (calculate_area(d = d)$hex / 1000000))
+    n <- ceiling(rgeos::gArea(x.utm) / (calculate_area(d = d)$hex * 1000000))
   }
   #
   #
   #
   if(!is.null(area)) {
-    n <- ceiling(rgeos::gArea(x.utm) / (area / 1000000))
+    n <- ceiling(rgeos::gArea(x.utm) / (area * 1000000))
   }
   #
   #
