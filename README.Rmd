@@ -23,8 +23,44 @@ knitr::opts_chunk$set(
 
 You can install `spatialsampler` from GitHub with:
 
-```{r gh-installation, eval = FALSE}
+```{r gh-installation, echo = TRUE, eval = FALSE}
 # install.packages("devtools")
 devtools::install_github("validmeasures/spatialsampler")
+library(spatialsampler)
 ```
 
+```{r, echo = FALSE, eval = TRUE}
+devtools::install_github("validmeasures/spatialsampler")
+library(spatialsampler)
+#
+# Create Sennar map and villages object for Sennar villages
+#
+sennar <- subset(spatialsampler::sudan01, STATE == "Sennar")
+villages <- spatialsampler::sennar_villages
+#
+# Estimate how many hexagonal grids will be created for Sennar given a d = 15
+#
+n <- spatialsampler::calculate_n(x = sennar, d = 15, country = "Sudan")
+#
+# Create a sampling grid of Sennar given n
+#
+samp.points <- sp::spsample(sennar, n = n, type = "hexagonal")
+#
+# Create a SpatialPolygons object of hexagon sampling grid
+#
+hex.samp    <- sp::HexPoints2SpatialPolygons(samp.points)
+#
+# Get nearest 1 village from sampling points
+#
+villages.sp <- spatialsampler::get_nearest_point(data = villages, data.x = "x", data.y = "y", query = samp.points, duplicate = FALSE)
+```
+
+```{r, echo = FALSE, eval = TRUE, fig.cap = "Sampling map of Sennar at d = 15 kms", fig.align = "center", fig.pos = "h", fig.width = 10, fig.height = 10, fig.retina = 1}
+raster::plot(sennar, lwd = 1.5)
+points(villages[ , c("x", "y")], pch = 20, cex = 0.7, col = "darkgreen")
+raster::plot(hex.samp, lwd = 1, border = "gray70", add = TRUE)
+raster::plot(samp.points, pch = 1, cex = 1.75, lwd = 2, col = "blue", bg = NA, add = TRUE)
+raster::text(samp.points, labels = 1:nrow(samp.points@coords), cex = 0.6)
+points(villages.sp[ , c("x", "y")], pch = 4, cex = 0.7, col = "red")
+text(villages.sp[ , c("x", "y")], labels = villages.sp$spid, cex = 0.7)
+```
