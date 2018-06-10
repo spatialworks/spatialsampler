@@ -4,14 +4,14 @@
 \alias{calculate_area}
 \title{calculate_area}
 \usage{
-calculate_area(d, digits = 1)
+calculate_area(d, digits = NULL)
 }
 \arguments{
 \item{d}{A numeric value for length (in kilometres) of the maximum distance
 of a village/community from a sampling point.}
 
 \item{digits}{A numeric value specifying the number of digits to round off
-the resulting area size. Default is 1.}
+the resulting area size. Default is NULL}
 }
 \value{
 A data.frame of 1 row and 2 columns. First column is for the area
