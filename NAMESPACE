@@ -2,9 +2,13 @@
 
 export(create_sp_grid)
 export(get_nearest_point)
+export(get_nn)
 export(get_tri)
+export(nearestPoint)
 export(vary_density)
+importFrom(FNN,get.knnx)
 importFrom(Imap,gdist)
+importFrom(geosphere,distGeo)
 importFrom(grDevices,dev.new)
 importFrom(graphics,identify)
 importFrom(graphics,plot)
