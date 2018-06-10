@@ -20,6 +20,8 @@
 #' @importFrom Imap gdist
 #' @importFrom sp SpatialPoints CRS plot
 #' @importFrom grDevices dev.new
+#' @importFrom geosphere distGeo
+#' @importFrom FNN get.knnx
 #
 ################################################################################
 NULL
