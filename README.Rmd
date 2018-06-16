@@ -30,26 +30,11 @@ library(spatialsampler)
 ```
 
 ```{r, echo = FALSE, eval = TRUE}
-#
-# Create Sennar map and villages object for Sennar villages
-#
 sennar <- subset(spatialsampler::sudan01, STATE == "Sennar")
 villages <- spatialsampler::sennar_villages
-#
-# Estimate how many hexagonal grids will be created for Sennar given a d = 15
-#
 n <- spatialsampler::calculate_n(x = sennar, d = 15, country = "Sudan")
-#
-# Create a sampling grid of Sennar given n
-#
 samp.points <- sp::spsample(sennar, n = n, type = "hexagonal")
-#
-# Create a SpatialPolygons object of hexagon sampling grid
-#
 hex.samp    <- sp::HexPoints2SpatialPolygons(samp.points)
-#
-# Get nearest 1 village from sampling points
-#
 villages.sp <- spatialsampler::get_nearest_point(data = villages, data.x = "x", data.y = "y", query = samp.points, duplicate = FALSE)
 ```
 
