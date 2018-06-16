@@ -45,7 +45,8 @@ An object of SpatialPoints-class. The number of points is only
 }
 \description{
 Function to create sampling grids as per CSAS or S3M specifications. This is
-a wrapper function for \code{spsample()} function in \code{sp} package.
+a wrapper function for \code{spsample()} function in \code{sp} package that
+adds arguments needed to implement CSAS and S3M-specific sampling.
 }
 \examples{
 #
