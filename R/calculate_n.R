@@ -37,7 +37,8 @@ calculate_n <- function(x, d = NULL, area = NULL, country) {
   #
   # Convert x to appropriate UTM
   #
-  x.utm <- sp::spTransform(x, CRSobj = sp::CRS(as.character(map_projections[map_projections$country == country, "proj"])))
+  x.utm <- sp::spTransform(x = x,
+                           CRSobj = sp::CRS(as.character(spatialsampler::map_projections[spatialsampler::map_projections$country == country, "proj"])))
   #
   #
   #
