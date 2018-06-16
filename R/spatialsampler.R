@@ -16,12 +16,13 @@
 #' @importFrom utils tail
 #' @importFrom graphics polygon identify plot points
 #' @importFrom stats quantile
-#' @importFrom rgeos gDelaunayTriangulation
+#' @importFrom rgeos gDelaunayTriangulation gBuffer
 #' @importFrom Imap gdist
 #' @importFrom sp SpatialPoints CRS spTransform plot
 #' @importFrom grDevices dev.new
 #' @importFrom geosphere distGeo
 #' @importFrom FNN get.knnx
+#'
 #
 ################################################################################
 NULL
