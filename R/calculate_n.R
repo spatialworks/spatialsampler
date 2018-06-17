@@ -40,19 +40,19 @@ calculate_n <- function(x, d = NULL, area = NULL, country) {
   x.utm <- sp::spTransform(x = x,
                            CRSobj = sp::CRS(as.character(map_projections$proj[map_projections$country == country])))
   #
-  #
+  # If d is specified, calculate n
   #
   if(!is.null(d)) {
     n <- ceiling(rgeos::gArea(x.utm) / (calculate_area(d = d)$hex * 1000000))
   }
   #
-  #
+  # If area is specified, calculate n
   #
   if(!is.null(area)) {
     n <- ceiling(rgeos::gArea(x.utm) / (area * 1000000))
   }
   #
-  #
+  # Return output
   #
   return(n)
 }
