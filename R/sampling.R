@@ -8,7 +8,7 @@
 #'
 #' @param x Spatial object to grid
 #' @param d A numeric value for distance (in kilometres) of the maximum distance
-#'     of a village/community from a sampling point.
+#'     of a village/community from a sampling point. Default is 10 kilometres.
 #' @param area A numeric value for area (in square kilometres) of a hexagon in a
 #'     hexagonal grid defining the sampling spatial resolution
 #' @param country Name of country where sampling area is located. This is used
@@ -55,7 +55,7 @@
 #
 ################################################################################
 
-create_sp_grid <- function(x, d, area, country, buffer = d,
+create_sp_grid <- function(x, d = NULL, area = NULL, country = NULL, buffer = d,
                            n = NULL, n.factor = NULL,
                            type = "s3m",
                            fixed = FALSE) {
@@ -74,13 +74,13 @@ create_sp_grid <- function(x, d, area, country, buffer = d,
   #
   # Check that country is specified if d or area is specified
   #
-  if(!missing(d) | !missing(area) & missing(country)) {
+  if((!is.null(d) | !is.null(area)) & is.null(country)) {
     stop("If d or area are specified, country needs to be specified. Try again", call. = TRUE)
   }
   #
   # Check if d specified and not n
   #
-  if(!missing(d) & is.null(n)) {
+  if(!is.null(d) & is.null(n)) {
     #
     # Calculate n
     #
@@ -89,7 +89,7 @@ create_sp_grid <- function(x, d, area, country, buffer = d,
   #
   # Check if area specified and not n
   #
-  if(!missing(area) & is.null(n)) {
+  if(!is.null(area) & is.null(n)) {
     #
     # Calculate n
     #
@@ -98,17 +98,28 @@ create_sp_grid <- function(x, d, area, country, buffer = d,
   #
   # If type is not "csas" or "s3m"
   #
-  if(type != "csas" | type != "s3m") {
+  if(!type %in% c("csas", "s3m")) {
     stop("Unrecognised sampling type. Specify either 'csas' or 's3m'. Try again.", call. = TRUE)
   }
   #
   # Determine type based on spsample arguments
   #
-  if(type == "csas") {type <- "regular"}
+  if(type == "csas") { type <- "regular" }
+  if(type == "s3m") { type <- "hexagonal" }
+  #
+  #
+  #
+  x.utm <- sp::spTransform(x = x,
+                           CRSobj = sp::CRS(as.character(map_projections$proj[map_projections$country == country])))
   #
   # Add buffer
   #
-  x <- rgeos::gBuffer(x, width = buffer)
+  x.buffer <- rgeos::gBuffer(x.utm, width = buffer * 1000)
+  #
+  #
+  #
+  x <- spTransform(x = x.buffer,
+                   CRSobj = sp::CRS(sp::proj4string(x)))
   #
   # Check if fixed == TRUE
   #
