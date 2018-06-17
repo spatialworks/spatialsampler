@@ -18,7 +18,7 @@
 #' @importFrom stats quantile
 #' @importFrom rgeos gDelaunayTriangulation gBuffer
 #' @importFrom Imap gdist
-#' @importFrom sp SpatialPoints CRS spTransform plot
+#' @importFrom sp SpatialPoints CRS spTransform plot proj4string
 #' @importFrom grDevices dev.new
 #' @importFrom geosphere distGeo
 #' @importFrom FNN get.knnx
