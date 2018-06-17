@@ -4,10 +4,27 @@
 \alias{create_sp_grid}
 \title{create_sp_grid}
 \usage{
-create_sp_grid(x, n, n.buffer = 0, type, fixed = FALSE)
+create_sp_grid(x, d, area, country, buffer = d, n = NULL, n.factor = NULL,
+  type = "s3m", fixed = FALSE)
 }
 \arguments{
 \item{x}{Spatial object to grid}
+
+\item{d}{A numeric value for distance (in kilometres) of the maximum distance
+of a village/community from a sampling point.}
+
+\item{area}{A numeric value for area (in square kilometres) of a hexagon in a
+hexagonal grid defining the sampling spatial resolution}
+
+\item{country}{Name of country where sampling area is located. This is used
+to determine the appropriate UTM projection to transform \code{x}}
+
+\item{buffer}{A numeric value for distance (in kilometres) to expand the
+borders of the given spatial object \code{x}. Specifying \code{buffer}
+corrects the behaviour of \code{spsample()} to limit selection of sampling
+points well within the borders of \code{x} often leaving areas at or near
+the border of \code{x} unsampled. Default is \code{d} (if specified)
+otherwise defaults to 0 (no buffer).}
 
 \item{n}{Approximate number of sampling points / clusters needed. Approximate
 because \code{spsample()} does not always result in \code{n} grids. If
@@ -16,24 +33,23 @@ because \code{spsample()} does not always result in \code{n} grids. If
 fixed \code{n} amount of sampling points needed, specify \code{fixed} to
 TRUE and specify \code{n.buffer} to inflate \code{n}.}
 
-\item{n.buffer}{Inflation factor for \code{n}. Default value is 0 (no inflation)
+\item{n.factor}{Inflation factor for \code{n}. Default value is 0 (no inflation)
 which produces approximate number of grids (i.e., more or less \code{n}).
-If minimum number of sampling points required, specify \code{n.buffer} to
+If minimum number of sampling points required, specify \code{n.factor} to
 increase \code{n} with to ensure that number of grids will be at least
 \code{n}. If fixed number of sampling points required (i.e., exactly \code{n}),
-specify \code{n.buffer} to increase \code{n} with. Function will go
+specify \code{n.factor} to increase \code{n} with. Function will go
 through repeat cycles of \code{spsample()} until \code{n} sampling
 points are selected.}
 
-\item{type}{A character value of type of spatial sampling to perform. Can be
-one of seven options: 1) \code{"random"} - completely spatial random;
-2) \code{"regular"} - systematically aligned sampling (CSAS);
-3) \code{"stratified"} - stratified random (ESAS); 4) \code{"non-aligned"} -
-non-aligned systematic sampling; 5) \code{"hexagonal"} - sampling on a
-hexagonal lattice (S3M); 6) \code{"clustered"} - clustered sampling; and,
-7) \code{"Fibonacci"} - Fibonacci sampling on the sphere.}
+\item{type}{A character value of either "csas" or "s3m" to specify type of
+spatial sampling to perform. If \code{"csas"}, a systematically aligned
+sampling is applied by passing the argument \code{type} \code{"regular"}
+to \code{spsample}. If \code{"s3m"}, sampling on a hexagonal lattice is
+applied by passing the argument \code{type} \code{"hexagonal"} to
+\code{spsample}. Default is \code{"s3m"}.}
 
-\item{fixed}{Logical. If TRUE, \code{n.buffer} must be specified and function
+\item{fixed}{Logical. If TRUE, \code{n.factor} must be specified and function
 will go through repeat cycles of \code{spsample()} until \code{n}
 sampling points are selected. Default is FALSE.}
 }
