@@ -30,6 +30,7 @@ library(spatialsampler)
 ```
 
 ```{r, echo = FALSE, eval = TRUE}
+library(spatialsampler)
 sennar <- subset(spatialsampler::sudan01, STATE == "Sennar")
 villages <- spatialsampler::sennar_villages
 n <- spatialsampler::calculate_n(x = sennar, d = 15, country = "Sudan")
@@ -46,4 +47,13 @@ raster::plot(samp.points, pch = 1, cex = 1.75, lwd = 2, col = "blue", bg = NA, a
 raster::text(samp.points, labels = 1:nrow(samp.points@coords), cex = 0.6)
 points(villages.sp[ , c("x", "y")], pch = 4, cex = 0.7, col = "red")
 text(villages.sp[ , c("x", "y")], labels = villages.sp$spid, cex = 0.7)
+```
+
+
+```{r, echo = FALSE, eval = TRUE, fig.cap = "Sampling map of Sennar at d = 15 kms with buffering", fig.align = "center", fig.pos = "h", fig.width = 10, fig.height = 10, fig.retina = 1}
+sennar_grid <- spatialsampler::create_sp_grid(x = sennar, d = 15, country = "Sudan")
+raster::plot(sennar, lwd = 1.5)
+raster::plot(sennar_grid, pch = 4, lwd = 2, col = "red", add = TRUE)
+points(sennar_villages[ , c("x", "y")], pch = 20, cex = 0.5, col = "blue")
+raster::plot(sp::HexPoints2SpatialPolygons(sennar_grid), border = "gray70", lwd = 1, add = TRUE)
 ```
