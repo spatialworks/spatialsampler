@@ -107,25 +107,15 @@ create_sp_grid <- function(x, d = NULL, area = NULL, country = NULL, buffer = d,
   if(type == "csas") { type <- "regular" }
   if(type == "s3m") { type <- "hexagonal" }
   #
+  # Create a sampling buffer
   #
-  #
-  x.utm <- sp::spTransform(x = x,
-                           CRSobj = sp::CRS(as.character(map_projections$proj[map_projections$country == country])))
-  #
-  # Add buffer
-  #
-  x.buffer <- rgeos::gBuffer(x.utm, width = buffer * 1000)
-  #
-  #
-  #
-  x <- spTransform(x = x.buffer,
-                   CRSobj = sp::CRS(sp::proj4string(x)))
+  x <- create_buffer(x = x, buffer = buffer, country = country)
   #
   # Check if fixed == TRUE
   #
   if(fixed == TRUE) {
     #
-    # Check if n.buffer is specified
+    # Check if n.factor is specified
     #
     if(is.null(n.factor)) {
       #
