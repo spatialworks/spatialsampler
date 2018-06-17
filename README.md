@@ -19,6 +19,6 @@ devtools::install_github("validmeasures/spatialsampler")
 library(spatialsampler)
 ```
 
-<img src="man/figures/README-unnamed-chunk-3-1.png" title="Sampling map of Sennar at d = 15 kms" alt="Sampling map of Sennar at d = 15 kms" style="display: block; margin: auto;" />
+<img src="man/figures/README-grid1-1.png" title="Sampling map of Sennar at d = 15 kms" alt="Sampling map of Sennar at d = 15 kms" style="display: block; margin: auto;" />
 
-<img src="man/figures/README-unnamed-chunk-4-1.png" title="Sampling map of Sennar at d = 15 kms with buffering" alt="Sampling map of Sennar at d = 15 kms with buffering" style="display: block; margin: auto;" />
+<img src="man/figures/README-grid2-1.png" title="Sampling map of Sennar at d = 15 kms with buffering" alt="Sampling map of Sennar at d = 15 kms with buffering" style="display: block; margin: auto;" />

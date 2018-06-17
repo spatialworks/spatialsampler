@@ -39,7 +39,7 @@ hex.samp    <- sp::HexPoints2SpatialPolygons(samp.points)
 villages.sp <- spatialsampler::get_nearest_point(data = villages, data.x = "x", data.y = "y", query = samp.points, duplicate = FALSE)
 ```
 
-```{r, echo = FALSE, eval = TRUE, fig.cap = "Sampling map of Sennar at d = 15 kms", fig.align = "center", fig.pos = "h", fig.width = 10, fig.height = 10, fig.retina = 1}
+```{r grid1, echo = FALSE, eval = TRUE, fig.cap = "Sampling map of Sennar at d = 15 kms", fig.align = "center", fig.pos = "h", fig.width = 10, fig.height = 10, fig.retina = 1}
 raster::plot(sennar, lwd = 1.5)
 points(villages[ , c("x", "y")], pch = 20, cex = 0.7, col = "darkgreen")
 raster::plot(hex.samp, lwd = 1, border = "gray70", add = TRUE)
@@ -50,7 +50,7 @@ text(villages.sp[ , c("x", "y")], labels = villages.sp$spid, cex = 0.7)
 ```
 
 
-```{r, echo = FALSE, eval = TRUE, fig.cap = "Sampling map of Sennar at d = 15 kms with buffering", fig.align = "center", fig.pos = "h", fig.width = 10, fig.height = 10, fig.retina = 1}
+```{r grid2, echo = FALSE, eval = TRUE, fig.cap = "Sampling map of Sennar at d = 15 kms with buffering", fig.align = "center", fig.pos = "h", fig.width = 10, fig.height = 10, fig.retina = 1}
 sennar_grid <- spatialsampler::create_sp_grid(x = sennar, d = 15, country = "Sudan")
 raster::plot(sennar, lwd = 1.5)
 raster::plot(sennar_grid, pch = 4, lwd = 2, col = "red", add = TRUE)
