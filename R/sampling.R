@@ -7,28 +7,39 @@
 #' adds arguments needed to implement CSAS and S3M-specific sampling.
 #'
 #' @param x Spatial object to grid
+#' @param d A numeric value for distance (in kilometres) of the maximum distance
+#'     of a village/community from a sampling point.
+#' @param area A numeric value for area (in square kilometres) of a hexagon in a
+#'     hexagonal grid defining the sampling spatial resolution
+#' @param country Name of country where sampling area is located. This is used
+#'     to determine the appropriate UTM projection to transform \code{x}
+#' @param buffer A numeric value for distance (in kilometres) to expand the
+#'     borders of the given spatial object \code{x}. Specifying \code{buffer}
+#'     corrects the behaviour of \code{spsample()} to limit selection of sampling
+#'     points well within the borders of \code{x} often leaving areas at or near
+#'     the border of \code{x} unsampled. Default is \code{d} (if specified)
+#'     otherwise defaults to 0 (no buffer).
 #' @param n Approximate number of sampling points / clusters needed. Approximate
 #'     because \code{spsample()} does not always result in \code{n} grids. If
 #'     \code{n} is the minimum number of sampling points required, specify
 #'     \code{n.buffer} to inflate \code{n} with to ensure required minimum. If
 #'     fixed \code{n} amount of sampling points needed, specify \code{fixed} to
 #'     TRUE and specify \code{n.buffer} to inflate \code{n}.
-#' @param n.buffer Inflation factor for \code{n}. Default value is 0 (no inflation)
+#' @param n.factor Inflation factor for \code{n}. Default value is 0 (no inflation)
 #'     which produces approximate number of grids (i.e., more or less \code{n}).
-#'     If minimum number of sampling points required, specify \code{n.buffer} to
+#'     If minimum number of sampling points required, specify \code{n.factor} to
 #'     increase \code{n} with to ensure that number of grids will be at least
 #'     \code{n}. If fixed number of sampling points required (i.e., exactly \code{n}),
-#'     specify \code{n.buffer} to increase \code{n} with. Function will go
+#'     specify \code{n.factor} to increase \code{n} with. Function will go
 #'     through repeat cycles of \code{spsample()} until \code{n} sampling
 #'     points are selected.
-#' @param type A character value of type of spatial sampling to perform. Can be
-#'     one of seven options: 1) \code{"random"} - completely spatial random;
-#'     2) \code{"regular"} - systematically aligned sampling (CSAS);
-#'     3) \code{"stratified"} - stratified random (ESAS); 4) \code{"non-aligned"} -
-#'     non-aligned systematic sampling; 5) \code{"hexagonal"} - sampling on a
-#'     hexagonal lattice (S3M); 6) \code{"clustered"} - clustered sampling; and,
-#'     7) \code{"Fibonacci"} - Fibonacci sampling on the sphere.
-#' @param fixed Logical. If TRUE, \code{n.buffer} must be specified and function
+#' @param type A character value of either "csas" or "s3m" to specify type of
+#'     spatial sampling to perform. If \code{"csas"}, a systematically aligned
+#'     sampling is applied by passing the argument \code{type} \code{"regular"}
+#'     to \code{spsample}. If \code{"s3m"}, sampling on a hexagonal lattice is
+#'     applied by passing the argument \code{type} \code{"hexagonal"} to
+#'     \code{spsample}. Default is \code{"s3m"}.
+#' @param fixed Logical. If TRUE, \code{n.factor} must be specified and function
 #'     will go through repeat cycles of \code{spsample()} until \code{n}
 #'     sampling points are selected. Default is FALSE.
 #' @return An object of SpatialPoints-class. The number of points is only
@@ -44,8 +55,60 @@
 #
 ################################################################################
 
-create_sp_grid <- function(x, n, n.buffer = 0,
-                           type, fixed = FALSE) {
+create_sp_grid <- function(x, d, area, country, buffer = d,
+                           n = NULL, n.factor = NULL,
+                           type = "s3m",
+                           fixed = FALSE) {
+  #
+  # Check that d and area are not both specified
+  #
+  if(!is.null(d) & !is.null(area)) {
+    stop("Specify either d or area, not both. Try again.", call. = TRUE)
+  }
+  #
+  # Check that d or area and n are not specified at the same time
+  #
+  if((!is.null(d) | !is.null(area)) & !is.null(n)) {
+    stop("Specify either d or area or n only. Try again.", call. = TRUE)
+  }
+  #
+  # Check that country is specified if d or area is specified
+  #
+  if(!missing(d) | !missing(area) & missing(country)) {
+    stop("If d or area are specified, country needs to be specified. Try again", call. = TRUE)
+  }
+  #
+  # Check if d specified and not n
+  #
+  if(!missing(d) & is.null(n)) {
+    #
+    # Calculate n
+    #
+    n <- calculate_n(x = x, d = d, country = country)
+  }
+  #
+  # Check if area specified and not n
+  #
+  if(!missing(area) & is.null(n)) {
+    #
+    # Calculate n
+    #
+    n <- calculate_n(x = x, area = area, country = country)
+  }
+  #
+  # If type is not "csas" or "s3m"
+  #
+  if(type != "csas" | type != "s3m") {
+    stop("Unrecognised sampling type. Specify either 'csas' or 's3m'. Try again.", call. = TRUE)
+  }
+  #
+  # Determine type based on spsample arguments
+  #
+  if(type == "csas") {type <- "regular"}
+  #
+  # Add buffer
+  #
+  x <- rgeos::gBuffer(x, width = buffer)
   #
   # Check if fixed == TRUE
   #
@@ -53,11 +116,11 @@ create_sp_grid <- function(x, n, n.buffer = 0,
     #
     # Check if n.buffer is specified
     #
-    if(n.buffer == 0) {
+    if(is.null(n.factor)) {
       #
       # Error message
       #
-      stop("If fixed == TRUE, n.buffer must be greater than 0.")
+      stop("If fixed == TRUE, n.factor must be specified.")
     }
     #
     # Repeat spsample until n sampling points generated
@@ -66,7 +129,7 @@ create_sp_grid <- function(x, n, n.buffer = 0,
       #
       # Sample
       #
-      spdf <- sp::spsample(x, n = n + n.buffer, type = type)
+      spdf <- sp::spsample(x, n = n + n.factor, type = type)
       #
       #
       #
