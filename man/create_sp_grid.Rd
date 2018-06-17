@@ -4,14 +4,14 @@
 \alias{create_sp_grid}
 \title{create_sp_grid}
 \usage{
-create_sp_grid(x, d, area, country, buffer = d, n = NULL, n.factor = NULL,
-  type = "s3m", fixed = FALSE)
+create_sp_grid(x, d = NULL, area = NULL, country = NULL, buffer = d,
+  n = NULL, n.factor = NULL, type = "s3m", fixed = FALSE)
 }
 \arguments{
 \item{x}{Spatial object to grid}
 
 \item{d}{A numeric value for distance (in kilometres) of the maximum distance
-of a village/community from a sampling point.}
+of a village/community from a sampling point. Default is 10 kilometres.}
 
 \item{area}{A numeric value for area (in square kilometres) of a hexagon in a
 hexagonal grid defining the sampling spatial resolution}
