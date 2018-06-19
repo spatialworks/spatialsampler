@@ -4,8 +4,9 @@
 \alias{create_sp_grid}
 \title{create_sp_grid}
 \usage{
-create_sp_grid(x, d = NULL, area = NULL, country = NULL, buffer = d,
-  n = NULL, n.factor = NULL, type = "s3m", fixed = FALSE)
+create_sp_grid(x, d = NULL, area = NULL, country = NULL,
+  buffer = ifelse(!is.null(d), d, 0), n = NULL, n.factor = NULL,
+  type = "s3m", fixed = FALSE)
 }
 \arguments{
 \item{x}{Spatial object to grid}
