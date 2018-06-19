@@ -25,8 +25,8 @@ proj <- c("+proj=utm +zone=35 +ellps=clrk80 +towgs84=-166,-15,204,0,0,0,0 +units
           "+proj=utm +zone=32 +ellps=clrk80 +towgs84=-92,-93,122,0,0,0,0 +units=m +no_defs",
           "+proj=utm +zone=31 +datum=WGS84 +units=m +no_defs",
           "+proj=utm +zone=30 +datum=WGS84 +units=m +no_defs",
-          "+proj=longlat +ellps=clrk80 +towgs84=-90,40,88,0,0,0,0 +no_defs",
-          "+proj=longlat +ellps=clrk80 +towgs84=-88,4,101,0,0,0,0 +no_defs")
+          "+proj=utm +zone=29 +ellps=WGS84 +datum=WGS84 +units=m +no_defs",
+          "+proj=utm +zone=28 +ellps=clrk80 +towgs84=-88,4,101,0,0,0,0 +units=m +no_defs")
 
 
 map_projections <- data.frame(country, utm, proj)
