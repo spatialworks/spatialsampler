@@ -55,7 +55,8 @@
 #
 ################################################################################
 
-create_sp_grid <- function(x, d = NULL, area = NULL, country = NULL, buffer = d,
+create_sp_grid <- function(x, d = NULL, area = NULL, country = NULL,
+                           buffer = ifelse(!is.null(d), d, 0),
                            n = NULL, n.factor = NULL,
                            type = "s3m",
                            fixed = FALSE) {
