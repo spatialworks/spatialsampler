@@ -12,7 +12,7 @@ utm <- c("Adindan / UTM zone 35N",
          "Minna / UTM zone 32N",
          "WGS 84 / UTM zone 31N",
          "WGS 84 / UTM zone 30N",
-         "Liberia 1964",
+         "EPSG:32629",
          "Sierra Leone 1968")
 
 proj <- c("+proj=utm +zone=35 +ellps=clrk80 +towgs84=-166,-15,204,0,0,0,0 +units=m +no_defs",
