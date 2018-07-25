@@ -33,7 +33,7 @@ create_buffer <- function(x, buffer, country) {
   #
   # Add buffer
   #
-  x.buffer <- rgeos::gBuffer(x.utm, width = buffer * 1000)
+  x.buffer <- rgeos::gBuffer(x.utm, width = buffer * 1000, capStyle = "FLAT", joinStyle = "BEVEL")
   #
   #
   #
