@@ -2,6 +2,8 @@
 
 export(calculate_area)
 export(calculate_d)
+export(calculate_height)
+export(calculate_length)
 export(calculate_n)
 export(create_buffer)
 export(create_sp_grid)
