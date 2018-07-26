@@ -18,10 +18,12 @@
 #' @importFrom stats quantile
 #' @importFrom rgeos gDelaunayTriangulation gBuffer
 #' @importFrom Imap gdist
-#' @importFrom sp SpatialPoints CRS spTransform plot proj4string
+#' @importFrom sp SpatialPoints CRS spTransform plot proj4string bbox
 #' @importFrom grDevices dev.new
 #' @importFrom geosphere distGeo
 #' @importFrom FNN get.knnx
+#' @importFrom raster extent
+#' @importFrom magrittr %>%
 #'
 #
 ################################################################################
