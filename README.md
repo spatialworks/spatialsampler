@@ -3,6 +3,7 @@
 
 # spatialsampler: An Implementation of Centric Systematic Area Sampling (CSAS) and Simple Spatial Sampling Method (S3M) in R
 
+[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis-CI Build
 Status](https://travis-ci.org/validmeasures/spatialsampler.svg?branch=master)](https://travis-ci.org/validmeasures/spatialsampler)
 [![AppVeyor Build
@@ -34,15 +35,61 @@ library(spatialsampler)
 
 ## Usage
 
-### 1\. Create a hexagonal sampling grid based on a d of 15 kms
+The current functions in `spatialsampler` can be grouped into two (2)
+classes: *calculator* functions and *sampling* functions.
+
+The *calculator* functions support the estimation of spatial sampling
+parameters needed for CSAS and S3M. These include the calculation of
+areas of grids, calculation of `d` value in kilometres that the grid
+area represents, calculation of height and length of rectangular grid
+for S3M and calculation of number of grids given the sampling area and d
+value or area size of grids.
+
+The *sampling* functions support the implementation of the CSAS or S3M
+sampling.
+
+### Calculator functions
+
+1.  `calculate_area()`
+
+Calculates the area size of the resulting hexagon in a hexagonal grid
+and the area size of the resulting triangle in a triangular grid for a
+specified value of `d` (in kms) used in the simple spatial sampling
+method (S3M).
+
+Given a \(d\) of 10 kms, area can be calculated as follows:
 
 ``` r
+calculate_area(d = 10, digits = 2)
+#>        tri      hex
+#> 1 129.9038 259.8076
+```
+
+The result is a data frame of 1 row and 2 columns. The first column
+gives the area of the triangular grid (in kms) and the second column
+gives the area of the hexagonal grid (in kms).
+
+### Sampling functions
+
+1.  Create a hexagonal sampling grid based on a d of 15 kms
+
+<!-- end list -->
+
+``` r
+#
+# Subset Sudan map to Sennar state map
+#
 sennar <- subset(sudan01, STATE == "Sennar")
+#
+# Create sampling grid
+#
 samp.points <- create_sp_grid(x = sennar, 
                               d = 15, 
                               buffer = 10, 
                               country = "Sudan")
 ```
+
+`create_sp_grid()` creates
 
 ``` r
 hex.samp    <- sp::HexPoints2SpatialPolygons(samp.points)
