@@ -1,0 +1,6 @@
+title: spatialsampler
+url: https://validmeasures.org/spatialsampler
+template:
+  params:
+    bootswatch: sandstone
+    #ganalytics: UA-102485058-4
