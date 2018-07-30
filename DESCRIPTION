@@ -7,7 +7,7 @@ Authors@R: c(
     person("Mark", "Myatt", email = "mark@brixtonhealth.com", role = "aut"),
     person("Farah", "Ibrahim", email = "abud.ff@gmail.com", role = "aut"),
     person("Ernest", "Guevarra", comment = c(ORCID = "0000-0002-4887-4415"), 
-           email = "ernestgmd@gmail.com", role = c("aut", "cre")))
+           email = "ernest@guevarra.io", role = c("aut", "cre")))
 Description: The Centric Systematic Area Sampling (CSAS) and the Simple Spatial 
     Survey Method (S3M) are spatial sampling methods adapted and used in health 
     and nutrition surveys by Brixton Health and Valid International. CSAS and 
