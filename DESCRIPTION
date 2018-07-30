@@ -24,7 +24,8 @@ Imports: gstat,
     maptools,
     sp,
     geosphere,
-    FNN
+    FNN,
+    magrittr
 License: AGPL-3
 Encoding: UTF-8
 LazyData: true
