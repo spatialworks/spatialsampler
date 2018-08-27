@@ -3,7 +3,6 @@
 \docType{data}
 \name{sennar_villages}
 \alias{sennar_villages}
-\alias{sennar_villages}
 \title{sennar_villages}
 \format{A data frame with 5 columns and 741 rows:
 \describe{

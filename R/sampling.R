@@ -79,6 +79,21 @@ create_sp_grid <- function(x, d = NULL, area = NULL, country = NULL,
     stop("If d or area are specified, country needs to be specified. Try again", call. = TRUE)
   }
   #
+  # If type is not "csas" or "s3m"
+  #
+  if(!type %in% c("csas", "s3m")) {
+    stop("Unrecognised sampling type. Specify either 'csas' or 's3m'. Try again.", call. = TRUE)
+  }
+  #
+  # Determine type based on spsample arguments
+  #
+  if(type == "csas") { type <- "regular" }
+  if(type == "s3m") { type <- "hexagonal" }
+  #
+  # Create a sampling buffer
+  #
+  x <- create_buffer(x = x, buffer = buffer, country = country)
+  #
   # Check if d specified and not n
   #
   if(!is.null(d) & is.null(n)) {
@@ -96,21 +111,6 @@ create_sp_grid <- function(x, d = NULL, area = NULL, country = NULL,
     #
     n <- calculate_n(x = x, area = area, country = country)
   }
-  #
-  # If type is not "csas" or "s3m"
-  #
-  if(!type %in% c("csas", "s3m")) {
-    stop("Unrecognised sampling type. Specify either 'csas' or 's3m'. Try again.", call. = TRUE)
-  }
-  #
-  # Determine type based on spsample arguments
-  #
-  if(type == "csas") { type <- "regular" }
-  if(type == "s3m") { type <- "hexagonal" }
-  #
-  # Create a sampling buffer
-  #
-  x <- create_buffer(x = x, buffer = buffer, country = country)
   #
   # Check if fixed == TRUE
   #
