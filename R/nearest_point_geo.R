@@ -105,9 +105,9 @@ get_nearest_point <- function(data, data.x, data.y,
       #
       # Add sampling point id
       #
-      near.point2 <- data.frame("spid" = rep(i, n),
+      near.point2 <- data.frame("spid" = rep(i, nrow(near.point2)),
                                 near.point2,
-                                d = tail(sort(x = near.point1, decreasing = TRUE), n = n))
+                                d = tail(sort(x = near.point1, decreasing = TRUE), n = nrow(near.point2)))
       #
       # Concatenate villages
       #
