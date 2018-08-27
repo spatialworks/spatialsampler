@@ -43,7 +43,7 @@ create_s3m_grid <- function(input, d, buffer, country, output = "points") {
   mapbox <- input %>%
     sp::bbox() %>%
     raster::extent() %>%
-    as(Class = "SpatialPolygons")
+    methods::as(Class = "SpatialPolygons")
 
   sp::proj4string(mapbox) <- sp::proj4string(input)
 
