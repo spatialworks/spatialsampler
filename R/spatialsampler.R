@@ -24,6 +24,7 @@
 #' @importFrom FNN get.knnx
 #' @importFrom raster extent
 #' @importFrom magrittr %>%
+#' @importFrom methods as
 #'
 #
 ################################################################################
