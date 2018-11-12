@@ -30,9 +30,9 @@ otherwise defaults to 0 (no buffer).}
 \item{n}{Approximate number of sampling points / clusters needed. Approximate
 because \code{spsample()} does not always result in \code{n} grids. If
 \code{n} is the minimum number of sampling points required, specify
-\code{n.buffer} to inflate \code{n} with to ensure required minimum. If
+\code{n.factor} to inflate \code{n} with to ensure required minimum. If
 fixed \code{n} amount of sampling points needed, specify \code{fixed} to
-TRUE and specify \code{n.buffer} to inflate \code{n}.}
+TRUE and specify \code{n.factor} to inflate \code{n}.}
 
 \item{n.factor}{Inflation factor for \code{n}. Default value is 0 (no inflation)
 which produces approximate number of grids (i.e., more or less \code{n}).
