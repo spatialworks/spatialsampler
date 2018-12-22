@@ -31,4 +31,4 @@
 NULL
 
 ## quiets concerns of R CMD check re: map_projections
-if(getRversion() >= "2.15.1")  utils::globalVariables("map_projections")
+if(getRversion() >= "2.15.1")  utils::globalVariables(c("map_projections", "countryCentroid"))
