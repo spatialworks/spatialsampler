@@ -115,3 +115,21 @@
 ################################################################################
 "map_projections"
 
+
+################################################################################
+#
+#' countryCentroid
+#'
+#' A dataframe of country centroids
+#'
+#' @format A data.frame with 252 rows and 3 columns
+#' \describe{
+#' \item{\code{country}}{Name of country}
+#' \item{\code{lon}}{Longitude coordinate of country centroid}
+#' \item{\code{lat}}{Latitude coordinate of country centroid}
+#' }
+#'
+#
+################################################################################
+"countryCentroid"
+
