@@ -35,10 +35,17 @@ calculate_n <- function(x, d = NULL, area = NULL, country) {
     stop("Specify either d or area, not both. Try again.", call. = TRUE)
   }
   #
+  #
+  #
+  utm.crs <- get_utm(lon = countryCentroid$lon[countryCentroid$country == country],
+                     lat = countryCentroid$lat[countryCentroid$country == country])
+  #
   # Convert x to appropriate UTM
   #
+  #x.utm <- sp::spTransform(x = x,
+  #                         CRSobj = sp::CRS(as.character(map_projections$proj[map_projections$country == country])))
   x.utm <- sp::spTransform(x = x,
-                           CRSobj = sp::CRS(as.character(map_projections$proj[map_projections$country == country])))
+                           CRSobj = sp::CRS(utm.crs))
   #
   # If d is specified, calculate n
   #
