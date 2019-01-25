@@ -31,4 +31,6 @@ proj <- c("+proj=utm +zone=35 +ellps=clrk80 +towgs84=-166,-15,204,0,0,0,0 +units
 
 map_projections <- data.frame(country, utm, proj)
 
+write.csv(map_projections, "data-raw/map_projections.csv", row.names = FALSE)
+
 devtools::use_data(map_projections, overwrite = TRUE)
