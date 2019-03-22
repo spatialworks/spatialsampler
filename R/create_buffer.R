@@ -28,8 +28,13 @@ create_buffer <- function(x, buffer, country) {
   #
   #
   #
+  utm.crs <- get_utm(lon = countryCentroid$lon[countryCentroid$country == country],
+                     lat = countryCentroid$lat[countryCentroid$country == country])
+  #
+  #
+  #
   x.utm <- sp::spTransform(x = x,
-                           CRSobj = sp::CRS(as.character(map_projections$proj[map_projections$country == country])))
+                           CRSobj = sp::CRS(as.character(utm.crs)))
   #
   # Add buffer
   #
