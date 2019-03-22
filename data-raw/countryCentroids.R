@@ -4,6 +4,9 @@ library(devtools)
 library(ggmap)
 library(gadmr)
 
+##
+options(stringsAsFactors = FALSE)
+
 ################################################################################
 ##
 register_google(key = "AIzaSyCa7K4CUhyOLBJUrLZPm4qEwv5yyP9zMKQ")
