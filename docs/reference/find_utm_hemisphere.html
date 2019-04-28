@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>create_buffer — create_buffer • spatialsampler</title>
+<title>find_utm_hemisphere — find_utm_hemisphere • spatialsampler</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -30,12 +30,9 @@
 
 
 
-<meta property="og:title" content="create_buffer — create_buffer" />
+<meta property="og:title" content="find_utm_hemisphere — find_utm_hemisphere" />
 
-<meta property="og:description" content="Function to create a buffer around a SpatialPolygons or SpatialPolygonsDataFrame
-object. This is a wrapper for gBuffer() function from package rgeos
-adding transformation of planar coordinates to appropriate projected coordinates
-to enable creation of buffer." />
+<meta property="og:description" content="Find UTM hemisphere based on a longitude and latitude GPS location." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -102,45 +99,31 @@ to enable creation of buffer." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>create_buffer</h1>
-    <small class="dont-index">Source: <a href='https://github.com/validmeasures/spatialsampler/blob/master/R/create_buffer.R'><code>R/create_buffer.R</code></a></small>
-    <div class="hidden name"><code>create_buffer.Rd</code></div>
+    <h1>find_utm_hemisphere</h1>
+    <small class="dont-index">Source: <a href='https://github.com/validmeasures/spatialsampler/blob/master/R/find_utm_hemisphere.R'><code>R/find_utm_hemisphere.R</code></a></small>
+    <div class="hidden name"><code>find_utm_hemisphere.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Function to create a buffer around a SpatialPolygons or SpatialPolygonsDataFrame
-object. This is a wrapper for <code>gBuffer()</code> function from package <code>rgeos</code>
-adding transformation of planar coordinates to appropriate projected coordinates
-to enable creation of buffer.</p>
+    <p>Find UTM hemisphere based on a longitude and latitude GPS location.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>create_buffer</span>(<span class='no'>x</span>, <span class='no'>buffer</span>, <span class='no'>country</span>)</pre>
+    <pre class="usage"><span class='fu'>find_utm_hemisphere</span>(<span class='no'>lat</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>x</th>
-      <td><p>A class SpatialPolygons or SpatialPolygonsDataFrame object defining
-the area to be buffered</p></td>
-    </tr>
-    <tr>
-      <th>buffer</th>
-      <td><p>A numeric value for distance (in kilometres) to expand the
-borders of the given spatial object <code>x</code>. Negative values allowed.</p></td>
-    </tr>
-    <tr>
-      <th>country</th>
-      <td><p>Name of country where sampling area is located. This is used
-to determine the appropriate UTM projection to transform <code>x</code></p></td>
+      <th>lat</th>
+      <td><p>Latitude coordinate</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A SpatialPolygons with the same CRS as <code>x</code></p>
+    <p>Either <code>north</code> or <code>south</code></p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>

@@ -19,6 +19,9 @@
     <loc>https://validmeasures.org/spatialsampler/reference/calculate_n.html</loc>
   </url>
   <url>
+    <loc>https://validmeasures.org/spatialsampler/reference/countryCentroid.html</loc>
+  </url>
+  <url>
     <loc>https://validmeasures.org/spatialsampler/reference/create_buffer.html</loc>
   </url>
   <url>
@@ -26,6 +29,12 @@
   </url>
   <url>
     <loc>https://validmeasures.org/spatialsampler/reference/create_sp_grid.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/spatialsampler/reference/find_utm_hemisphere.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/spatialsampler/reference/find_utm_zone.html</loc>
   </url>
   <url>
     <loc>https://validmeasures.org/spatialsampler/reference/gedaref_villages.html</loc>
@@ -38,6 +47,9 @@
   </url>
   <url>
     <loc>https://validmeasures.org/spatialsampler/reference/get_tri.html</loc>
+  </url>
+  <url>
+    <loc>https://validmeasures.org/spatialsampler/reference/get_utm.html</loc>
   </url>
   <url>
     <loc>https://validmeasures.org/spatialsampler/reference/map_projections.html</loc>

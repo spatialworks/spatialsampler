@@ -33,38 +33,6 @@ devtools::install_github("validmeasures/spatialsampler")
 library(spatialsampler)
 ```
 
-    #> gstat (2.0-0 -> 2.0-1) [CRAN]
-    #> rgeos (0.4-2 -> 0.4-3) [CRAN]
-    #> 
-    #> The downloaded binary packages are in
-    #>  /var/folders/fk/s0yv8hhn2cs_nfsmzhm4dmhc0000gn/T//RtmpPMkNTu/downloaded_packages
-    #>   
-       checking for file ‘/private/var/folders/fk/s0yv8hhn2cs_nfsmzhm4dmhc0000gn/T/RtmpPMkNTu/remotes1031b4bb675bf/SpatialWorks-spatialsampler-6c911c1/DESCRIPTION’ ...
-      
-    ✔  checking for file ‘/private/var/folders/fk/s0yv8hhn2cs_nfsmzhm4dmhc0000gn/T/RtmpPMkNTu/remotes1031b4bb675bf/SpatialWorks-spatialsampler-6c911c1/DESCRIPTION’ (365ms)
-    #> 
-      
-    ─  preparing ‘spatialsampler’:
-    #> 
-      
-       checking DESCRIPTION meta-information ...
-      
-    ✔  checking DESCRIPTION meta-information
-    #> 
-      
-    ─  checking for LF line-endings in source and make files and shell scripts
-    #> 
-      
-    ─  checking for empty or unneeded directories
-    #> ─  looking to see if a ‘data/datalist’ file should be added
-    #> 
-      
-    ─  building ‘spatialsampler_0.1.0.tar.gz’
-    #> 
-      
-       
-    #> 
-
 ## Usage
 
 The current functions in `spatialsampler` can be grouped into two (2)
