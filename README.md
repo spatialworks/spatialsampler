@@ -6,8 +6,8 @@
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis-CI Build
 Status](https://travis-ci.org/SpatialWorks/spatialsampler.svg?branch=master)](https://travis-ci.org/SpatialWorks/spatialsampler)
-[![AppVeyor Build
-Status](https://ci.appveyor.com/api/projects/status/github/SpatialWorks/spatialsampler?branch=master&svg=true)](https://ci.appveyor.com/project/SpatialWorks/spatialsampler)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/SpatialWorks/spatialsampler?branch=master&svg=true)](https://ci.appveyor.com/project/SpatialWorks/spatialsampler)
 [![codecov](https://codecov.io/gh/SpatialWorks/spatialsampler/branch/master/graph/badge.svg)](https://codecov.io/gh/SpatialWorks/spatialsampler)
 
 The Centric Systematic Area Sampling (CSAS) and the Simple Spatial
@@ -32,6 +32,34 @@ if(!require(devtools)) install.packages("devtools")
 devtools::install_github("validmeasures/spatialsampler")
 library(spatialsampler)
 ```
+
+    #> 
+    #>   
+       checking for file ‘/private/var/folders/fk/s0yv8hhn2cs_nfsmzhm4dmhc0000gn/T/Rtmp4EAvFp/remotes1061182d45fe/SpatialWorks-spatialsampler-535f1af/DESCRIPTION’ ...
+      
+    ✔  checking for file ‘/private/var/folders/fk/s0yv8hhn2cs_nfsmzhm4dmhc0000gn/T/Rtmp4EAvFp/remotes1061182d45fe/SpatialWorks-spatialsampler-535f1af/DESCRIPTION’
+    #> 
+      
+    ─  preparing ‘spatialsampler’:
+    #> 
+      
+       checking DESCRIPTION meta-information ...
+      
+    ✔  checking DESCRIPTION meta-information
+    #> 
+      
+    ─  checking for LF line-endings in source and make files and shell scripts
+    #> 
+      
+    ─  checking for empty or unneeded directories
+    #> ─  looking to see if a ‘data/datalist’ file should be added
+    #> 
+      
+    ─  building ‘spatialsampler_0.1.0.tar.gz’
+    #> 
+      
+       
+    #> 
 
 ## Usage
 

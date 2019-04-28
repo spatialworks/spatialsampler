@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis-CI Build Status](https://travis-ci.org/SpatialWorks/spatialsampler.svg?branch=master)](https://travis-ci.org/SpatialWorks/spatialsampler)
-[![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/SpatialWorks/spatialsampler?branch=master&svg=true)](https://ci.appveyor.com/project/SpatialWorks/spatialsampler)
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/SpatialWorks/spatialsampler?branch=master&svg=true)](https://ci.appveyor.com/project/SpatialWorks/spatialsampler)
 [![codecov](https://codecov.io/gh/SpatialWorks/spatialsampler/branch/master/graph/badge.svg)](https://codecov.io/gh/SpatialWorks/spatialsampler)
 
 The Centric Systematic Area Sampling (CSAS) and the Simple Spatial Survey Method (S3M) are spatial sampling methods adapted and used in health and nutrition surveys by Brixton Health and Valid International. CSAS and S3M are used in surveys designed to be spatially representative i.e., the sample distributed evenly across the survey area, using a spatial sample design that selected communities located closest to the centroids of a square (for CSAS) or hexagonal (for S3M) grid laid over the survey area.
