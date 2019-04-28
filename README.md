@@ -5,10 +5,10 @@
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis-CI Build
-Status](https://travis-ci.org/validmeasures/spatialsampler.svg?branch=master)](https://travis-ci.org/validmeasures/spatialsampler)
+Status](https://travis-ci.org/SpatialWorks/spatialsampler.svg?branch=master)](https://travis-ci.org/SpatialWorks/spatialsampler)
 [![AppVeyor Build
-Status](https://ci.appveyor.com/api/projects/status/github/validmeasures/spatialsampler?branch=master&svg=true)](https://ci.appveyor.com/project/validmeasures/spatialsampler)
-[![codecov](https://codecov.io/gh/validmeasures/spatialsampler/branch/master/graph/badge.svg)](https://codecov.io/gh/validmeasures/spatialsampler)
+Status](https://ci.appveyor.com/api/projects/status/github/SpatialWorks/spatialsampler?branch=master&svg=true)](https://ci.appveyor.com/project/SpatialWorks/spatialsampler)
+[![codecov](https://codecov.io/gh/SpatialWorks/spatialsampler/branch/master/graph/badge.svg)](https://codecov.io/gh/SpatialWorks/spatialsampler)
 
 The Centric Systematic Area Sampling (CSAS) and the Simple Spatial
 Survey Method (S3M) are spatial sampling methods adapted and used in
