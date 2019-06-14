@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Function to select nearest community to a given sampling point (usually the
-centroid of a square grid for CSAS or of a hexagonal grid for S3M) — nearestPoint • spatialsampler</title>
+centroid of a square grid for CSAS or of a hexagonal grid for S3M) — nearest_point • spatialsampler</title>
 
 <!-- jquery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -32,7 +32,7 @@ centroid of a square grid for CSAS or of a hexagonal grid for S3M) — nearestPo
 
 
 <meta property="og:title" content="Function to select nearest community to a given sampling point (usually the
-centroid of a square grid for CSAS or of a hexagonal grid for S3M) — nearestPoint" />
+centroid of a square grid for CSAS or of a hexagonal grid for S3M) — nearest_point" />
 
 <meta property="og:description" content="Function to select nearest community to a given sampling point (usually the
 centroid of a square grid for CSAS or of a hexagonal grid for S3M)" />
@@ -105,7 +105,7 @@ centroid of a square grid for CSAS or of a hexagonal grid for S3M)" />
     <h1>Function to select nearest community to a given sampling point (usually the
 centroid of a square grid for CSAS or of a hexagonal grid for S3M)</h1>
     <small class="dont-index">Source: <a href='https://github.com/validmeasures/spatialsampler/blob/master/R/nearest_point.R'><code>R/nearest_point.R</code></a></small>
-    <div class="hidden name"><code>nearestPoint.Rd</code></div>
+    <div class="hidden name"><code>nearest_point.Rd</code></div>
     </div>
 
     <div class="ref-description">
@@ -115,7 +115,7 @@ centroid of a square grid for CSAS or of a hexagonal grid for S3M)</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>nearestPoint</span>(<span class='no'>data</span>, <span class='no'>x1</span>, <span class='no'>y1</span>, <span class='no'>query</span>, <span class='no'>x2</span>, <span class='no'>y2</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>duplicate</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
+    <pre class="usage"><span class='fu'>nearest_point</span>(<span class='no'>data</span>, <span class='no'>x1</span>, <span class='no'>y1</span>, <span class='no'>query</span>, <span class='no'>x2</span>, <span class='no'>y2</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>1</span>, <span class='kw'>duplicate</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -170,12 +170,99 @@ duplicate samples.</p></td>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='co'># Use nearestPoint() with test sampling points in Sennar</span>
+    <pre class="examples"><div class='input'><span class='co'># Use nearest_point() with test sampling points in Sennar</span>
 <span class='no'>sennar</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/subset'>subset</a></span>(<span class='no'>sudan01</span>, <span class='no'>STATE</span> <span class='kw'>==</span> <span class='st'>"Sennar"</span>)
 <span class='no'>samp.points</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>sp</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/sp/topics/spsample'>spsample</a></span>(<span class='no'>sennar</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"hexagonal"</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>20</span>)
-<span class='fu'>nearestPoint</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>samp.points</span>@<span class='kw'>coords</span>, <span class='kw'>x1</span> <span class='kw'>=</span> <span class='st'>"x"</span>, <span class='kw'>y1</span> <span class='kw'>=</span> <span class='st'>"y"</span>,
-             <span class='kw'>query</span> <span class='kw'>=</span> <span class='no'>sennar_villages</span>, <span class='kw'>x2</span> <span class='kw'>=</span> <span class='st'>"x"</span>, <span class='kw'>y2</span> <span class='kw'>=</span> <span class='st'>"y"</span>,
-             <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>3</span>)</div><div class='output co'>#&gt; <span class='error'>Error in nearestPoint(data = samp.points@coords, x1 = "x", y1 = "y", query = sennar_villages,     x2 = "x", y2 = "y", n = 3): could not find function "nearestPoint"</span></div><div class='input'>
+<span class='fu'>nearest_point</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>samp.points</span>@<span class='kw'>coords</span>, <span class='kw'>x1</span> <span class='kw'>=</span> <span class='st'>"x"</span>, <span class='kw'>y1</span> <span class='kw'>=</span> <span class='st'>"y"</span>,
+              <span class='kw'>query</span> <span class='kw'>=</span> <span class='no'>sennar_villages</span>, <span class='kw'>x2</span> <span class='kw'>=</span> <span class='st'>"x"</span>, <span class='kw'>y2</span> <span class='kw'>=</span> <span class='st'>"y"</span>,
+              <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>3</span>)</div><div class='output co'>#&gt;     spid  id        x        y                 village             locality
+#&gt; 728    1 929 33.53883 12.26989               AlMazmoum AlDali and AlMazmoum
+#&gt; 729    1 930 33.37906 12.04256             Hafir terus AlDali and AlMazmoum
+#&gt; 730    1 931 33.33164 12.22647          Hafir umm koka AlDali and AlMazmoum
+#&gt; 349    2 349 34.50039 12.59189                  braish              AlSooki
+#&gt; 351    2 351 34.28500 12.43228               abo hager              AlSooki
+#&gt; 352    2 352 34.29117 12.41944          umdrman flaata              AlSooki
+#&gt; 717    3 918 33.21367 12.41053               Abu Ireif AlDali and AlMazmoum
+#&gt; 718    3 919 33.36556 12.40275                AlMjawir AlDali and AlMazmoum
+#&gt; 719    3 920 33.28083 12.61028            Galaa AlBeid AlDali and AlMazmoum
+#&gt; 63     4  63 33.70803 12.59786                Alsahbaa            Abu Hijar
+#&gt; 727    4 928 33.49911 12.45197             Hilat Idris AlDali and AlMazmoum
+#&gt; 732    4 933 33.75706 12.41561    Arab AlBalf (Kockry)            Abu Hijar
+#&gt; 68     5  68 34.18017 12.47111                 AlZeaif            Abu Hijar
+#&gt; 357    5 357 34.16428 12.50389           Bunzga Janoob              AlSooki
+#&gt; 358    5 358 34.18850 12.48100                  Kairan              AlSooki
+#&gt; 124    6 124 34.77686 12.85164                Om Sagit            Al Dindir
+#&gt; 126    6 126 34.79900 12.84908        Om Bagara Sharig            Al Dindir
+#&gt; 244    6 244 34.79008 12.82597          Um Bagara Garb            Al Dindir
+#&gt; 18     7  18 33.70356 12.77214                 UmMarda            Abu Hijar
+#&gt; 19     7  19 33.56717 12.72828               Abo Rawag            Abu Hijar
+#&gt; 731    7 932 33.53467 12.72550            Hafir kamtor            Abu Hijar
+#&gt; 26     8  26 33.99511 12.88547                   Tabat            Abu Hijar
+#&gt; 27     8  27 33.97611 12.89631            Khor AlLibda            Abu Hijar
+#&gt; 30     8  30 33.99053 12.93842     AlAmara Wad Baloola            Abu Hijar
+#&gt; 80     9  80 34.44878 12.93794       Araki Al Halaween            Al Dindir
+#&gt; 81     9  81 34.42286 12.92950          Wad Al Zalagam            Al Dindir
+#&gt; 83     9  83 34.40997 12.93781            Abd Al Banat            Al Dindir
+#&gt; 179   10 179 34.86331 13.02667                Um Bagaa            Al Dindir
+#&gt; 498   11 498 33.14969 13.36497           Dood Alamarna               Sennar
+#&gt; 500   11 500 33.15650 13.40961          Dood Albasheer               Sennar
+#&gt; 502   11 502 33.15931 13.34058  Dood Abdallah(Um Alaj)               Sennar
+#&gt; 506   12 506 33.70986 13.32258 Abdeen Al Ajooz Albarnu                Sinja
+#&gt; 508   12 508 33.71192 13.30561              Al Shigaig                Sinja
+#&gt; 510   12 510 33.71756 13.29853     Aldaraba Wad alaita                Sinja
+#&gt; 159   13 159 34.18036 13.27928              Al Rimaila            Al Dindir
+#&gt; 212   13 212 34.19547 13.33208               Wad Dayan            Al Dindir
+#&gt; 213   13 213 34.19164 13.31311               Wad Ragma            Al Dindir
+#&gt; 430   14 430 33.12422 13.84464        Baida Almagaweer               Sennar
+#&gt; 431   14 431 33.08758 13.88300     Um Wizzain Dafallah               Sennar
+#&gt; 432   14 432 33.07914 13.89189          Goaz Alhabeela               Sennar
+#&gt; 695   15 695 34.00000 13.78336                 Darouma         Sharg Sennar
+#&gt; 696   15 696 33.99558 13.77711          Eid Misheilkha         Sharg Sennar
+#&gt; 697   15 697 34.03308 13.74931            Hanu Sleiman         Sharg Sennar
+#&gt;              d
+#&gt; 728 22.4855606
+#&gt; 729 19.9331003
+#&gt; 730 13.4760871
+#&gt; 349 76.2301730
+#&gt; 351 74.9589761
+#&gt; 352 69.7496792
+#&gt; 717 16.2299075
+#&gt; 718 12.2640410
+#&gt; 719 11.1255273
+#&gt; 63  25.1351204
+#&gt; 727 10.7369373
+#&gt; 732 10.2059015
+#&gt; 68   3.7277920
+#&gt; 357  3.1751858
+#&gt; 358  2.4040569
+#&gt; 124 54.5440632
+#&gt; 126 52.6688866
+#&gt; 244 51.5290913
+#&gt; 18  27.6219603
+#&gt; 19  21.5870073
+#&gt; 731 20.7801031
+#&gt; 26   4.7816015
+#&gt; 27   4.6538755
+#&gt; 30   2.2735658
+#&gt; 80   3.9984837
+#&gt; 81   3.8070010
+#&gt; 83   2.4181177
+#&gt; 179 12.4562117
+#&gt; 498 15.0689649
+#&gt; 500 12.7922493
+#&gt; 502 10.8524943
+#&gt; 506  1.8961438
+#&gt; 508  1.8472334
+#&gt; 510  1.6725948
+#&gt; 159  4.1163598
+#&gt; 212  1.9894734
+#&gt; 213  0.2297812
+#&gt; 430 19.9929640
+#&gt; 431 19.3796365
+#&gt; 432 17.6961054
+#&gt; 695  8.6318833
+#&gt; 696  8.2721783
+#&gt; 697  7.4325035</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">

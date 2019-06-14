@@ -1,75 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://validmeasures.org/spatialsampler/index.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/index.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/calculate_area.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/calculate_area.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/calculate_d.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/calculate_d.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/calculate_height.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/calculate_height.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/calculate_length.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/calculate_length.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/calculate_n.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/calculate_n.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/countryCentroid.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/countryCentroid.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/create_buffer.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/create_buffer.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/create_s3m_grid.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/create_s3m_grid.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/create_sp_grid.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/create_sp_grid.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/find_utm_hemisphere.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/find_utm_hemisphere.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/find_utm_zone.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/find_utm_zone.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/gedaref_villages.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/gedaref_villages.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/get_nearest_point.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/get_nearest_point.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/get_nn.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/get_nn.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/get_tri.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/get_tri.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/get_utm.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/get_utm.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/map_projections.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/map_projections.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/nearestPoint.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/nearest_point.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/sennar_villages.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/sennar_villages.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/spatialsampler.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/spatialsampler.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/sudan01.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/sudan01.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/sudan02.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/sudan02.html</loc>
   </url>
   <url>
-    <loc>https://validmeasures.org/spatialsampler/reference/vary_density.html</loc>
+    <loc>https://spatialworks.org/spatialsampler/reference/vary_density.html</loc>
   </url>
 </urlset>

@@ -110,7 +110,21 @@
     <tbody>
       <tr>
         <th colspan="2">
-          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
+          <h2 id="section-description" class="hasAnchor"><a href="#section-description" class="anchor"></a>Description</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="spatialsampler.html">spatialsampler</a></code> </p>
+        </td>
+        <td><p>Simple Spatial Sampling Method (S3M)</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-calculate" class="hasAnchor"><a href="#section-calculate" class="anchor"></a>Calculate</h2>
           <p class="section-desc"></p>
         </th>
       </tr>
@@ -119,139 +133,178 @@
         <td>
           <p><code><a href="calculate_area.html">calculate_area()</a></code> </p>
         </td>
-        <td><p>calculate_area</p></td>
+        <td><p>Function to calculate the area size of the resulting hexagon in a hexagonal
+grid and the area size of the resulting triangle in a triangular grid for a
+specified value of <code>d</code> (in kilometres) used in the simple spatial
+sampling method (S3M).</p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="calculate_d.html">calculate_d()</a></code> </p>
         </td>
-        <td><p>calculate_d</p></td>
+        <td><p>Function to calculate the distance <code>d</code> given an area size (in square
+kilometres) of a hexagon in a hexagonal spatial grid determining spatial
+resolution of spatial sampling</p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="calculate_height.html">calculate_height()</a></code> </p>
         </td>
-        <td><p>calculate_height</p></td>
+        <td><p>Calculate height (distance from north to south) of S3M grid given a value of <code>d</code></p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="calculate_length.html">calculate_length()</a></code> </p>
         </td>
-        <td><p>calculate_length</p></td>
+        <td><p>Calculate length (distance from east to west) of S3M grid given a value of
+<code>d</code></p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="calculate_n.html">calculate_n()</a></code> </p>
         </td>
-        <td><p>calculate_n</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="countryCentroid.html">countryCentroid</a></code> </p>
-        </td>
-        <td><p>countryCentroid</p></td>
-      </tr><tr>
+        <td><p>Function to calculate the number of hexagonal grids</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-sample" class="hasAnchor"><a href="#section-sample" class="anchor"></a>Sample</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
         
         <td>
           <p><code><a href="create_buffer.html">create_buffer()</a></code> </p>
         </td>
-        <td><p>create_buffer</p></td>
+        <td><p>Function to create a buffer around a SpatialPolygons or SpatialPolygonsDataFrame
+object. This is a wrapper for <code>gBuffer()</code> function from package <code>rgeos</code>
+adding transformation of planar coordinates to appropriate projected coordinates
+to enable creation of buffer.</p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="create_s3m_grid.html">create_s3m_grid()</a></code> </p>
         </td>
-        <td><p>create_s3m_grid</p></td>
+        <td><p>Create the rectangular S3M grid given a value of d of the farthest distance of
+a village from a sampling point.</p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="create_sp_grid.html">create_sp_grid()</a></code> </p>
         </td>
-        <td><p>create_sp_grid</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="find_utm_hemisphere.html">find_utm_hemisphere()</a></code> </p>
-        </td>
-        <td><p>find_utm_hemisphere</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="find_utm_zone.html">find_utm_zone()</a></code> </p>
-        </td>
-        <td><p>find_utm_zone</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="gedaref_villages.html">gedaref_villages</a></code> </p>
-        </td>
-        <td><p>gedaref_villages</p></td>
+        <td><p>Function to create sampling grids as per CSAS or S3M specifications. This is
+a wrapper function for <code>spsample()</code> function in <code>sp</code> package that
+adds arguments needed to implement CSAS and S3M-specific sampling.</p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="get_nearest_point.html">get_nearest_point()</a></code> </p>
         </td>
-        <td><p>get_nearest_point</p></td>
+        <td><p>Function to select nearest community to a given sampling point (usually the
+centroid of a square grid for CSAS or of a hexagonal grid for S3M) using
+geodesic calculations based on a specified reference ellipsoid</p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="get_nn.html">get_nn()</a></code> </p>
         </td>
-        <td><p>get_nn</p></td>
+        <td><p>Function to select nearest community to a given sampling point (usually the
+centroid of a square grid for CSAS or of a hexagonal grid for S3M) based on
+a nearest neighbour algorithm using Euclidean calculations</p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="get_tri.html">get_tri()</a></code> </p>
         </td>
-        <td><p>get_tri</p></td>
+        <td><p>A wrapper function to <code>gDelaunayTriangulation()</code> to perform Delaunay
+triangulation with additional options to specify thresholds for suppressing
+long sided triangles</p></td>
       </tr><tr>
         
         <td>
-          <p><code><a href="get_utm.html">get_utm()</a></code> </p>
+          <p><code><a href="nearest_point.html">nearest_point()</a></code> </p>
         </td>
-        <td><p>get_utm</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="map_projections.html">map_projections</a></code> </p>
-        </td>
-        <td><p>map_projections</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="nearestPoint.html">nearestPoint()</a></code> </p>
-        </td>
-        <td><p>nearestPoint</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="sennar_villages.html">sennar_villages</a></code> <code><a href="sennar_villages.html">sennar_villages</a></code> </p>
-        </td>
-        <td><p>sennar_villages</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="spatialsampler.html">spatialsampler</a></code> </p>
-        </td>
-        <td><p>Simple Spatial Sampling Method (S3M)</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="sudan01.html">sudan01</a></code> </p>
-        </td>
-        <td><p>sudan01</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="sudan02.html">sudan02</a></code> </p>
-        </td>
-        <td><p>sudan02</p></td>
+        <td><p>Function to select nearest community to a given sampling point (usually the
+centroid of a square grid for CSAS or of a hexagonal grid for S3M)</p></td>
       </tr><tr>
         
         <td>
           <p><code><a href="vary_density.html">vary_density()</a></code> </p>
         </td>
-        <td><p>vary_density</p></td>
+        <td><p>Adjust triangulation by by dividing a densely populated triangle into smaller
+triangles by adding 3 points at the middle of each side of the triangle</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-utility" class="hasAnchor"><a href="#section-utility" class="anchor"></a>Utility</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="find_utm_hemisphere.html">find_utm_hemisphere()</a></code> </p>
+        </td>
+        <td><p>Find UTM hemisphere based on a longitude and latitude GPS location.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="find_utm_zone.html">find_utm_zone()</a></code> </p>
+        </td>
+        <td><p>Find the UTM zone based on a longitude and latitude GPS location.</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="get_utm.html">get_utm()</a></code> </p>
+        </td>
+        <td><p>Get the appropriate UTM projection string given a longitude and latitude
+coordinate reference system values.</p></td>
+      </tr>
+    </tbody><tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-data" class="hasAnchor"><a href="#section-data" class="anchor"></a>Data</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="countryCentroid.html">countryCentroid</a></code> </p>
+        </td>
+        <td><p>A dataframe of country centroids</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="map_projections.html">map_projections</a></code> </p>
+        </td>
+        <td><p>A dataset of UTM projections</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="gedaref_villages.html">gedaref_villages</a></code> </p>
+        </td>
+        <td><p>A dataset of village names of Gedaref State, Sudan with data on coordinate locations</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="sennar_villages.html">sennar_villages</a></code> <code><a href="sennar_villages.html">sennar_villages</a></code> </p>
+        </td>
+        <td><p>A dataset of village names of Sennar State, Sudan with data on coordinate locations</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="sudan01.html">sudan01</a></code> </p>
+        </td>
+        <td><p>A map dataset of class SpatialPolygonsDataFrame of level 1 administrative units (states) of Sudan</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="sudan02.html">sudan02</a></code> </p>
+        </td>
+        <td><p>A map dataset of class SpatialPolygonsDataFrame of level 2 administrative units (localities) of Sudan</p></td>
       </tr>
     </tbody>
     </table>
@@ -260,7 +313,11 @@
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#section-description">Description</a></li>
+      <li><a href="#section-calculate">Calculate</a></li>
+      <li><a href="#section-sample">Sample</a></li>
+      <li><a href="#section-utility">Utility</a></li>
+      <li><a href="#section-data">Data</a></li>
     </ul>
   </div>
 </div>
