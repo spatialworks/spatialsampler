@@ -2,7 +2,9 @@
 % Please edit documentation in R/nearest_point_nn.R
 \name{get_nn}
 \alias{get_nn}
-\title{get_nn}
+\title{Function to select nearest community to a given sampling point (usually the
+centroid of a square grid for CSAS or of a hexagonal grid for S3M) based on
+a nearest neighbour algorithm using Euclidean calculations}
 \usage{
 get_nn(data, x1, y1, query, x2, y2, n, duplicate = FALSE)
 }

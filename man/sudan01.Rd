@@ -3,7 +3,7 @@
 \docType{data}
 \name{sudan01}
 \alias{sudan01}
-\title{sudan01}
+\title{A map dataset of class SpatialPolygonsDataFrame of level 1 administrative units (states) of Sudan}
 \format{A SpatialPolygonsDataFrame with 5 features with 4 fields:
 \describe{
 \item{\code{OBJECTID_1}}{Unique identifier}

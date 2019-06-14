@@ -2,7 +2,10 @@
 % Please edit documentation in R/create_buffer.R
 \name{create_buffer}
 \alias{create_buffer}
-\title{create_buffer}
+\title{Function to create a buffer around a SpatialPolygons or SpatialPolygonsDataFrame
+object. This is a wrapper for \code{gBuffer()} function from package \code{rgeos}
+adding transformation of planar coordinates to appropriate projected coordinates
+to enable creation of buffer.}
 \usage{
 create_buffer(x, buffer, country)
 }

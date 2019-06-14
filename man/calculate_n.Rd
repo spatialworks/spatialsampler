@@ -2,7 +2,7 @@
 % Please edit documentation in R/calculate_n.R
 \name{calculate_n}
 \alias{calculate_n}
-\title{calculate_n}
+\title{Function to calculate the number of hexagonal grids}
 \usage{
 calculate_n(x, d = NULL, area = NULL, country)
 }
@@ -24,7 +24,7 @@ A numeric value for number of hexagons to divide sampling area based
     on a specified \code{d} or a specified hexagon \code{area} size.
 }
 \description{
-Function to calcualte the number of hexagonal grids
+Function to calculate the number of hexagonal grids
 }
 \examples{
 # Calculate number of hexagons to create a sampling grid with a d = 10 kms

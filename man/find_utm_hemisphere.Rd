@@ -2,7 +2,7 @@
 % Please edit documentation in R/find_utm_hemisphere.R
 \name{find_utm_hemisphere}
 \alias{find_utm_hemisphere}
-\title{find_utm_hemisphere}
+\title{Find UTM hemisphere based on a longitude and latitude GPS location.}
 \usage{
 find_utm_hemisphere(lat)
 }

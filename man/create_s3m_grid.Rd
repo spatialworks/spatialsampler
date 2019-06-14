@@ -2,7 +2,8 @@
 % Please edit documentation in R/create_grid_s3m.R
 \name{create_s3m_grid}
 \alias{create_s3m_grid}
-\title{create_s3m_grid}
+\title{Create the rectangular S3M grid given a value of d of the farthest distance of
+a village from a sampling point.}
 \source{
 based on S3M sampling approach designed by Mark Myatt and
     Ernest Guevarra

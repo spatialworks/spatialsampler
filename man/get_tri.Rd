@@ -2,7 +2,9 @@
 % Please edit documentation in R/get_tri.R
 \name{get_tri}
 \alias{get_tri}
-\title{get_tri}
+\title{A wrapper function to \code{gDelaunayTriangulation()} to perform Delaunay
+triangulation with additional options to specify thresholds for suppressing
+long sided triangles}
 \usage{
 get_tri(input, x, y,
   crs = "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0",

@@ -3,7 +3,7 @@
 \docType{data}
 \name{sennar_villages}
 \alias{sennar_villages}
-\title{sennar_villages}
+\title{A dataset of village names of Sennar State, Sudan with data on coordinate locations}
 \format{A data frame with 5 columns and 741 rows:
 \describe{
 \item{\code{id}}{Unique identifier}

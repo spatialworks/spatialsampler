@@ -2,7 +2,10 @@
 % Please edit documentation in R/calculate_area.R
 \name{calculate_area}
 \alias{calculate_area}
-\title{calculate_area}
+\title{Function to calculate the area size of the resulting hexagon in a hexagonal
+grid and the area size of the resulting triangle in a triangular grid for a
+specified value of \code{d} (in kilometres) used in the simple spatial
+sampling method (S3M).}
 \usage{
 calculate_area(d, digits = NULL)
 }

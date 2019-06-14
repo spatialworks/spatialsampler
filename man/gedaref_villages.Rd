@@ -3,7 +3,7 @@
 \docType{data}
 \name{gedaref_villages}
 \alias{gedaref_villages}
-\title{gedaref_villages}
+\title{A dataset of village names of Gedaref State, Sudan with data on coordinate locations}
 \format{A data frame with 5 columns and 625 rows:
 \describe{
 \item{\code{id}}{Unique identifier}

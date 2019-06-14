@@ -2,7 +2,9 @@
 % Please edit documentation in R/sampling.R
 \name{create_sp_grid}
 \alias{create_sp_grid}
-\title{create_sp_grid}
+\title{Function to create sampling grids as per CSAS or S3M specifications. This is
+a wrapper function for \code{spsample()} function in \code{sp} package that
+adds arguments needed to implement CSAS and S3M-specific sampling.}
 \usage{
 create_sp_grid(x, d = NULL, area = NULL, country = NULL,
   buffer = ifelse(!is.null(d), d, 0), n = NULL, n.factor = NULL,

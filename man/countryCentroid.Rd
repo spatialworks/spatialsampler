@@ -3,7 +3,7 @@
 \docType{data}
 \name{countryCentroid}
 \alias{countryCentroid}
-\title{countryCentroid}
+\title{A dataframe of country centroids}
 \format{A data.frame with 252 rows and 3 columns
 \describe{
 \item{\code{country}}{Name of country}

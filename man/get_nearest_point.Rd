@@ -2,7 +2,9 @@
 % Please edit documentation in R/nearest_point_geo.R
 \name{get_nearest_point}
 \alias{get_nearest_point}
-\title{get_nearest_point}
+\title{Function to select nearest community to a given sampling point (usually the
+centroid of a square grid for CSAS or of a hexagonal grid for S3M) using
+geodesic calculations based on a specified reference ellipsoid}
 \usage{
 get_nearest_point(data, data.x, data.y, query, n = 1,
   ellipsoid = c("AA", "AN", "??", "BR", "BN", "CC", "CD", "EB", "EA",

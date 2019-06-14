@@ -2,7 +2,8 @@
 % Please edit documentation in R/vary_density.R
 \name{vary_density}
 \alias{vary_density}
-\title{vary_density}
+\title{Adjust triangulation by by dividing a densely populated triangle into smaller
+triangles by adding 3 points at the middle of each side of the triangle}
 \usage{
 vary_density(sample, x, y, label = seq_along(x), basemap = NULL,
   crs = "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0")

@@ -2,7 +2,9 @@
 % Please edit documentation in R/calculate_d.R
 \name{calculate_d}
 \alias{calculate_d}
-\title{calculate_d}
+\title{Function to calculate the distance \code{d} given an area size (in square
+kilometres) of a hexagon in a hexagonal spatial grid determining spatial
+resolution of spatial sampling}
 \usage{
 calculate_d(area, geom = c("tri", "hex"))
 }

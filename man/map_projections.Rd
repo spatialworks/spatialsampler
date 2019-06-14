@@ -3,7 +3,7 @@
 \docType{data}
 \name{map_projections}
 \alias{map_projections}
-\title{map_projections}
+\title{A dataset of UTM projections}
 \format{A data.frame with 12 rows and 3 columns:
 \describe{
 \item{\code{country}}{Name of country}

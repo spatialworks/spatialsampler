@@ -2,7 +2,8 @@
 % Please edit documentation in R/calculate_length.R
 \name{calculate_length}
 \alias{calculate_length}
-\title{calculate_length}
+\title{Calculate length (distance from east to west) of S3M grid given a value of
+\code{d}}
 \source{
 Based on equations by Mark Myatt
 }
@@ -19,7 +20,8 @@ A numeric value in kilometres of length (distance from east to west)
     of the S3M grid
 }
 \description{
-Calculate length (distance from east to west) of S3M grid given a value of \code{d}
+Calculate length (distance from east to west) of S3M grid given a value of
+\code{d}
 }
 \examples{
 

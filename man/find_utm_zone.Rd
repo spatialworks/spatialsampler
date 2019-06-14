@@ -2,7 +2,7 @@
 % Please edit documentation in R/find_utm_zone.R
 \name{find_utm_zone}
 \alias{find_utm_zone}
-\title{find_utm_zone}
+\title{Find the UTM zone based on a longitude and latitude GPS location.}
 \usage{
 find_utm_zone(lon, lat)
 }

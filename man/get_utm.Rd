@@ -2,7 +2,8 @@
 % Please edit documentation in R/get_utm.R
 \name{get_utm}
 \alias{get_utm}
-\title{get_utm}
+\title{Get the appropriate UTM projection string given a longitude and latitude
+coordinate reference system values.}
 \usage{
 get_utm(lon, lat, units = "m")
 }

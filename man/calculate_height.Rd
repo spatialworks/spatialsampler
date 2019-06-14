@@ -2,7 +2,7 @@
 % Please edit documentation in R/calculate_height.R
 \name{calculate_height}
 \alias{calculate_height}
-\title{calculate_height}
+\title{Calculate height (distance from north to south) of S3M grid given a value of \code{d}}
 \source{
 Based on equations by Mark Myatt
 }
