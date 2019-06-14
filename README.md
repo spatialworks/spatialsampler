@@ -11,6 +11,7 @@ developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.re
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/spatialsampler)](https://cran.r-project.org/package=spatialsampler)
+[![CRAN](http://www.r-pkg.org/badges/last-release/spatialsamplers)](https://cran.r-project.org/package=spatialsampler)
 [![CRAN
 status](http://cranlogs.r-pkg.org/badges/grand-total/spatialsampler)](https://cran.r-project.org/package=spatialsampler)
 [![CRAN
@@ -20,6 +21,7 @@ Status](https://travis-ci.org/SpatialWorks/spatialsampler.svg?branch=master)](ht
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/SpatialWorks/spatialsampler?branch=master&svg=true)](https://ci.appveyor.com/project/SpatialWorks/spatialsampler)
 [![codecov](https://codecov.io/gh/SpatialWorks/spatialsampler/branch/master/graph/badge.svg)](https://codecov.io/gh/SpatialWorks/spatialsampler)
+
 <!-- badges: end -->
 
 The Centric Systematic Area Sampling (CSAS) and the Simple Spatial

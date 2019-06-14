@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![CRAN status](https://www.r-pkg.org/badges/version/spatialsampler)](https://cran.r-project.org/package=spatialsampler)
+[![CRAN](http://www.r-pkg.org/badges/last-release/spatialsamplers)](https://cran.r-project.org/package=spatialsampler)
 [![CRAN status](http://cranlogs.r-pkg.org/badges/grand-total/spatialsampler)](https://cran.r-project.org/package=spatialsampler)
 [![CRAN status](http://cranlogs.r-pkg.org/badges/spatialsampler)](https://cran.r-project.org/package=spatialsampler)
 [![Travis-CI Build Status](https://travis-ci.org/SpatialWorks/spatialsampler.svg?branch=master)](https://travis-ci.org/SpatialWorks/spatialsampler)
