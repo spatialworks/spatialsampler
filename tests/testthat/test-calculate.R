@@ -1,3 +1,4 @@
-test_that("multiplication works", {
-  expect_equal(2 * 2, 4)
+test_that("calculate_area works", {
+  expect_equal(length(calculate_area(d = 10)), 2)
+  expect_is(calculate_area(d = 10), "data.frame")
 })
