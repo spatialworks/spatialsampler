@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' get_nearest_point
-#'
 #' Function to select nearest community to a given sampling point (usually the
 #' centroid of a square grid for CSAS or of a hexagonal grid for S3M) using
 #' geodesic calculations based on a specified reference ellipsoid

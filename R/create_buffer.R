@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' create_buffer
-#'
 #' Function to create a buffer around a SpatialPolygons or SpatialPolygonsDataFrame
 #' object. This is a wrapper for \code{gBuffer()} function from package \code{rgeos}
 #' adding transformation of planar coordinates to appropriate projected coordinates

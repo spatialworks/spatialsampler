@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' find_utm_zone
-#'
 #' Find the UTM zone based on a longitude and latitude GPS location.
 #'
 #' @param lon Longitude coordinate

@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' get_utm
-#'
 #' Get the appropriate UTM projection string given a longitude and latitude
 #' coordinate reference system values.
 #'

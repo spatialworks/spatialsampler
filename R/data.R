@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' gedaref_villages
-#'
 #' A dataset of village names of Gedaref State, Sudan with data on coordinate locations
 #'
 #' @format A data frame with 5 columns and 625 rows:
@@ -21,8 +19,6 @@
 
 ################################################################################
 #
-#' sennar_villages
-#'
 #' A dataset of village names of Sennar State, Sudan with data on coordinate locations
 #'
 #' @format A data frame with 5 columns and 741 rows:
@@ -41,8 +37,6 @@
 
 ################################################################################
 #
-#' sennar_villages
-#'
 #' A dataset of village names of Sennar State, Sudan with data on coordinate locations
 #'
 #' @format A data frame with 5 columns and 741 rows:
@@ -61,8 +55,6 @@
 
 ################################################################################
 #
-#' sudan01
-#'
 #' A map dataset of class SpatialPolygonsDataFrame of level 1 administrative units (states) of Sudan
 #'
 #' @format A SpatialPolygonsDataFrame with 5 features with 4 fields:
@@ -80,8 +72,6 @@
 
 ################################################################################
 #
-#' sudan02
-#'
 #' A map dataset of class SpatialPolygonsDataFrame of level 2 administrative units (localities) of Sudan
 #'
 #' @format A SpatialPolygonsDataFrame with 5 features and 5 rows:
@@ -100,8 +90,6 @@
 
 ################################################################################
 #
-#' map_projections
-#'
 #' A dataset of UTM projections
 #'
 #' @format A data.frame with 12 rows and 3 columns:
@@ -118,8 +106,6 @@
 
 ################################################################################
 #
-#' countryCentroid
-#'
 #' A dataframe of country centroids
 #'
 #' @format A data.frame with 252 rows and 3 columns

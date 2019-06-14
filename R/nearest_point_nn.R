@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' get_nn
-#'
 #' Function to select nearest community to a given sampling point (usually the
 #' centroid of a square grid for CSAS or of a hexagonal grid for S3M) based on
 #' a nearest neighbour algorithm using Euclidean calculations

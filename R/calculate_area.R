@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' calculate_area
-#'
 #' Function to calculate the area size of the resulting hexagon in a hexagonal
 #' grid and the area size of the resulting triangle in a triangular grid for a
 #' specified value of \code{d} (in kilometres) used in the simple spatial

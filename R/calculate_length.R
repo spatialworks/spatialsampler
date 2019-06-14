@@ -1,8 +1,7 @@
 ################################################################################
 #
-#' calculate_length
-#'
-#' Calculate length (distance from east to west) of S3M grid given a value of \code{d}
+#' Calculate length (distance from east to west) of S3M grid given a value of
+#' \code{d}
 #'
 #' @param d A numeric value for length (in kilometres) of the maximum distance
 #'     of a village/community from a sampling point. This can be the output of

@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' vary_density
-#'
 #' Adjust triangulation by by dividing a densely populated triangle into smaller
 #' triangles by adding 3 points at the middle of each side of the triangle
 #'

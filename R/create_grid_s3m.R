@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' create_s3m_grid
-#'
 #' Create the rectangular S3M grid given a value of d of the farthest distance of
 #' a village from a sampling point.
 #'

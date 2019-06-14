@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' nearestPoint
-#'
 #' Function to select nearest community to a given sampling point (usually the
 #' centroid of a square grid for CSAS or of a hexagonal grid for S3M)
 #'
@@ -29,19 +27,19 @@
 #' @author Farah Mohamad Ibrahim <abdu.ff@gmail.com>
 #'
 #' @examples
-#' # Use nearestPoint() with test sampling points in Sennar
+#' # Use nearest_point() with test sampling points in Sennar
 #' sennar <- subset(sudan01, STATE == "Sennar")
 #' samp.points <- sp::spsample(sennar, type = "hexagonal", n = 20)
-#' nearestPoint(data = samp.points@coords, x1 = "x", y1 = "y",
-#'              query = sennar_villages, x2 = "x", y2 = "y",
-#'              n = 3)
+#' nearest_point(data = samp.points@coords, x1 = "x", y1 = "y",
+#'               query = sennar_villages, x2 = "x", y2 = "y",
+#'               n = 3)
 #'
 #' @export
 #'
 #
 ################################################################################
 
-nearestPoint <- function(data, x1, y1,
+nearest_point <- function(data, x1, y1,
                          query, x2, y2,
                          n = 1,
                          duplicate = FALSE) {

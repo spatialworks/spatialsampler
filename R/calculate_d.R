@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' calculate_d
-#'
 #' Function to calculate the distance \code{d} given an area size (in square
 #' kilometres) of a hexagon in a hexagonal spatial grid determining spatial
 #' resolution of spatial sampling

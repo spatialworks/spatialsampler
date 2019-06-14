@@ -1,8 +1,6 @@
 ################################################################################
 #
-#' calculate_n
-#'
-#' Function to calcualte the number of hexagonal grids
+#' Function to calculate the number of hexagonal grids
 #'
 #' @param x A class SpatialPolygons or SpatialPolygonsDataFrame object defining
 #'     the area to be sampled

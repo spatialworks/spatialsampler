@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' get_tri
-#'
 #' A wrapper function to \code{gDelaunayTriangulation()} to perform Delaunay
 #' triangulation with additional options to specify thresholds for suppressing
 #' long sided triangles

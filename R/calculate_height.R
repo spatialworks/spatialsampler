@@ -1,7 +1,5 @@
 ################################################################################
 #
-#' calculate_height
-#'
 #' Calculate height (distance from north to south) of S3M grid given a value of \code{d}
 #'
 #' @param d A numeric value for length (in kilometres) of the maximum distance
