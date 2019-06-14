@@ -1,6 +1,49 @@
 title: spatialsampler
-url: https://validmeasures.org/spatialsampler
+
+url: https://spatialworks.org/spatialsampler
+
 template:
   params:
     bootswatch: sandstone
     #ganalytics: UA-102485058-4
+
+reference:
+- title: Description
+  contents:
+  - spatialsampler
+
+- title: Calculate
+  contents:
+  - calculate_area
+  - calculate_d
+  - calculate_height
+  - calculate_length
+  - calculate_n
+
+- title: Sample
+  contents:
+  - create_buffer
+  - create_s3m_grid
+  - create_sp_grid
+  - get_nearest_point
+  - get_nn
+  - get_tri
+  - nearest_point
+  - vary_density
+
+- title: Utility
+  contents:
+  - find_utm_hemisphere
+  - find_utm_zone
+  - get_utm
+
+- title: Data
+  contents:
+  - countryCentroid
+  - map_projections
+  - gedaref_villages
+  - sennar_villages
+  - sudan01
+  - sudan02
+
+
