@@ -29,7 +29,7 @@ Function to calculate the number of hexagonal grids
 \examples{
 # Calculate number of hexagons to create a sampling grid with a d = 10 kms
 # on Sennar State in Sudan
-sennar <- subset(sudan01, STATE = "Sennar")
+sennar <- subset(sudan01, STATE == "Sennar")
 calculate_n(x = sennar, d = 10, country = "Sudan")
 
 }
