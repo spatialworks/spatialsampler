@@ -12,5 +12,11 @@ test_that("calculate_d works", {
   expect_equal(calculate_d(area = 130, geom = "hex"), sqrt((130 * 2) / (3 * sqrt(3))))
 })
 
+test_that("calculate_height works", {
+  expect_equal(calculate_height(d = 6), (sqrt(3) / 2) * 6)
+})
+
+
+
 
 
