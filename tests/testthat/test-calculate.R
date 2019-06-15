@@ -20,7 +20,10 @@ test_that("calculate_length works", {
   expect_equal(calculate_length(d = 6), (3 * 6) / 2)
 })
 
-
+test_that("calculate_n works", {
+  expect_equal(calculate_n(x = sudan01, d = 10, country = "Sudan"), 7242)
+  expect_error(calculate_n(x = sudan01, country = "Sudan"), "Specify either d or area. Try again.")
+})
 
 
 
