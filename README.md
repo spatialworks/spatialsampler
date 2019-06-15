@@ -41,8 +41,8 @@ Method (S3M) using R.
 You can install `spatialsampler` from GitHub with:
 
 ``` r
-if(!require(devtools)) install.packages("devtools")
-devtools::install_github("validmeasures/spatialsampler")
+if(!require(remotes)) install.packages("remotes")
+remotes::install_github("validmeasures/spatialsampler")
 library(spatialsampler)
 ```
 
@@ -74,8 +74,8 @@ Given a \(d\) of 10 kms, area can be calculated as follows:
 
 ``` r
 calculate_area(d = 10, digits = 2)
-#>     tri    hex
-#> 1 129.9 259.81
+#>        tri      hex
+#> 1 129.9038 259.8076
 ```
 
 The result is a data frame of 1 row and 2 columns. The first column

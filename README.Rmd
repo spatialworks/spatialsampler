@@ -35,14 +35,14 @@ The `spatialsampler` package provides sets of functions for implementing the Cen
 You can install `spatialsampler` from GitHub with:
 
 ```{r install1, echo = TRUE, eval = FALSE}
-if(!require(devtools)) install.packages("devtools")
-devtools::install_github("validmeasures/spatialsampler")
+if(!require(remotes)) install.packages("remotes")
+remotes::install_github("validmeasures/spatialsampler")
 library(spatialsampler)
 ```
 
 ```{r install2, echo = FALSE, eval = TRUE, message = FALSE}
-if(!require(devtools)) install.packages("devtools")
-if(!require(spatialsampler)) devtools::install_github("validmeasures/spatialsampler")
+if(!require(remotes)) install.packages("remotes")
+if(!require(spatialsampler)) remotes::install_github("validmeasures/spatialsampler")
 library(spatialsampler)
 ```
 
