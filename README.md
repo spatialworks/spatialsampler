@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# spatialsampler: An Implementation of Centric Systematic Area Sampling (CSAS) and Simple Spatial Sampling Method (S3M) in R
+# spatialsampler: An Implementation of Centric Systematic Area Sampling (CSAS) and Simple Spatial Sampling Method (S3M) in R <img src="man/figures/spatialsampler.png" width="200" align="right" />
 
 <!-- badges: start -->
 
@@ -74,8 +74,8 @@ Given a \(d\) of 10 kms, area can be calculated as follows:
 
 ``` r
 calculate_area(d = 10, digits = 2)
-#>        tri      hex
-#> 1 129.9038 259.8076
+#>     tri    hex
+#> 1 129.9 259.81
 ```
 
 The result is a data frame of 1 row and 2 columns. The first column
