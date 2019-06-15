@@ -8,3 +8,4 @@
 ^LICENSE\.md$
 ^_pkgdown\.yml$
 ^docs$
+^cran-comments\.md$
