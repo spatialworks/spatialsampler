@@ -26,38 +26,23 @@
 ################################################################################
 
 calculate_n <- function(x, d = NULL, area = NULL, country) {
-  #
-  # Check that d and area are not both specified
-  #
+  ## Check that d and area are not both specified
   if(!is.null(d) & !is.null(area)) {
     stop("Specify either d or area, not both. Try again.", call. = TRUE)
   }
-  #
-  #
-  #
+  ## Get UTM coordinates for specified country
   utm.crs <- get_utm(lon = countryCentroid$lon[countryCentroid$country == country],
                      lat = countryCentroid$lat[countryCentroid$country == country])
-  #
-  # Convert x to appropriate UTM
-  #
-  #x.utm <- sp::spTransform(x = x,
-  #                         CRSobj = sp::CRS(as.character(map_projections$proj[map_projections$country == country])))
-  x.utm <- sp::spTransform(x = x,
-                           CRSobj = sp::CRS(utm.crs))
-  #
-  # If d is specified, calculate n
-  #
+  ## Convert x to appropriate UTM
+  x.utm <- sp::spTransform(x = x, CRSobj = sp::CRS(utm.crs))
+  ## If d is specified, calculate n
   if(!is.null(d)) {
     n <- ceiling(rgeos::gArea(x.utm) / (calculate_area(d = d)$hex * 1000000))
   }
-  #
-  # If area is specified, calculate n
-  #
+  ## If area is specified, calculate n
   if(!is.null(area)) {
     n <- ceiling(rgeos::gArea(x.utm) / (area * 1000000))
   }
-  #
-  # Return output
-  #
+  ## Return output
   return(n)
 }
