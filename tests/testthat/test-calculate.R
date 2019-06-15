@@ -23,6 +23,8 @@ test_that("calculate_length works", {
 test_that("calculate_n works", {
   expect_equal(calculate_n(x = sudan01, d = 10, country = "Sudan"), 7242)
   expect_error(calculate_n(x = sudan01, country = "Sudan"), "Specify either d or area. Try again.")
+  expect_error(calculate_n(x = sudan01, d = 10, area = 130, country = "Sudan"), "Specify either d or area, not both. Try again.")
+  expect_equal(calculate_n(x = sudan01, area = 130, country = "Sudan"), 14473)
 })
 
 
