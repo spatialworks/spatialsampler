@@ -21,7 +21,6 @@ Status](https://travis-ci.org/SpatialWorks/spatialsampler.svg?branch=master)](ht
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/SpatialWorks/spatialsampler?branch=master&svg=true)](https://ci.appveyor.com/project/SpatialWorks/spatialsampler)
 [![codecov](https://codecov.io/gh/SpatialWorks/spatialsampler/branch/master/graph/badge.svg)](https://codecov.io/gh/SpatialWorks/spatialsampler)
-
 <!-- badges: end -->
 
 The Centric Systematic Area Sampling (CSAS) and the Simple Spatial
