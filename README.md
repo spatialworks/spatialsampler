@@ -74,8 +74,8 @@ Given a \(d\) of 10 kms, area can be calculated as follows:
 
 ``` r
 calculate_area(d = 10, digits = 2)
-#>        tri      hex
-#> 1 129.9038 259.8076
+#>     tri    hex
+#> 1 129.9 259.81
 ```
 
 The result is a data frame of 1 row and 2 columns. The first column
