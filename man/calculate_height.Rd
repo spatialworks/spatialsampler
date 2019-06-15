@@ -2,10 +2,8 @@
 % Please edit documentation in R/calculate_height.R
 \name{calculate_height}
 \alias{calculate_height}
-\title{Calculate height (distance from north to south) of S3M grid given a value of \code{d}}
-\source{
-Based on equations by Mark Myatt
-}
+\title{Calculate height (distance from north to south) of S3M grid given a value of
+\code{d}}
 \usage{
 calculate_height(d)
 }
@@ -15,15 +13,19 @@ of a village/community from a sampling point. This can be the output of
 the function \code{calculate_d()}}
 }
 \value{
-A numeric value in kilometres of height (distance from north to south)
-    of the S3M grid
+A numeric value in kilometres of height (distance from north to
+    south) of the S3M grid
 }
 \description{
-Calculate height (distance from north to south) of S3M grid given a value of \code{d}
+Calculate height (distance from north to south) of S3M grid given a value of
+\code{d}
 }
 \examples{
 
 # Calculate height given a d of 6 kms
 calculate_height(d = 6)
 
+}
+\author{
+Ernest Guevarra based on equations by Mark Myatt
 }
