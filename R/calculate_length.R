@@ -15,7 +15,7 @@
 #' # Calculate length given a d of 6 kms
 #' calculate_length(d = 6)
 #'
-#' @source Based on equations by Mark Myatt
+#' @author Ernest Guevarra based on equations by Mark Myatt
 #'
 #' @export
 #'
