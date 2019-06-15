@@ -17,7 +17,7 @@
 #' @examples
 #' # Calculate number of hexagons to create a sampling grid with a d = 10 kms
 #' # on Sennar State in Sudan
-#' sennar <- subset(sudan01, STATE = "Sennar")
+#' sennar <- subset(sudan01, STATE == "Sennar")
 #' calculate_n(x = sennar, d = 10, country = "Sudan")
 #'
 #' @export
@@ -29,6 +29,10 @@ calculate_n <- function(x, d = NULL, area = NULL, country) {
   ## Check that d and area are not both specified
   if(!is.null(d) & !is.null(area)) {
     stop("Specify either d or area, not both. Try again.", call. = TRUE)
+  }
+  ## Check that either d or area are specified
+  if(is.null(d) & is.null(area)) {
+    stop("Specify either d or area. Try again.", call. = TRUE)
   }
   ## Get UTM coordinates for specified country
   utm.crs <- get_utm(lon = countryCentroid$lon[countryCentroid$country == country],
