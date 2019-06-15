@@ -4,9 +4,6 @@
 \alias{calculate_length}
 \title{Calculate length (distance from east to west) of S3M grid given a value of
 \code{d}}
-\source{
-Based on equations by Mark Myatt
-}
 \usage{
 calculate_length(d)
 }
@@ -28,4 +25,7 @@ Calculate length (distance from east to west) of S3M grid given a value of
 # Calculate length given a d of 6 kms
 calculate_length(d = 6)
 
+}
+\author{
+Ernest Guevarra based on equations by Mark Myatt
 }
