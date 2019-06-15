@@ -16,6 +16,12 @@ test_that("calculate_height works", {
   expect_equal(calculate_height(d = 6), (sqrt(3) / 2) * 6)
 })
 
+test_that("calculate_length works", {
+  expect_equal(calculate_length(d = 6), (3 * 6) / 2)
+})
+
+
+
 
 
 
