@@ -26,26 +26,16 @@
 ################################################################################
 
 calculate_area <- function(d, digits = NULL) {
-  #
-  # Calculate triangular area
-  #
+  ## Calculate triangular area
   tri.area <- tan(30 * (pi / 180)) * (9 / 4) * d ^ 2
-  #
-  # Calculate hexagonal area
-  #
+  ## Calculate hexagonal area
   hex.area <- ((3 * sqrt(3)) / 2) * d ^ 2
-  #
-  # Concatenate calculations
-  #
+  ## Concatenate calculations
   area <- data.frame("tri" = tri.area, "hex" = hex.area)
-  #
-  # Round results if !is.null(digits)
-  #
+  ## Round results if !is.null(digits)
   if(!is.null(digits)) {
-    round(area, digits = digits)
+    area <- round(area, digits = digits)
   }
-  #
-  # Return output
-  #
+  ## Return output
   return(area)
 }
