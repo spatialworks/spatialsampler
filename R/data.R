@@ -37,24 +37,6 @@
 
 ################################################################################
 #
-#' A dataset of village names of Sennar State, Sudan with data on coordinate locations
-#'
-#' @format A data frame with 5 columns and 741 rows:
-#' \describe{
-#' \item{\code{id}}{Unique identifier}
-#' \item{\code{x}}{Longitude (in decimal format)}
-#' \item{\code{y}}{Latitude (in decimal format)}
-#' \item{\code{village}}{Village name}
-#' \item{\code{locality}}{Locality name}
-#' }
-#' @source Sudan Bureau of Statistics and UNICEF Sudan
-#'
-#
-################################################################################
-"sennar_villages"
-
-################################################################################
-#
 #' A map dataset of class SpatialPolygonsDataFrame of level 1 administrative units (states) of Sudan
 #'
 #' @format A SpatialPolygonsDataFrame with 5 features with 4 fields:

@@ -14,17 +14,11 @@
 }}
 \source{
 Sudan Bureau of Statistics and UNICEF Sudan
-
-Sudan Bureau of Statistics and UNICEF Sudan
 }
 \usage{
 sennar_villages
-
-sennar_villages
 }
 \description{
-A dataset of village names of Sennar State, Sudan with data on coordinate locations
-
 A dataset of village names of Sennar State, Sudan with data on coordinate locations
 }
 \keyword{datasets}
