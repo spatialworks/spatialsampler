@@ -6,9 +6,17 @@
 a wrapper function for \code{spsample()} function in \code{sp} package that
 adds arguments needed to implement CSAS and S3M-specific sampling.}
 \usage{
-create_sp_grid(x, d = NULL, area = NULL, country = NULL,
-  buffer = ifelse(!is.null(d), d, 0), n = NULL, n.factor = NULL,
-  type = "s3m", fixed = FALSE)
+create_sp_grid(
+  x,
+  d = NULL,
+  area = NULL,
+  country = NULL,
+  buffer = ifelse(!is.null(d), d, 0),
+  n = NULL,
+  n.factor = NULL,
+  type = "s3m",
+  fixed = FALSE
+)
 }
 \arguments{
 \item{x}{Spatial object to grid}

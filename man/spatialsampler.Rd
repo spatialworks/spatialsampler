@@ -3,7 +3,6 @@
 \docType{package}
 \name{spatialsampler}
 \alias{spatialsampler}
-\alias{spatialsampler-package}
 \title{Simple Spatial Sampling Method (S3M)}
 \description{
 The Simple Spatial Survey Method (S3M) was developed from the Centric

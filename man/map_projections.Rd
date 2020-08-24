@@ -4,12 +4,14 @@
 \name{map_projections}
 \alias{map_projections}
 \title{A dataset of UTM projections}
-\format{A data.frame with 12 rows and 3 columns:
+\format{
+A data.frame with 12 rows and 3 columns:
 \describe{
 \item{\code{country}}{Name of country}
 \item{\code{utm}}{UTM name}
 \item{\code{proj}}{A character string specifying UTM projection}
-}}
+}
+}
 \usage{
 map_projections
 }
