@@ -10,21 +10,29 @@
 centroid of a square grid for CSAS or of a hexagonal grid for S3M) based on
 a nearest neighbour algorithm using Euclidean calculations — get_nn • spatialsampler</title>
 
-<!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<!-- Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.7/sandstone/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script>
+<!-- jquery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<!-- Bootstrap -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/sandstone/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script>
 
-<!-- sticky kit -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
+<!-- headroom.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
@@ -32,14 +40,14 @@ a nearest neighbour algorithm using Euclidean calculations — get_nn • spatia
 
 
 
+
 <meta property="og:title" content="Function to select nearest community to a given sampling point (usually the
 centroid of a square grid for CSAS or of a hexagonal grid for S3M) based on
 a nearest neighbour algorithm using Euclidean calculations — get_nn" />
-
 <meta property="og:description" content="Function to select nearest community to a given sampling point (usually the
 centroid of a square grid for CSAS or of a hexagonal grid for S3M) based on
 a nearest neighbour algorithm using Euclidean calculations" />
-<meta name="twitter:card" content="summary" />
+
 
 
 
@@ -53,9 +61,10 @@ a nearest neighbour algorithm using Euclidean calculations" />
 <![endif]-->
 
 
+
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -77,7 +86,7 @@ a nearest neighbour algorithm using Euclidean calculations" />
       <ul class="nav navbar-nav">
         <li>
   <a href="../index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -88,11 +97,10 @@ a nearest neighbour algorithm using Euclidean calculations" />
   <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="https://github.com/validmeasures/spatialsampler">
-    <span class="fa fa-github fa-lg"></span>
+  <a href="https://github.com/spatialworks/spatialsampler/">
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -103,6 +111,7 @@ a nearest neighbour algorithm using Euclidean calculations" />
 </div><!--/.navbar -->
 
       
+
       </header>
 
 <div class="row">
@@ -111,20 +120,18 @@ a nearest neighbour algorithm using Euclidean calculations" />
     <h1>Function to select nearest community to a given sampling point (usually the
 centroid of a square grid for CSAS or of a hexagonal grid for S3M) based on
 a nearest neighbour algorithm using Euclidean calculations</h1>
-    <small class="dont-index">Source: <a href='https://github.com/validmeasures/spatialsampler/blob/master/R/nearest_point_nn.R'><code>R/nearest_point_nn.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/spatialworks/spatialsampler/blob/master/R/nearest_point_nn.R'><code>R/nearest_point_nn.R</code></a></small>
     <div class="hidden name"><code>get_nn.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    
     <p>Function to select nearest community to a given sampling point (usually the
 centroid of a square grid for CSAS or of a hexagonal grid for S3M) based on
 a nearest neighbour algorithm using Euclidean calculations</p>
-    
     </div>
 
     <pre class="usage"><span class='fu'>get_nn</span>(<span class='no'>data</span>, <span class='no'>x1</span>, <span class='no'>y1</span>, <span class='no'>query</span>, <span class='no'>x2</span>, <span class='no'>y2</span>, <span class='no'>n</span>, <span class='kw'>duplicate</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>)</pre>
-    
+
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
@@ -171,22 +178,23 @@ to search for</p></td>
 kept or discarded. Default is FALSE (discard).</p></td>
     </tr>
     </table>
-    
+
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A subset data frame of <code>data</code> of selected villages/communities
     nearest to the sampling points with a new variable <code>d</code> indicating
     the distance of the village/community to the sampling point (in coordinate
     units). If <code>duplicate</code> is TRUE, the result has number of rows equal
-    to <code><a href='https://www.rdocumentation.org/packages/base/topics/nrow'>nrow(query)</a></code></p>
-    
+    to <code><a href='https://rdrr.io/r/base/nrow.html'>nrow(query)</a></code></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'># Use get_nn() with test sampling points in Sennar to find 3 nearest communities</span>
 <span class='co'># from the sampling points</span>
-<span class='no'>sennar</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/subset'>subset</a></span>(<span class='no'>sudan01</span>, <span class='no'>STATE</span> <span class='kw'>==</span> <span class='st'>"Sennar"</span>)
-<span class='no'>samp.points</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>sp</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/sp/topics/spsample'>spsample</a></span>(<span class='no'>sennar</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"hexagonal"</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>10</span>)
-<span class='fu'>get_nn</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>sennar_villages</span>, <span class='kw'>x1</span> <span class='kw'>=</span> <span class='st'>"x"</span>, <span class='kw'>y1</span> <span class='kw'>=</span> <span class='st'>"y"</span>,
+<span class='no'>sennar</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/subset.html'>subset</a></span>(<span class='no'>sudan01</span>, <span class='no'>STATE</span> <span class='kw'>==</span> <span class='st'>"Sennar"</span>)
+<span class='no'>samp.points</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>sp</span><span class='kw ns'>::</span><span class='fu'><a href='https://rdrr.io/pkg/sp/man/spsample.html'>spsample</a></span>(<span class='no'>sennar</span>, <span class='kw'>type</span> <span class='kw'>=</span> <span class='st'>"hexagonal"</span>, <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>10</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: Discarded datum WGS_1984 in CRS definition,</span>
+#&gt; <span class='warning'> but +towgs84= values preserved</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Discarded datum WGS_1984 in CRS definition,</span>
+#&gt; <span class='warning'> but +towgs84= values preserved</span></div><div class='output co'>#&gt; <span class='warning'>Warning: Discarded datum WGS_1984 in CRS definition,</span>
+#&gt; <span class='warning'> but +towgs84= values preserved</span></div><div class='output co'>#&gt; <span class='warning'>Warning: CRS object has comment, which is lost in output</span></div><div class='input'><span class='fu'>get_nn</span>(<span class='kw'>data</span> <span class='kw'>=</span> <span class='no'>sennar_villages</span>, <span class='kw'>x1</span> <span class='kw'>=</span> <span class='st'>"x"</span>, <span class='kw'>y1</span> <span class='kw'>=</span> <span class='st'>"y"</span>,
        <span class='kw'>query</span> <span class='kw'>=</span> <span class='no'>samp.points</span>, <span class='kw'>x2</span> <span class='kw'>=</span> <span class='st'>"x"</span>, <span class='kw'>y2</span> <span class='kw'>=</span> <span class='st'>"y"</span>,
        <span class='kw'>n</span> <span class='kw'>=</span> <span class='fl'>3</span>)</div><div class='output co'>#&gt;      id        x        y              village     locality          d
 #&gt; 732 933 33.75706 12.41561 Arab AlBalf (Kockry)    Abu Hijar 0.12172316
@@ -207,20 +215,13 @@ kept or discarded. Default is FALSE (discard).</p></td>
 #&gt; 563 563 33.83750 13.56875  Mabriika Wa Barakat Sharg Sennar 0.04296518</div><div class='input'>
 </div></pre>
   </div>
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <h2>Contents</h2>
-    <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      
-      <li><a href="#value">Value</a></li>
-      
-      <li><a href="#examples">Examples</a></li>
-    </ul>
-
-    <h2>Author</h2>
-    <p>Ernest Guevarra &lt;ernest@guevarra.io&gt;</p>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 </div>
+
 
       <footer>
       <div class="copyright">
@@ -228,13 +229,16 @@ kept or discarded. Default is FALSE (discard).</p></td>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.</p>
 </div>
+
       </footer>
    </div>
 
   
 
+
   </body>
 </html>
+
 
