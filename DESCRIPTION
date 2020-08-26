@@ -16,7 +16,8 @@ Description: The Centric Systematic Area Sampling (CSAS) and the Simple Spatial
     design that selected communities located closest to the centroids of a 
     square (for CSAS) or hexagonal (for S3M) grid laid over the survey area.
 Depends: R (>= 2.10)
-Imports: gstat,
+Imports: 
+    gstat,
     Imap,
     rgeos,
     rgdal,
@@ -33,6 +34,7 @@ Suggests:
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
-URL: https://github.com/validmeasures/spatialsampler
-BugReports: https://github.com/validmeasures/spatialsampler/issues
+Language: en-GB
+RoxygenNote: 7.1.1
+URL: https://github.com/spatialworks/spatialsampler
+BugReports: https://github.com/spatialworks/spatialsampler/issues
