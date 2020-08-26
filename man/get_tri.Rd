@@ -6,9 +6,13 @@
 triangulation with additional options to specify thresholds for suppressing
 long sided triangles}
 \usage{
-get_tri(input, x, y,
+get_tri(
+  input,
+  x,
+  y,
   crs = "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0",
-  qTSL = 0.975)
+  qTSL = 0.975
+)
 }
 \arguments{
 \item{input}{A data frame of locations with at least information on longitude

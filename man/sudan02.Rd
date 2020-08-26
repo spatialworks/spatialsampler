@@ -4,14 +4,16 @@
 \name{sudan02}
 \alias{sudan02}
 \title{A map dataset of class SpatialPolygonsDataFrame of level 2 administrative units (localities) of Sudan}
-\format{A SpatialPolygonsDataFrame with 5 features and 5 rows:
+\format{
+A SpatialPolygonsDataFrame with 5 features and 5 rows:
 \describe{
 \item{\code{Locality}}{Locality name}
 \item{\code{State}}{State name}
 \item{\code{Source}}{Source of data}
 \item{\code{Status}}{Status of verification}
 \item{\code{season2013}}{Season 2013}
-}}
+}
+}
 \source{
 Sudan Bureau of Statistics and UNICEF Sudan
 }

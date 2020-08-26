@@ -6,10 +6,16 @@
 centroid of a square grid for CSAS or of a hexagonal grid for S3M) using
 geodesic calculations based on a specified reference ellipsoid}
 \usage{
-get_nearest_point(data, data.x, data.y, query, n = 1,
-  ellipsoid = c("AA", "AN", "??", "BR", "BN", "CC", "CD", "EB", "EA",
-  "EC", "EF", "EE", "ED", "RF", "HE", "HO", "ID", "IN", "KA", "AM", "FA",
-  "SA", "WD", "WE"), duplicate = FALSE)
+get_nearest_point(
+  data,
+  data.x,
+  data.y,
+  query,
+  n = 1,
+  ellipsoid = c("AA", "AN", "??", "BR", "BN", "CC", "CD", "EB", "EA", "EC", "EF", "EE",
+    "ED", "RF", "HE", "HO", "ID", "IN", "KA", "AM", "FA", "SA", "WD", "WE"),
+  duplicate = FALSE
+)
 }
 \arguments{
 \item{data}{An input data frame or matrix containing longitude and latitude

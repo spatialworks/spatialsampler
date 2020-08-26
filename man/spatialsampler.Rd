@@ -15,3 +15,22 @@ using a spatial sample design that selected communities located closest to
 the centroids of a hexagonal grid laid over the survey area. The resulting
 sample is a triangular irregular network.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/spatialworks/spatialsampler}
+  \item Report bugs at \url{https://github.com/spatialworks/spatialsampler/issues}
+}
+
+}
+\author{
+\strong{Maintainer}: Ernest Guevarra \email{ernest@guevarra.io} (\href{https://orcid.org/0000-0002-4887-4415}{ORCID})
+
+Authors:
+\itemize{
+  \item Mark Myatt \email{mark@brixtonhealth.com}
+  \item Farah Ibrahim \email{abud.ff@gmail.com}
+}
+
+}
+\keyword{internal}

@@ -4,13 +4,15 @@
 \name{sudan01}
 \alias{sudan01}
 \title{A map dataset of class SpatialPolygonsDataFrame of level 1 administrative units (states) of Sudan}
-\format{A SpatialPolygonsDataFrame with 5 features with 4 fields:
+\format{
+A SpatialPolygonsDataFrame with 5 features with 4 fields:
 \describe{
 \item{\code{OBJECTID_1}}{Unique identifier}
 \item{\code{STATE}}{State name}
 \item{\code{Source}}{Source of data}
 \item{\code{Region}}{Region name}
-}}
+}
+}
 \source{
 Sudan Bureau of Statistics and UNICEF Sudan
 }

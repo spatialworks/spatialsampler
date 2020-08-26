@@ -5,8 +5,14 @@
 \title{Adjust triangulation by by dividing a densely populated triangle into smaller
 triangles by adding 3 points at the middle of each side of the triangle}
 \usage{
-vary_density(sample, x, y, label = seq_along(x), basemap = NULL,
-  crs = "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0")
+vary_density(
+  sample,
+  x,
+  y,
+  label = seq_along(x),
+  basemap = NULL,
+  crs = "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0"
+)
 }
 \arguments{
 \item{sample}{A data frame containing selected villages for sampling. This is the
