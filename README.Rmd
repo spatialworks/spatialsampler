@@ -6,6 +6,9 @@ output: github_document
 
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(
+  error = FALSE,
+  warning = FALSE,
+  message = FALSE,
   collapse = TRUE,
   comment = "#>",
   fig.path = "man/figures/README-"
@@ -24,6 +27,7 @@ knitr::opts_chunk$set(
 [![Travis-CI Build Status](https://travis-ci.org/SpatialWorks/spatialsampler.svg?branch=master)](https://travis-ci.org/SpatialWorks/spatialsampler)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/SpatialWorks/spatialsampler?branch=master&svg=true)](https://ci.appveyor.com/project/SpatialWorks/spatialsampler)
 [![codecov](https://codecov.io/gh/SpatialWorks/spatialsampler/branch/master/graph/badge.svg)](https://codecov.io/gh/SpatialWorks/spatialsampler)
+[![CodeFactor](https://www.codefactor.io/repository/github/spatialworks/spatialsampler/badge)](https://www.codefactor.io/repository/github/spatialworks/spatialsampler)
 <!-- badges: end -->
 
 The Centric Systematic Area Sampling (CSAS) and the Simple Spatial Survey Method (S3M) are spatial sampling methods adapted and used in health and nutrition surveys by Brixton Health and Valid International. CSAS and S3M are used in surveys designed to be spatially representative i.e., the sample distributed evenly across the survey area, using a spatial sample design that selected communities located closest to the centroids of a square (for CSAS) or hexagonal (for S3M) grid laid over the survey area.
@@ -32,17 +36,14 @@ The `spatialsampler` package provides sets of functions for implementing the Cen
 
 ## Installation
 
-You can install `spatialsampler` from GitHub with:
+You can install `spatialsampler` from [GitHub](https://github.com/spatialworks/spatialsampler) with:
 
-```{r install1, echo = TRUE, eval = FALSE}
+```{r install, echo = TRUE, eval = TRUE}
+## Install
 if(!require(remotes)) install.packages("remotes")
-remotes::install_github("validmeasures/spatialsampler")
-library(spatialsampler)
-```
+remotes::install_github("spatialworks/spatialsampler")
 
-```{r install2, echo = FALSE, eval = TRUE, message = FALSE}
-if(!require(remotes)) install.packages("remotes")
-if(!require(spatialsampler)) remotes::install_github("validmeasures/spatialsampler")
+## Load
 library(spatialsampler)
 ```
 
@@ -75,13 +76,10 @@ The result is a data frame of 1 row and 2 columns. The first column gives the ar
 1. Create a hexagonal sampling grid based on a d of 15 kms
 
 ```{r, echo = TRUE, eval = TRUE}
-#
-# Subset Sudan map to Sennar state map
-#
+## Subset Sudan map to Sennar state map
 sennar <- subset(sudan01, STATE == "Sennar")
-#
-# Create sampling grid
-#
+
+## Create sampling grid
 samp.points <- create_sp_grid(x = sennar, 
                               d = 15, 
                               buffer = 10, 
@@ -108,7 +106,6 @@ raster::text(samp.points, labels = 1:nrow(samp.points@coords), cex = 0.6)
 points(villages.sp[ , c("x", "y")], pch = 4, cex = 0.7, col = "red")
 text(villages.sp[ , c("x", "y")], labels = villages.sp$spid, cex = 0.7)
 ```
-
 
 ```{r grid2, echo = FALSE, eval = TRUE, fig.cap = "Sampling map of Sennar at d = 15 kms with buffering", fig.align = "center", fig.pos = "h", fig.width = 10, fig.height = 10, fig.retina = 1}
 sennar_grid <- spatialsampler::create_sp_grid(x = sennar, d = 15, country = "Sudan")

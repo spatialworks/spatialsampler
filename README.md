@@ -21,6 +21,7 @@ Status](https://travis-ci.org/SpatialWorks/spatialsampler.svg?branch=master)](ht
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/SpatialWorks/spatialsampler?branch=master&svg=true)](https://ci.appveyor.com/project/SpatialWorks/spatialsampler)
 [![codecov](https://codecov.io/gh/SpatialWorks/spatialsampler/branch/master/graph/badge.svg)](https://codecov.io/gh/SpatialWorks/spatialsampler)
+[![CodeFactor](https://www.codefactor.io/repository/github/spatialworks/spatialsampler/badge)](https://www.codefactor.io/repository/github/spatialworks/spatialsampler)
 <!-- badges: end -->
 
 The Centric Systematic Area Sampling (CSAS) and the Simple Spatial
@@ -38,11 +39,15 @@ Method (S3M) using R.
 
 ## Installation
 
-You can install `spatialsampler` from GitHub with:
+You can install `spatialsampler` from
+[GitHub](https://github.com/spatialworks/spatialsampler) with:
 
 ``` r
+## Install
 if(!require(remotes)) install.packages("remotes")
-remotes::install_github("validmeasures/spatialsampler")
+remotes::install_github("spatialworks/spatialsampler")
+
+## Load
 library(spatialsampler)
 ```
 
@@ -89,13 +94,10 @@ gives the area of the hexagonal grid (in kms).
 <!-- end list -->
 
 ``` r
-#
-# Subset Sudan map to Sennar state map
-#
+## Subset Sudan map to Sennar state map
 sennar <- subset(sudan01, STATE == "Sennar")
-#
-# Create sampling grid
-#
+
+## Create sampling grid
 samp.points <- create_sp_grid(x = sennar, 
                               d = 15, 
                               buffer = 10, 
@@ -113,6 +115,26 @@ villages.sp <- get_nearest_point(data = sennar_villages,
                                  duplicate = FALSE)
 ```
 
-<img src="man/figures/README-grid1-1.png" title="Sampling map of Sennar at d = 15 kms" alt="Sampling map of Sennar at d = 15 kms" style="display: block; margin: auto;" />
+<div class="figure" style="text-align: center">
 
-<img src="man/figures/README-grid2-1.png" title="Sampling map of Sennar at d = 15 kms with buffering" alt="Sampling map of Sennar at d = 15 kms with buffering" style="display: block; margin: auto;" />
+<img src="man/figures/README-grid1-1.png" alt="Sampling map of Sennar at d = 15 kms"  />
+
+<p class="caption">
+
+Sampling map of Sennar at d = 15 kms
+
+</p>
+
+</div>
+
+<div class="figure" style="text-align: center">
+
+<img src="man/figures/README-grid2-1.png" alt="Sampling map of Sennar at d = 15 kms with buffering"  />
+
+<p class="caption">
+
+Sampling map of Sennar at d = 15 kms with buffering
+
+</p>
+
+</div>
