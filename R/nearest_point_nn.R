@@ -46,35 +46,28 @@
 ################################################################################
 
 get_nn <- function(data, x1, y1, query, x2, y2, n, duplicate = FALSE) {
-  #
-  # Check that x1, y1, x2, y2 are character
-  #
+  ## Check that x1, y1, x2, y2 are character
   if(class(x1) != "character" | class(y1) != "character" | class(x2) != "character" | class(y2) != "character") {
     stop("x1 and/or y1 and/or x2 and/or y2 is/are not character. Try again", call. = TRUE)
   }
-  #
-  # Find n nearest neighbours
-  #
+
+  ## Find n nearest neighbours
   near.index <- FNN::get.knnx(data = data[ , c(x1, y1)],
                               query = query@coords[ , c(x2, y2)],
                               k = n)
-  #
-  # Subset data for n nearest neighbours
-  #
+
+  ## Subset data for n nearest neighbours
   near.point <- data[near.index$nn.index, ]
-  #
-  # Add distance (d) in coordinate units to near.point data.frame
-  #
+
+  ## Add distance (d) in coordinate units to near.point data.frame
   near.point <- data.frame(near.point, d = c(near.index$nn.dist))
-  #
-  # Remove duplicates
-  #
+
+  ## Remove duplicates
   if(duplicate == FALSE) {
     near.point <- near.point[!duplicated(near.point[ , c(x1, y1)]), ]
   }
-  #
-  # Return output
-  #
+
+  ## Return output
   return(near.point)
 }
 

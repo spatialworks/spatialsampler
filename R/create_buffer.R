@@ -23,28 +23,22 @@
 ################################################################################
 
 create_buffer <- function(x, buffer, country) {
-  #
-  #
-  #
+  ##
   utm.crs <- get_utm(lon = countryCentroid$lon[countryCentroid$country == country],
                      lat = countryCentroid$lat[countryCentroid$country == country])
-  #
-  #
-  #
+
+  ##
   x.utm <- sp::spTransform(x = x,
                            CRSobj = sp::CRS(as.character(utm.crs)))
-  #
-  # Add buffer
-  #
+
+  ## Add buffer
   x.buffer <- rgeos::gBuffer(x.utm, width = buffer * 1000, capStyle = "SQUARE", joinStyle = "BEVEL")
-  #
-  #
-  #
+
+  ##
   x.output <- spTransform(x = x.buffer,
                           CRSobj = sp::CRS(sp::proj4string(x)))
-  #
-  #
-  #
+
+  ##
   return(x.output)
 }
 

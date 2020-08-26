@@ -43,48 +43,37 @@ nearest_point <- function(data, x1, y1,
                          query, x2, y2,
                          n = 1,
                          duplicate = FALSE) {
-  #
-  # Create concatenating object
-  #
+  ## Create concatenating object
   near.point <- NULL
-  #
-  # Check that x1, y1, x2, y2 are character
-  #
+
+  ## Check that x1, y1, x2, y2 are character
   if(class(x1) != "character" | class(y1) != "character" | class(x2) != "character" | class(y2) != "character") {
     stop("x1 and/or y1 and/or x2 and/or y2 is/are not character. Try again")
     }
-  #
-  # Cycle through rows of data
-  #
-  for(i in 1:nrow(data)) {
-    #
-    # Get distance between current sampling point and vector of villages
-    #
+
+  ## Cycle through rows of data
+  for(i in seq_len(nrow(data))) {
+    ## Get distance between current sampling point and vector of villages
     near.point1 <- mapply(FUN = Imap::gdist, lon.2 = query[ , x2], lat.2 = query[ , y2],
                           MoreArgs = list(data[i, x1], data[i, y2], units = "km"))
-    #
-    # Find the village nearest to the sampling point
-    #
+
+    ## Find the village nearest to the sampling point
     near.point2 <- query[which(near.point1 %in% tail(sort(x = near.point1, decreasing = TRUE), n = n)), ]
-    #
-    # Add sampling point id
-    #
+
+    ## Add sampling point id
     near.point2 <- data.frame("spid" = rep(i, n),
                               near.point2,
                               "d" = tail(sort(x = near.point1, decreasing = TRUE), n = n))
-    #
-    # Concatenate villages
-    #
+
+    ## Concatenate villages
     near.point <- data.frame(rbind(near.point, near.point2))
   }
-  #
-  # Remove duplicates
-  #
+
+  ## Remove duplicates
   if(duplicate == FALSE) {
     near.point <- near.point[!duplicated(near.point[ , c(x2, y2)]), ]
   }
-  #
-  # Return output
-  #
+
+  ## Return output
   return(near.point)
 }

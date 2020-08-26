@@ -49,76 +49,60 @@ get_nearest_point <- function(data, data.x, data.y,
                                             "HO", "ID", "IN", "KA", "AM",
                                             "FA", "SA", "WD", "WE"),
                               duplicate = FALSE) {
-  #
-  # Create a SpatialPoints object out of data
-  #
+  ## Create a SpatialPoints object out of data
   dataSP <- sp::SpatialPoints(coords = data[ , c(data.x, data.y)],
                               proj4string = sp::CRS(sp::proj4string(query)))
-  #
-  # Get constants for WGS84 reference ellipsoid
-  #
+
+  ## Get constants for WGS84 reference ellipsoid
   a <- geosphere::refEllipsoids()[geosphere::refEllipsoids()$code == "WE", "a"]
   f <- 1 / geosphere::refEllipsoids()[geosphere::refEllipsoids()$code == "WE", "invf"]
-  #
-  # Determine constants based on reference ellipsoid used
-  #
+
+  ## Determine constants based on reference ellipsoid used
   if(length(ellipsoid) !=  24 & length(ellipsoid) == 1) {
     a <- geosphere::refEllipsoids()[geosphere::refEllipsoids()$code == ellipsoid, "a"]
     f <- 1 / geosphere::refEllipsoids()[geosphere::refEllipsoids()$code == ellipsoid, "invf"]
   }
-  #
-  # Check if more than one reference ellipsoid selected
-  #
+
+  ## Check if more than one reference ellipsoid selected
   if(length(ellipsoid) > 1 & length(ellipsoid) != 24) {
     stop("More than one reference ellipsoid specified. Select only one. Try again", call. = TRUE)
   }
-  #
-  # Check that data.x, data.y are character values
-  #
+
+  ## Check that data.x, data.y are character values
   if(class(data.x) != "character" | class(data.y) != "character") {
     stop("data.x and/or data.y is/are not character. Try again", call. = TRUE)
   }
-  #
-  # Check that query is a class SpatialPoints object
-  #
+
+  ## Check that query is a class SpatialPoints object
   if(class(query) != "SpatialPoints") {
     stop("query should be class SpatialPoints object. Try again.", call. = TRUE)
   }
-  #
-  # Create concatenating object
-  #
+
+  ## Create concatenating object
   near.point <- NULL
-  #
-  # Cycle through rows of input
-  #
-  for(i in 1:length(query)) {
-      #
-      # Get distance between current sampling point and vector of villages
-      #
-      near.point1 <- geosphere::distGeo(p1 = query[i, ], p2 = dataSP, a = a, f = f) / 1000
-      #
-      # Find the village nearest to the sampling point
-      #
-      near.point2 <- data[which(near.point1 %in% tail(sort(x = near.point1, decreasing = TRUE), n = n)), ]
-      #
-      # Add sampling point id
-      #
-      near.point2 <- data.frame("spid" = rep(i, nrow(near.point2)),
-                                near.point2,
-                                d = tail(sort(x = near.point1, decreasing = TRUE), n = nrow(near.point2)))
-      #
-      # Concatenate villages
-      #
-      near.point <- data.frame(rbind(near.point, near.point2))
+
+  ## Cycle through rows of input
+  for(i in seq_len(length(query))) {
+    ## Get distance between current sampling point and vector of villages
+    near.point1 <- geosphere::distGeo(p1 = query[i, ], p2 = dataSP, a = a, f = f) / 1000
+
+    ## Find the village nearest to the sampling point
+    near.point2 <- data[which(near.point1 %in% tail(sort(x = near.point1, decreasing = TRUE), n = n)), ]
+
+    ## Add sampling point id
+    near.point2 <- data.frame("spid" = rep(i, nrow(near.point2)),
+                              near.point2,
+                              d = tail(sort(x = near.point1, decreasing = TRUE), n = nrow(near.point2)))
+
+    ## Concatenate villages
+    near.point <- data.frame(rbind(near.point, near.point2))
   }
-  #
-  # Check if duplicates are to be removed
-  #
+
+  ## Check if duplicates are to be removed
   if(duplicate == FALSE) {
     near.point <- near.point[!duplicated(near.point[ , c(data.x, data.y)]), ]
   }
-  #
-  # Return output
-  #
+
+  ## Return output
   return(near.point)
 }

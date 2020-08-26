@@ -78,8 +78,8 @@ create_s3m_grid <- function(input, d, buffer, country, output = "points") {
   coords1 <- NULL
   coords2 <- NULL
 
-  for(i in 1:length(x)) {
-    for(j in 1:length(y)) {
+  for(i in seq_len(length(x))) {
+    for(j in seq_len(length(y))) {
       coords  <- rbind(coords, c(x[i], y[j]))
       coords1 <- rbind(coords1, c(x1[i], y1[j]))
       coords2 <- rbind(coords2, c(x2[i], y2[j]))
@@ -101,7 +101,7 @@ create_s3m_grid <- function(input, d, buffer, country, output = "points") {
 
   hline <- NULL
 
-  for(i in 1:length(x)) {
+  for(i in seq_len(length(x))) {
     temp <- sp::Lines(sp::Line(coords[a[i]:b[i], ]), ID = paste("hline", i, sep = ""))
     hline <- c(hline, temp)
   }
@@ -113,7 +113,7 @@ create_s3m_grid <- function(input, d, buffer, country, output = "points") {
 
   vline <- NULL
 
-  for(i in 1:length(y)) {
+  for(i in seq_len(length(y))) {
     temp <- sp::Lines(sp::Line(coordsX[a[i]:b[i], ]), ID = paste("vline", i, sep = ""))
     vline <- c(vline, temp)
   }

@@ -58,91 +58,69 @@ create_sp_grid <- function(x, d = NULL, area = NULL, country = NULL,
                            n = NULL, n.factor = NULL,
                            type = "s3m",
                            fixed = FALSE) {
-  #
-  # Check that d and area are not both specified
-  #
+
+  ## Check that d and area are not both specified
   if(!is.null(d) & !is.null(area)) {
     stop("Specify either d or area, not both. Try again.", call. = TRUE)
   }
-  #
-  # Check that d or area and n are not specified at the same time
-  #
+
+  ## Check that d or area and n are not specified at the same time
   if((!is.null(d) | !is.null(area)) & !is.null(n)) {
     stop("Specify either d or area or n only. Try again.", call. = TRUE)
   }
-  #
-  # Check that country is specified if d or area is specified
-  #
+
+  ## Check that country is specified if d or area is specified
   if((!is.null(d) | !is.null(area)) & is.null(country)) {
     stop("If d or area are specified, country needs to be specified. Try again", call. = TRUE)
   }
-  #
-  # If type is not "csas" or "s3m"
-  #
+
+  ## If type is not "csas" or "s3m"
   if(!type %in% c("csas", "s3m")) {
     stop("Unrecognised sampling type. Specify either 'csas' or 's3m'. Try again.", call. = TRUE)
   }
-  #
-  # Determine type based on spsample arguments
-  #
+
+  ## Determine type based on spsample arguments
   if(type == "csas") { type <- "regular" }
   if(type == "s3m") { type <- "hexagonal" }
-  #
-  # Create a sampling buffer
-  #
+
+  ## Create a sampling buffer
   x <- create_buffer(x = x, buffer = buffer, country = country)
-  #
-  # Check if d specified and not n
-  #
+
+  ## Check if d specified and not n
   if(!is.null(d) & is.null(n)) {
-    #
-    # Calculate n
-    #
+
+    ## Calculate n
     n <- calculate_n(x = x, d = d, country = country)
   }
-  #
-  # Check if area specified and not n
-  #
+
+  ## Check if area specified and not n
   if(!is.null(area) & is.null(n)) {
-    #
-    # Calculate n
-    #
+
+    ## Calculate n
     n <- calculate_n(x = x, area = area, country = country)
   }
-  #
-  # Check if fixed == TRUE
-  #
+
+  ## Check if fixed == TRUE
   if(fixed == TRUE) {
-    #
-    # Check if n.factor is specified
-    #
+    ## Check if n.factor is specified
     if(is.null(n.factor)) {
-      #
-      # Error message
-      #
+      ## Error message
       stop("If fixed == TRUE, n.factor must be specified.")
     }
-    #
-    # Repeat spsample until n sampling points generated
-    #
+
+    ## Repeat spsample until n sampling points generated
     repeat{
-      #
-      # Sample
-      #
+      ## Sample
       spdf <- sp::spsample(x, n = n + n.factor, type = type)
-      #
-      #
-      #
+
+      ##
       if(length(spdf) == n) break
     }
   } else {
-    #
-    # Sample
-    #
+    ## Sample
     spdf <- sp::spsample(x, n = n, type = type)
   }
-  #
-  #
-  #
+
+  ##
   return(spdf)
 }

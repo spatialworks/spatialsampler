@@ -30,22 +30,16 @@
 get_tri <- function(input, x, y,
                     crs = "+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0",
                     qTSL = 0.975) {
-  #
-  # Create Delaunay triangulation of input data
-  #
+  ## Create Delaunay triangulation of input data
   tri.poly <- rgeos::gDelaunayTriangulation(spgeom = SpatialPoints(coords = input[ , c(x, y)],
                                                                    proj4string = CRS(crs)))
-  #
-  # Create concatenating object
-  #
+
+  ## Create concatenating object
   distDF <- NULL
-  #
-  # Cycle through each triangle of x
-  #
-  for(i in 1:length(tri.poly)) {
-    #
-    # Calculate distances between three points of triangle
-    #
+
+  ## Cycle through each triangle of x
+  for(i in seq_len(length(tri.poly))) {
+    ## Calculate distances between three points of triangle
     d1 <- Imap::gdist(tri.poly@polygons[[i]]@Polygons[[1]]@coords[,1][1],
                       tri.poly@polygons[[i]]@Polygons[[1]]@coords[,2][1],
                       tri.poly@polygons[[i]]@Polygons[[1]]@coords[,1][2],
@@ -63,24 +57,21 @@ get_tri <- function(input, x, y,
                       tri.poly@polygons[[i]]@Polygons[[1]]@coords[,1][1],
                       tri.poly@polygons[[i]]@Polygons[[1]]@coords[,2][1],
                       units = "km")
-    #
-    # Concatenate calculated distances for current triangle
-    #
+
+    ## Concatenate calculated distances for current triangle
     dist <- cbind(d1, d2, d3)
-    #
-    # Concatenate calculated distances of current triangle with previous triangles
-    #
+
+    ## Concatenate calculated distances of current triangle with previous
+    ## triangles
     distDF <- data.frame(rbind(distDF, dist))
   }
-  #
-  # Determine which sides to drop
-  #
+
+  ## Determine which sides to drop
   out <- ifelse(distDF[ , 1] >= quantile(distDF[ , 1], probs = qTSL), FALSE,
            ifelse(distDF[ , 2] >= quantile(distDF[ , 2], probs = qTSL), FALSE,
              ifelse(distDF[ , 3] >= quantile(distDF[ , 3], probs = qTSL), FALSE, TRUE)))
-  #
-  # Get subset of Delaunay triangulation SpatialPolygonsDataFrame
-  #
+
+  ## Get subset of Delaunay triangulation SpatialPolygonsDataFrame
   sub.tri.poly <- tri.poly[out]
   return(sub.tri.poly)
 }

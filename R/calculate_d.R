@@ -31,14 +31,17 @@ calculate_d <- function(area, geom = c("tri", "hex")) {
   if(length(geom) > 1 | is.null(geom) | missing(geom)) {
     stop("Polygon type needs to be specified. Try again.", call. = TRUE)
   }
+
   ## Check if geom is "tri"
   if(geom == "tri") {
     d <- sqrt((area * 4) / (tan(30 * (pi / 180)) * 9))
   }
+
   ## Check if geom is "hex"
   if(geom == "hex") {
     d <- sqrt((area * 2) / (3 * sqrt(3)))
   }
+
   ## Return output
   return(d)
 }

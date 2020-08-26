@@ -13,12 +13,14 @@
 #'
 #' @docType package
 #' @name spatialsampler
+#' @keywords internal
 #' @importFrom utils tail
 #' @importFrom graphics polygon identify plot points
 #' @importFrom stats quantile
 #' @importFrom rgeos gDelaunayTriangulation gBuffer
 #' @importFrom Imap gdist
-#' @importFrom sp SpatialPoints SpatialLines CRS spTransform plot proj4string bbox Line Lines
+#' @importFrom sp SpatialPoints SpatialLines CRS spTransform plot proj4string
+#'   bbox Line Lines
 #' @importFrom grDevices dev.new
 #' @importFrom geosphere distGeo
 #' @importFrom FNN get.knnx
@@ -28,7 +30,8 @@
 #'
 #
 ################################################################################
-NULL
+"_PACKAGE"
 
 ## quiets concerns of R CMD check re: map_projections
-if(getRversion() >= "2.15.1")  utils::globalVariables(c("map_projections", "countryCentroid"))
+if(getRversion() >= "2.15.1")  utils::globalVariables(c("map_projections",
+                                                        "countryCentroid"))
