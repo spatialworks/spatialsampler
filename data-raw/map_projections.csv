@@ -12,3 +12,4 @@
 "Liberia","EPSG:32629","+proj=utm +zone=29 +ellps=WGS84 +datum=WGS84 +units=m +no_defs"
 "Sierra Leone","Sierra Leone 1968","+proj=utm +zone=28 +ellps=clrk80 +towgs84=-88,4,101,0,0,0,0 +units=m +no_defs"
 "Mozambique","Moznet / UTM zone 38S","+proj=utm +zone=38 +south +ellps=WGS84 +towgs84=0,0,0,-0,-0,-0,0 +units=m +no_defs"
+"Tanzania","Arc 1960 / UTM zone 37S","+proj=utm +zone=37 +south +ellps=clrk80 +towgs84=-160,-6,-302,0,0,0,0 +units=m +no_defs"
