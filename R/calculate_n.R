@@ -37,11 +37,15 @@ calculate_n <- function(x, d = NULL, area = NULL, country) {
   }
 
   ## Get UTM coordinates for specified country
-  utm.crs <- get_utm(lon = countryCentroid$lon[countryCentroid$country == country],
-                     lat = countryCentroid$lat[countryCentroid$country == country])
+  #utm.crs <- get_utm(lon = countryCentroid$lon[countryCentroid$country == country],
+  #                   lat = countryCentroid$lat[countryCentroid$country == country])
+
+  epsg <- paste("+init=epsg:",
+                map_projections$epsg[map_projections$country == country],
+                sep = "")
 
   ## Convert x to appropriate UTM
-  x.utm <- sp::spTransform(x = x, CRSobj = sp::CRS(utm.crs))
+  x.utm <- sp::spTransform(x = x, CRSobj = sp::CRS(epsg))
 
   ## If d is specified, calculate n
   if(!is.null(d)) {

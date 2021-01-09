@@ -32,7 +32,7 @@ get_tri <- function(input, x, y,
                     qTSL = 0.975) {
   ## Create Delaunay triangulation of input data
   tri.poly <- rgeos::gDelaunayTriangulation(spgeom = SpatialPoints(coords = input[ , c(x, y)],
-                                                                   proj4string = CRS(crs)))
+                                                                   proj4string = sp::CRS(crs)))
 
   ## Create concatenating object
   distDF <- NULL
