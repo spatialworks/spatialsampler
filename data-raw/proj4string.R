@@ -12,8 +12,8 @@ utm <- c("Adindan / UTM zone 35N",
          "Minna / UTM zone 32N",
          "WGS 84 / UTM zone 31N",
          "WGS 84 / UTM zone 30N",
-         "EPSG:32629",
-         "Sierra Leone 1968",
+         "Liberia 1964",
+         "Sierra Leone 1968 / UTM zone 29N",
          "Moznet / UTM zone 38S",
          "Arc 1960 / UTM zone 37S")
 
@@ -32,8 +32,9 @@ proj <- c("+proj=utm +zone=35 +ellps=clrk80 +towgs84=-166,-15,204,0,0,0,0 +units
           "+proj=utm +zone=38 +south +ellps=WGS84 +towgs84=0,0,0,-0,-0,-0,0 +units=m +no_defs",
           "+proj=utm +zone=37 +south +ellps=clrk80 +towgs84=-160,-6,-302,0,0,0,0 +units=m +no_defs")
 
+epsg <- c("20135", "20138", "21097", "20539", "21095", "32736", "20934", "26322", "32631", "32630", "4251", "2162", "5629", "21037")
 
-map_projections <- data.frame(country, utm, proj)
+map_projections <- data.frame(country, utm, proj, epsg)
 
 write.csv(map_projections, "data-raw/map_projections.csv", row.names = FALSE)
 

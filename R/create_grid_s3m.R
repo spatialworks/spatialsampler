@@ -47,8 +47,12 @@ create_s3m_grid <- function(input, d, buffer, country, output = "points") {
 
   mapbox <- mapbox %>% create_buffer(buffer = buffer, country = country)
 
+  epsg <- paste("+init=epsg:",
+                map_projections$epsg[map_projections$country == country],
+                sep = "")
+
   mapbox <- sp::spTransform(x = mapbox,
-                            CRSobj = CRS(as.character(map_projections$proj[map_projections$country == country])))
+                            CRSobj = sp::CRS(epsg))
 
   x <- seq(from = raster::extent(mapbox)[1],
            to = raster::extent(mapbox)[2],
@@ -94,7 +98,7 @@ create_s3m_grid <- function(input, d, buffer, country, output = "points") {
                                 proj4string = sp::CRS(sp::proj4string(mapbox)))
 
   coordsSP <- sp::spTransform(x = coordsSP,
-                              CRSobj = sp::CRS(sp::proj4string(input)))
+                              CRSobj = sp::CRS("+init=epsg:4326"))
 
   a <- seq(from = 1, to = nrow(coords), by = length(y))
   b <- seq(from = length(y), to = nrow(coords), by = length(y))
@@ -119,10 +123,10 @@ create_s3m_grid <- function(input, d, buffer, country, output = "points") {
   }
 
   allLines <- sp::SpatialLines(c(hline, vline),
-                               proj4string = sp::CRS(sp::proj4string(mapbox)))
+                               proj4string = sp::CRS("+init=epsg:4326"))
 
   allLines <- sp::spTransform(x = allLines,
-                              CRSobj = sp::CRS(sp::proj4string(input)))
+                              CRSobj = sp::CRS("+init=epsg:4326"))
 
   if(output == "points") {
     return(coordsSP)

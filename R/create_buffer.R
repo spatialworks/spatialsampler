@@ -24,19 +24,25 @@
 
 create_buffer <- function(x, buffer, country) {
   ##
-  utm.crs <- get_utm(lon = countryCentroid$lon[countryCentroid$country == country],
-                     lat = countryCentroid$lat[countryCentroid$country == country])
+  #utm.crs <- get_utm(lon = countryCentroid$lon[countryCentroid$country == country],
+  #                   lat = countryCentroid$lat[countryCentroid$country == country])
+
+  epsg <- paste("+init=epsg:",
+                map_projections$epsg[map_projections$country == country],
+                sep = "")
 
   ##
+  #x.utm <- sp::spTransform(x = x,
+  #                         CRSobj = sp::CRS(as.character(utm.crs)))
   x.utm <- sp::spTransform(x = x,
-                           CRSobj = sp::CRS(as.character(utm.crs)))
+                           CRSobj = sp::CRS(epsg))
 
   ## Add buffer
   x.buffer <- rgeos::gBuffer(x.utm, width = buffer * 1000, capStyle = "SQUARE", joinStyle = "BEVEL")
 
   ##
   x.output <- spTransform(x = x.buffer,
-                          CRSobj = sp::CRS(sp::proj4string(x)))
+                          CRSobj = sp::CRS("+init=epsg:4326"))
 
   ##
   return(x.output)
