@@ -17,3 +17,4 @@
 "Philippines","WGS 84 / UTM zone 51N","+proj=utm +zone=51 +datum=WGS84 +units=m +no_defs","32651"
 "South Africa","WGS 84 / UTM zone 34S","+proj=utm +zone=34 +south +datum=WGS84 +units=m +no_defs","32734"
 "Bangladesh","WGS 84 / UTM zone 46N","+proj=utm +zone=46 +datum=WGS84 +units=m +no_defs","32646"
+"Chad","WGS 84 / UTM zone 33N","+proj=utm +zone=33 +datum=WGS84 +units=m +no_defs","32633"

@@ -1,7 +1,7 @@
 country <- c("Sudan", "Ethiopia", "Kenya", "Somalia", "Uganda", "Rwanda",
              "Zambia", "Nigeria", "Niger", "Burkina Faso", "Liberia",
              "Sierra Leone", "Mozambique", "Tanzania", "Jordan", "Philippines",
-             "South Africa", "Bangladesh")
+             "South Africa", "Bangladesh", "Chad")
 
 utm <- c("Adindan / UTM zone 35N",
          "Adindan / UTM zone 38N",
@@ -20,7 +20,8 @@ utm <- c("Adindan / UTM zone 35N",
          "ED50 / UTM zone 37N",
          "WGS 84 / UTM zone 51N",
          "WGS 84 / UTM zone 34S",
-         "WGS 84 / UTM zone 46N")
+         "WGS 84 / UTM zone 46N",
+         "WGS 84 / UTM zone 33N")
 
 proj <- c("+proj=utm +zone=35 +ellps=clrk80 +towgs84=-166,-15,204,0,0,0,0 +units=m +no_defs",
           "+proj=utm +zone=38 +ellps=clrk80 +towgs84=-166,-15,204,0,0,0,0 +units=m +no_defs ",
@@ -39,10 +40,11 @@ proj <- c("+proj=utm +zone=35 +ellps=clrk80 +towgs84=-166,-15,204,0,0,0,0 +units
           "+proj=utm +zone=37 +ellps=intl +towgs84=-87,-98,-121,0,0,0,0 +units=m +no_defs",
           "+proj=utm +zone=51 +datum=WGS84 +units=m +no_defs",
           "+proj=utm +zone=34 +south +datum=WGS84 +units=m +no_defs",
-          "+proj=utm +zone=46 +datum=WGS84 +units=m +no_defs")
+          "+proj=utm +zone=46 +datum=WGS84 +units=m +no_defs",
+          "+proj=utm +zone=33 +datum=WGS84 +units=m +no_defs")
 
 epsg <- c("20135", "20138", "21097", "20539", "21095", "32736", "20934", "26322",
-          "32631", "32630", "4251", "2162", "5629", "21037", "23037", "32651", "32734", "32646")
+          "32631", "32630", "4251", "2162", "5629", "21037", "23037", "32651", "32734", "32646", "32633")
 
 map_projections <- data.frame(country, utm, proj, epsg)
 
