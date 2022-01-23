@@ -9,7 +9,7 @@
 "Nigeria","Minna / UTM zone 32N","+proj=utm +zone=32 +ellps=clrk80 +towgs84=-92,-93,122,0,0,0,0 +units=m +no_defs","26322"
 "Niger","WGS 84 / UTM zone 31N","+proj=utm +zone=31 +datum=WGS84 +units=m +no_defs","32631"
 "Burkina Faso","WGS 84 / UTM zone 30N","+proj=utm +zone=30 +datum=WGS84 +units=m +no_defs","32630"
-"Liberia","Liberia 1964","+proj=utm +zone=29 +ellps=WGS84 +datum=WGS84 +units=m +no_defs","4251"
+"Liberia","Liberia 1964 / UTM zone 29","+proj=utm +zone=29 +ellps=WGS84 +datum=WGS84 +units=m +no_defs","4251"
 "Sierra Leone","Sierra Leone 1968 / UTM zone 29N","+proj=utm +zone=28 +ellps=clrk80 +towgs84=-88,4,101,0,0,0,0 +units=m +no_defs","2162"
 "Mozambique","Moznet / UTM zone 38S","+proj=utm +zone=38 +south +ellps=WGS84 +towgs84=0,0,0,-0,-0,-0,0 +units=m +no_defs","5629"
 "Tanzania","Arc 1960 / UTM zone 37S","+proj=utm +zone=37 +south +ellps=clrk80 +towgs84=-160,-6,-302,0,0,0,0 +units=m +no_defs","21037"
